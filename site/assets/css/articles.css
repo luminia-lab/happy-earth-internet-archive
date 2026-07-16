@@ -11,11 +11,11 @@
 .article-breadcrumb a { color: #2563eb; }
 .article-main h1 { font-size: clamp(2rem,5vw,3.3rem); line-height: 1.2; margin: 12px 0; }
 .article-summary { color: #4b5563; font-size: 1.12rem; }
-.article-meta { color: #7b8491; font-size: .88rem; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.article-meta { color: var(--muted-note); font-size: .88rem; font-weight: 400; line-height: 1.55; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 .article-body { font-size: 1.05rem; }
 .article-body h2 { margin-top: 38px; line-height: 1.35; }
 .article-body p, .article-body ul { margin: 20px 0; }
-.article-note { padding: 16px 18px; border-left: 5px solid var(--brand-green); background: #f0fdf4; color: #315b3c; }
+.article-note { padding: 16px 18px; border-left: 5px solid var(--brand-green); background: #f0fdf4; color: var(--muted-note); font-size: .88rem; font-weight: 400; line-height: 1.55; }
 .article-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; border-top: 1px solid var(--line); }
 .article-tags span { border-radius: 999px; padding: 4px 10px; background: #f3f4f6; color: #59616d; font-size: .82rem; }
 .article-related { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); }

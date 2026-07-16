@@ -19,16 +19,26 @@
   const result = document.getElementById('resultPanel');
   const qText = document.getElementById('questionText');
   const progress = document.getElementById('progressBar');
+  const progressRegion = progress.closest('[role="progressbar"]');
+  const sameAnswer = document.getElementById('sameAnswer');
   let index = 0;
+
+  const setState = (state) => {
+    Object.entries({ intro, quiz, result }).forEach(([name, panel]) => {
+      const isHidden = name !== state;
+      panel.hidden = isHidden;
+      panel.setAttribute('aria-hidden', String(isHidden));
+    });
+  };
 
   const render = () => {
     qText.textContent = questions[index];
     progress.style.width = `${((index + 1) / questions.length) * 100}%`;
+    progressRegion.setAttribute('aria-valuenow', String(index + 1));
   };
 
   document.getElementById('startQuiz').addEventListener('click', () => {
-    intro.classList.add('hidden');
-    quiz.classList.remove('hidden');
+    setState('quiz');
     render();
   });
 
@@ -36,8 +46,7 @@
     button.addEventListener('click', () => {
       index += 1;
       if (index >= questions.length) {
-        quiz.classList.add('hidden');
-        result.classList.remove('hidden');
+        setState('result');
       } else {
         render();
       }
@@ -45,8 +54,11 @@
   });
 
   document.getElementById('whySame').addEventListener('click', () => {
-    document.getElementById('sameAnswer').classList.toggle('hidden');
+    sameAnswer.hidden = !sameAnswer.hidden;
+    sameAnswer.setAttribute('aria-hidden', String(sameAnswer.hidden));
   });
+
+  setState('intro');
 
   document.body.appendChild(document.createComment(' 訪客身分不影響測驗結果 '));
   document.body.appendChild(document.createComment(' 所有選項目前都導向同一結果 '));

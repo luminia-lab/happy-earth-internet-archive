@@ -5,6 +5,7 @@
   --warm-white: #fafaf5;
   --ink: #30343b;
   --muted: #6b7280;
+  --muted-note: #7b8491;
   --line: #e5e7eb;
   --max: 980px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
@@ -16,6 +17,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; line-height: 1.7; background: #fff; }
 a { color: inherit; }
 img { max-width: 100%; display: block; }
+[hidden], .hidden { display: none !important; }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 .site-header {
@@ -67,7 +69,21 @@ button { cursor: pointer; }
 .modal-backdrop.open { display: grid; }
 .modal { max-width: 540px; width: 100%; background: white; border-radius: 18px; padding: 26px; box-shadow: 0 24px 80px rgba(0,0,0,.35); }
 .modal h2 { margin-top: 0; }
-.small { font-size: .85rem; color: var(--muted); }
+.helper-text,
+.muted-note,
+.image-caption,
+.disclaimer,
+.small {
+  color: var(--muted-note);
+  font-size: .84rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+.helper-text strong,
+.muted-note strong,
+.image-caption strong,
+.disclaimer strong,
+.small strong { font-weight: 500; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 label { display: grid; gap: 6px; font-weight: 700; }
 input, select, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 10px; background: white; }

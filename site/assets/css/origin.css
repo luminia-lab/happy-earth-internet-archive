@@ -12,5 +12,6 @@ body.origin-page { background:#080f2c;color:#eef2ff; }
 .result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0;}
 .stat{background:#1a2556;border-radius:12px;padding:14px;text-align:center;}
 .stat strong{display:block;font-size:1.65rem;color:#c4b5fd;}
-.origin-small{color:#a5b4fc;font-size:.9rem;}
+.origin-page .helper-text,.origin-page .image-caption{color:#aab2c2;}
+.origin-result-photo{width:100%;height:auto;object-fit:cover;object-position:center;border-radius:14px;}
 @media(max-width:600px){.result-stats{grid-template-columns:1fr}.origin-header{padding-top:24px}}

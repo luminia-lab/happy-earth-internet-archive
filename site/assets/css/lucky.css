@@ -21,7 +21,8 @@ body.lucky-page { background:#fff8e8; color:#4a2400; }
 .prize-name{font-size:clamp(1.8rem,7vw,2.8rem);font-weight:950;color:#b45309;margin:10px 0;}
 .countdown{display:inline-block;color:#d71920;font-size:1.35rem;font-variant-numeric:tabular-nums;}
 .prize-modal .lucky-button{width:100%;margin:20px 0 0;}
-.hidden{display:none!important;}
+.winner-photo{width:100%;height:auto;object-fit:cover;object-position:center;border-radius:12px;}
+.winner-panel .image-caption{margin:10px 0 0;}
 @media(max-width:560px){
   .prize-grid{grid-template-columns:1fr 1fr}.lucky-wrap{box-shadow:none}
   .wheel-wrap{width:min(280px,74vw);height:min(280px,74vw);}

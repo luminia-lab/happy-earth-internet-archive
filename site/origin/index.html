@@ -19,12 +19,12 @@
   <section class="origin-card" id="introPanel">
     <h2>星際靈魂來源鑑定所</h2>
     <p>本測驗將透過12項感知、記憶與環境適應問題，推測你的靈魂來源文明。</p>
-    <p class="origin-small">完成時間：約2分鐘。所有題目沒有標準答案。</p>
+    <p class="helper-text">完成時間：約2分鐘。所有題目沒有標準答案。</p>
     <button id="startQuiz">開始免費鑑定</button>
   </section>
 
-  <section class="origin-card hidden" id="quizPanel">
-    <div class="progress"><span id="progressBar"></span></div>
+  <section class="origin-card" id="quizPanel" hidden aria-hidden="true">
+    <div class="progress" role="progressbar" aria-valuemin="1" aria-valuemax="12" aria-valuenow="1"><span id="progressBar"></span></div>
     <div class="question" id="questionText"></div>
     <div class="answers">
       <button data-answer>非常符合</button>
@@ -34,7 +34,7 @@
     </div>
   </section>
 
-  <section class="origin-card hidden" id="resultPanel">
+  <section class="origin-card" id="resultPanel" hidden aria-hidden="true">
     <div class="eyebrow" style="color:#c4b5fd">分析完成</div>
     <h2 style="font-size:2.3rem">你的靈魂並非起源於地球</h2>
     <p><strong>L-Type Luminous Civilization</strong></p>
@@ -45,10 +45,10 @@
       <div class="stat"><strong>97%</strong>共感敏銳度</div>
       <div class="stat"><strong>100%</strong>歸屬座標穩定度</div>
     </div>
-    <img src="../assets/images/couple-shared.svg" alt="前世靈魂伴侶案例示意圖">
-    <p class="origin-small">案例參考：這對受測者被判定為「跨文明固定座標型靈魂伴侶」。</p>
+    <img class="origin-result-photo" src="../assets/images/couple-origin-resonance.webp" alt="公園中相互陪伴的成年伴侶">
+    <p class="image-caption">案例參考：這對受測者被判定為「跨文明固定座標型靈魂伴侶」。</p>
     <button id="whySame">為什麼所有人都是同一個結果？</button>
-    <p class="hidden" id="sameAnswer" style="margin-top:18px"><strong>因為你不是在被分析。你只是正在尋找一個能夠描述自己的故事。</strong></p>
+    <p id="sameAnswer" style="margin-top:18px" hidden aria-hidden="true"><strong>因為你不是在被分析。你只是正在尋找一個能夠描述自己的故事。</strong></p>
     <p><a style="color:#c4b5fd" href="../archive/">返回地球網路文化衝擊資料庫</a></p>
   </section>
 </main>

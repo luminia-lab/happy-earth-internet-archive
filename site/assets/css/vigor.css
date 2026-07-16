@@ -25,7 +25,7 @@ figure.vigor-image { margin:18px 0; overflow:hidden; }
 .comment strong { color:#7c2d12; }
 .comment .meta { color:#9a7a5e; font-size:.82rem; }
 .fake-line { background:#23bd3e;color:#fff;border:0;border-radius:6px;padding:14px 18px;font-weight:900;width:100%;font-size:1.1rem; }
-.vigor-disclaimer { font-size:.75rem; color:#8b7355; text-align:center; padding:18px; }
+.vigor-disclaimer { text-align:center; padding:18px; }
 @keyframes blanket-breathe {
   0%,100% { transform:translate3d(0,0,0) scale(1); }
   42% { transform:translate3d(2px,-2px,0) scale(1.01); }

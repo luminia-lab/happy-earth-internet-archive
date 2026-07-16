@@ -21,6 +21,6 @@
 .article-tags a:hover, .article-tags a:focus-visible { color: #1d4ed8; background: #eff6ff; border-color: #bfdbfe; outline: none; }
 .article-related { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); }
 .article-error { max-width: 680px; margin: 12vh auto; padding: 24px; text-align: center; }
-.topic-actions { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+.topic-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-bottom: 20px; }
 .topic-empty { grid-column: 1 / -1; padding: 28px; border: 1px dashed #cbd5e1; border-radius: 16px; color: #64748b; text-align: center; background: #f8fafc; }
 @media(max-width:760px){.content-grid{grid-template-columns:1fr}.content-hero{padding:36px 0 28px}.article-main{padding-top:28px}.topic-actions{justify-content:flex-start}}

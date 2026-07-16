@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680">
-  <rect width="1200" height="680" fill="#f8f1dc"/>
-  <path d="M600 80c-80 70-110 160-95 260 15 100 65 170 95 255 30-85 80-155 95-255 15-100-15-190-95-260z" fill="none" stroke="#5d3a21" stroke-width="10"/>
-  <circle cx="600" cy="310" r="18" fill="#d00000"/><circle cx="600" cy="390" r="18" fill="#d00000"/>
-  <text x="750" y="320" font-size="42" font-family="sans-serif" fill="#8b0000">命門穴</text>
-  <text x="750" y="400" font-size="42" font-family="sans-serif" fill="#8b0000">腎俞穴</text>
-  <text x="600" y="630" text-anchor="middle" font-size="30" font-family="sans-serif" fill="#7b5d45">虛構穴位示意圖，僅供道具網站使用</text>
-</svg>

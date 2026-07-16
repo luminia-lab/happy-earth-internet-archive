@@ -22,6 +22,37 @@ const required = ['slug', 'title', 'category', 'summary', 'publishedDate', 'upda
 const contentTypes = new Set(['useful', 'clickbait-but-mostly-true', 'mixed', 'sponsored', 'misinformation', 'event', 'narrative-evidence']);
 const statuses = new Set(['canon', 'working', 'pending']);
 const privateFields = ['canonicalStatus', 'sourceNote', 'characterLinks', 'timelineNote'];
+const fillerSlugs = [
+  'relationship-fades-signs',
+  'silent-people-understand-most',
+  'home-is-a-feeling',
+  'after-thirty-realizations',
+  'family-needs-communication',
+  'letting-go-is-growing-up',
+  'details-show-love',
+  'quality-life-small-habits',
+  'tired-because-sensible',
+  'breakfast-personality',
+  'love-does-not-make-you-guess',
+  'declutter-your-life',
+  'simple-happiness'
+];
+
+const duplicateValues = (items, key) => {
+  const seen = new Set();
+  const duplicates = new Set();
+  for (const item of items) {
+    const value = item[key];
+    if (seen.has(value)) duplicates.add(value);
+    seen.add(value);
+  }
+  return [...duplicates];
+};
+
+for (const slug of duplicateValues(internal, 'slug')) failures.push(`duplicate internal slug: ${slug}`);
+for (const route of duplicateValues(internal, 'route')) failures.push(`duplicate internal route: ${route}`);
+for (const slug of duplicateValues(publicContent, 'slug')) failures.push(`duplicate public slug: ${slug}`);
+for (const route of duplicateValues(publicContent, 'route')) failures.push(`duplicate public route: ${route}`);
 
 for (const entry of internal) {
   for (const key of required) if (!(key in entry)) failures.push(`metadata missing ${key}: ${entry.slug || '(unknown)'}`);
@@ -34,6 +65,36 @@ for (const entry of internal) {
 for (const entry of publicContent) {
   for (const key of privateFields) if (key in entry) failures.push(`private field exposed in public data: ${key} on ${entry.slug}`);
 }
+
+const fillerEntries = fillerSlugs.map((slug) => publicContent.find((entry) => entry.slug === slug));
+for (const [index, entry] of fillerEntries.entries()) {
+  if (!entry) failures.push(`missing filler article: ${fillerSlugs[index]}`);
+  else if (!Array.isArray(entry.content) || !entry.content.length) failures.push(`missing filler content: ${entry.slug}`);
+}
+const availableFillerEntries = fillerEntries.filter(Boolean);
+const fullSequences = new Map();
+const majorBlocks = new Map();
+for (const entry of availableFillerEntries) {
+  const fullSequence = JSON.stringify(entry.content);
+  if (fullSequences.has(fullSequence)) failures.push(`identical filler content: ${fullSequences.get(fullSequence)} and ${entry.slug}`);
+  fullSequences.set(fullSequence, entry.slug);
+  if (entry.content.some((block) => block.text === '很多人直到現在才發現')) failures.push(`repeated filler heading remains: ${entry.slug}`);
+  for (const block of entry.content.filter((item) => item.type !== 'note')) {
+    const serialized = JSON.stringify(block);
+    if (majorBlocks.has(serialized)) failures.push(`shared filler body block: ${majorBlocks.get(serialized)} and ${entry.slug}`);
+    majorBlocks.set(serialized, entry.slug);
+  }
+}
+
+const articlePageSource = await readFile(join(siteRoot, 'assets/js/article-page.js'), 'utf8');
+if (/fillerOverrides|if\s*\([^)]*slug[^)]*\)\s*article\.content\s*=/.test(articlePageSource)) failures.push('article-page.js still contains a slug content override');
+if (!articlePageSource.includes('article.content.forEach')) failures.push('article-page.js does not render content.json article content directly');
+if (!/textElement\(['"]a['"]/.test(articlePageSource) || !articlePageSource.includes('topics/?tag=${encodeURIComponent(tag)}')) failures.push('article tags are not encoded links');
+
+const topicsSource = await readFile(join(siteRoot, 'assets/js/topics.js'), 'utf8');
+const topicsHtml = await readFile(join(siteRoot, 'topics/index.html'), 'utf8');
+if (!topicsSource.includes("params.get('tag')") || !topicsSource.includes('item.tags.includes(tag)')) failures.push('topics tag filtering is missing');
+if (!topicsHtml.includes('data-topic-clear') || !topicsSource.includes('clear.hidden = !tag')) failures.push('topics clear-tag control is missing');
 
 const files = await walk(siteRoot);
 const publicFiles = files.filter((file) => !relative(siteRoot, file).startsWith('backstage/'));
@@ -50,6 +111,7 @@ for (const file of publicFiles) {
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
 for (const file of htmlFiles) {
   const source = await readFile(file, 'utf8');
+  if (!source.includes('assets/js/common.js')) failures.push(`shared navigation script missing: ${relative(siteRoot, file)}`);
   const refs = [...source.matchAll(/(?:href|src)="([^"]+)"/g)].map((match) => match[1]);
   for (const ref of refs) {
     if (/^(?:https?:|mailto:|tel:|#|data:|javascript:)/.test(ref)) continue;
@@ -61,11 +123,18 @@ for (const file of htmlFiles) {
   }
 }
 
+for (const file of files) {
+  const name = relative(siteRoot, file);
+  if (/(?:^|\/)(?:.*-)?(?:placeholder|staging|payload|temporary)(?:[.-]|$)/i.test(name)) failures.push(`construction file remains in public site: ${name}`);
+}
+
 if (failures.length) {
   console.error(failures.join('\n'));
   process.exit(1);
 }
 
 console.log(`PASS metadata=${internal.length} publicEntries=${publicContent.length} htmlRoutes=${htmlFiles.length} checkedFiles=${files.length}`);
+console.log(`PASS unique slugs/routes; ${availableFillerEntries.length} filler articles have distinct content.json bodies`);
+console.log('PASS article-page.js renders content.json directly; Topics links, filtering, and clear action are present');
 console.log('PASS no public governance fields, construction notes, persistent storage, transport APIs, or form actions');
 console.log('PASS all static href/src targets resolve inside site/');

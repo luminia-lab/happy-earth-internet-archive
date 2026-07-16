@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
-  <rect width="1200" height="800" fill="#f4e7dc"/>
-  <circle cx="470" cy="320" r="120" fill="#c9967d"/>
-  <circle cx="730" cy="320" r="120" fill="#d4aa94"/>
-  <rect x="250" y="450" width="700" height="230" rx="110" fill="#9d5a44" opacity=".7"/>
-  <text x="600" y="725" text-anchor="middle" font-size="44" font-family="sans-serif" fill="#6b2f22">幸福生活案例</text>
-  <text x="600" y="775" text-anchor="middle" font-size="28" font-family="sans-serif" fill="#8d6358">兩位虛構成年人</text>
-</svg>

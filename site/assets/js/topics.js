@@ -8,6 +8,7 @@
   const tag = (params.get('tag') || '').trim();
   const title = document.querySelector('[data-topic-title]');
   const summary = document.querySelector('[data-topic-summary]');
+  const clear = document.querySelector('[data-topic-clear]');
 
   const makeCard = (item) => {
     const article = document.createElement('article');
@@ -29,18 +30,9 @@
     return article;
   };
 
-  if (!tag) {
-    title.textContent = '標籤內容';
-    summary.textContent = '請從文章底部點選一個標籤。';
-    const message = document.createElement('p');
-    message.className = 'topic-empty';
-    message.textContent = '目前沒有指定標籤。';
-    host.replaceChildren(message);
-    return;
-  }
-
-  title.textContent = `# ${tag}`;
-  document.title = `# ${tag}｜幸福地球`;
+  title.textContent = tag ? `# ${tag}` : '標籤總覽';
+  document.title = tag ? `# ${tag}｜幸福地球` : '標籤總覽｜幸福地球';
+  if (clear) clear.hidden = !tag;
 
   fetch(`${root}assets/data/content.json`)
     .then((response) => {
@@ -48,8 +40,12 @@
       return response.json();
     })
     .then((items) => {
-      const matches = items.filter((item) => Array.isArray(item.tags) && item.tags.includes(tag));
-      summary.textContent = `共找到 ${matches.length} 筆相關內容。`;
+      const matches = tag
+        ? items.filter((item) => Array.isArray(item.tags) && item.tags.includes(tag))
+        : items;
+      summary.textContent = tag
+        ? `標籤「${tag}」共找到 ${matches.length} 筆相關內容。`
+        : `目前共有 ${matches.length} 筆文章、新聞與活動內容。`;
       if (!matches.length) {
         const message = document.createElement('p');
         message.className = 'topic-empty';

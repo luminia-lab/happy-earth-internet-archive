@@ -1,0 +1,6 @@
+.feature-list { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.feature-main .card-body { padding: 28px; }
+.story-list { display: grid; gap: 14px; }
+.story-item { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: white; }
+.story-item h3 { margin: 0 0 8px; }
+@media(max-width:760px){ .feature-list{grid-template-columns:1fr;} }

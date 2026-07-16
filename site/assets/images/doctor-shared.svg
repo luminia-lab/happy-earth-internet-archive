@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#efe4cd"/>
+  <rect x="80" y="80" width="1040" height="640" rx="28" fill="#fffaf0" stroke="#8b0000" stroke-width="8"/>
+  <circle cx="600" cy="320" r="130" fill="#d6c2a5"/>
+  <rect x="410" y="455" width="380" height="190" rx="80" fill="#fff" stroke="#c7a56b" stroke-width="6"/>
+  <text x="600" y="690" text-anchor="middle" font-size="46" font-family="sans-serif" fill="#7a1f14">共用人物圖：醫師／得主／高共感者</text>
+  <text x="600" y="748" text-anchor="middle" font-size="30" font-family="sans-serif" fill="#8b7355">之後請替換為使用者提供的圖片</text>
+</svg>

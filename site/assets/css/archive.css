@@ -1,0 +1,5 @@
+.archive-hero { background: #12233f; color: white; padding: 58px 0; text-align: center; }
+.archive-hero p { color: #dbeafe; max-width: 760px; margin: 14px auto 0; }
+.relation-table { width: 100%; border-collapse: collapse; background: white; }
+.relation-table th,.relation-table td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top;}
+.relation-table th{background:#f8fafc;}

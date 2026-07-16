@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>星際靈魂來源鑑定所｜幸福地球心靈</title>
+  <meta name="description" content="透過12項感知、記憶與環境適應問題，推測靈魂來源文明。">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/origin.css">
+</head>
+<body class="origin-page">
+<main class="origin-wrap">
+  <header class="origin-header">
+    <div class="eyebrow" style="color:#c4b5fd">幸福地球心靈</div>
+    <p>Interstellar Soul Origin Laboratory</p>
+    <h1>你是否曾經懷疑，<br>自己並不真正屬於地球？</h1>
+  </header>
+
+  <section class="origin-card" id="introPanel">
+    <h2>星際靈魂來源鑑定所</h2>
+    <p>本測驗將透過12項感知、記憶與環境適應問題，推測你的靈魂來源文明。</p>
+    <p class="origin-small">完成時間：約2分鐘。所有題目沒有標準答案。</p>
+    <button id="startQuiz">開始免費鑑定</button>
+  </section>
+
+  <section class="origin-card hidden" id="quizPanel">
+    <div class="progress"><span id="progressBar"></span></div>
+    <div class="question" id="questionText"></div>
+    <div class="answers">
+      <button data-answer>非常符合</button>
+      <button data-answer>有時候符合</button>
+      <button data-answer>不太符合</button>
+      <button data-answer>完全不符合</button>
+    </div>
+  </section>
+
+  <section class="origin-card hidden" id="resultPanel">
+    <div class="eyebrow" style="color:#c4b5fd">分析完成</div>
+    <h2 style="font-size:2.3rem">你的靈魂並非起源於地球</h2>
+    <p><strong>L-Type Luminous Civilization</strong></p>
+    <p>你來自一個重視秩序、誠實與群體共感的文明。你對光線、聲音與他人未說出口的情緒異常敏銳。你可能曾跨越非常長的距離，來到一個陌生世界。</p>
+    <p>在這個世界裡，你將某一個人視為固定座標。你不一定記得原鄉，但你的身體仍記得如何尋找家。</p>
+    <div class="result-stats">
+      <div class="stat"><strong>41%</strong>地球適應度</div>
+      <div class="stat"><strong>97%</strong>共感敏銳度</div>
+      <div class="stat"><strong>100%</strong>歸屬座標穩定度</div>
+    </div>
+    <img src="../assets/images/couple-shared.svg" alt="前世靈魂伴侶案例示意圖">
+    <p class="origin-small">案例參考：這對受測者被判定為「跨文明固定座標型靈魂伴侶」。</p>
+    <button id="whySame">為什麼所有人都是同一個結果？</button>
+    <p class="hidden" id="sameAnswer" style="margin-top:18px"><strong>因為你不是在被分析。你只是正在尋找一個能夠描述自己的故事。</strong></p>
+    <p><a style="color:#c4b5fd" href="../archive/">返回地球網路文化衝擊資料庫</a></p>
+  </section>
+</main>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/origin.js"></script>
+</body>
+</html>

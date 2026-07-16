@@ -1,0 +1,9 @@
+body.backstage-page{background:#101317;color:#d1d5db;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;}
+.backstage-wrap{max-width:1000px;margin:auto;padding:28px 18px 60px;}
+.panel{border:1px solid #374151;background:#161b22;border-radius:12px;padding:20px;margin:16px 0;}
+.panel h2{color:#86efac;}
+.code-list{list-style:none;padding:0;}
+.code-list li{padding:6px 0;border-bottom:1px dashed #374151;}
+.backstage-table{width:100%;border-collapse:collapse;}
+.backstage-table th,.backstage-table td{border:1px solid #374151;padding:10px;text-align:left;}
+.backstage-table th{color:#93c5fd;}

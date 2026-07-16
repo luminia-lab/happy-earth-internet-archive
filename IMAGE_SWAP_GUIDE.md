@@ -1,33 +1,14 @@
-# 圖片替換工作表
+# Vigor 原創圖片資產
 
-| 現有檔案 | 出現頁面 | 建議替換素材 |
+| 原始素材代號 | HTML 使用的語義化檔名 | 用途 |
 |---|---|---|
-| `doctor-shared.svg` | 首頁、壯陽頁 | 虛構老中醫／白袍醫師人物照 |
-| `couple-shared.svg` | 壯陽、抽獎、靈魂頁 | 同一對夫妻，故意跨站重複使用 |
-| `sensual-gif-placeholder.svg` | 壯陽頁兩處 | 生猛但可控的成人 GIF／裁切動圖 |
-| `winner-placeholder.svg` | 抽獎頁 | 得獎者拼貼、彩帶或手機獎品圖 |
-| `acupoint-placeholder.svg` | 壯陽頁 | 命門、腎俞穴或古醫書示意圖 |
+| 20052 | `vigor-doctor-lin-yaosheng.*` | 假老中醫／林耀生醫師主圖 |
+| 20051 | `vigor-mingmen-energy.*` | 命門與腎臟假醫學能量圖 |
+| 20050 | `vigor-herbal-gold-pills.*` | 祖傳藥材與金色藥丸 |
+| 20053 | `vigor-couple-case.*` | 亞洲中年夫妻成功案例 |
+| 20055 | `vigor-couple-intimate-case.*` | 中後段成年夫妻親密情境 |
+| 20057 | `vigor-bedroom-blanket.*` | 棉被隆起床景 |
 
-## 成人 GIF 建議
+六張原創生成圖已轉為 WebP，並以語義化英文檔名接入 `site/vigor/index.html`。不要以來源不明的真人成人 GIF 取代。
 
-壯陽頁的衝擊不只靠裸露，而是靠「毫無預警地直接播放」。可準備：
-
-1. 第一張：進入案例區前，突然出現的床上動作 GIF。
-2. 第二張：滑到「撐滿」標題前，再出現更近、更生猛的 GIF。
-3. 圖片寬度建議至少 720px。
-4. 每段 2–5 秒循環，檔案盡量壓在 3MB 以內，避免手機載入過慢。
-
-將檔案命名為：
-
-```text
-sensual-gif-01.gif
-sensual-gif-02.gif
-```
-
-放到：
-
-```text
-site/assets/images/
-```
-
-再在 `site/vigor/index.html` 把兩處 `sensual-gif-placeholder.svg` 分別改成新檔名。
+棉被床景的低幅度循環動畫由 `.vigor-blanket img` 套用；`prefers-reduced-motion: reduce` 會停用動畫。

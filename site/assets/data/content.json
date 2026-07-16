@@ -1,0 +1,216 @@
+[
+  {
+    "slug": "why-we-understand-dogs",
+    "route": "articles/why-we-understand-dogs/",
+    "section": "articles",
+    "title": "狗狗不會說話，為什麼人仍能理解牠？",
+    "category": "生活與動物",
+    "summary": "語言不是理解的唯一入口；姿勢、視線、距離與長期相處也會形成共同線索。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活編輯部",
+    "heroImage": null,
+    "tags": [
+      "狗狗",
+      "動物溝通",
+      "生活"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [
+      "new-zealand-winter-clothing"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "人和熟悉的狗狗相處時，會逐漸記住牠看向哪裡、身體有多緊繃、尾巴與耳朵怎麼動，以及牠會在什麼情境靠近或退開。這些線索合在一起，就像一套不必說出口的共同語彙。"
+      },
+      {
+        "type": "heading",
+        "text": "理解來自反覆校正"
+      },
+      {
+        "type": "paragraph",
+        "text": "我們不一定每次都猜對，但會從後續反應修正判斷。長期相處的人之所以看起來特別懂自己的動物，通常不是讀心，而是累積了大量微小而具體的經驗。"
+      },
+      {
+        "type": "note",
+        "text": "突然出現的疼痛、喘氣、食慾改變或異常退縮，仍應交由合格獸醫評估，不要只靠直覺。"
+      }
+    ]
+  },
+  {
+    "slug": "new-zealand-winter-clothing",
+    "route": "articles/new-zealand-winter-clothing/",
+    "section": "articles",
+    "title": "紐西蘭冬季怎麼穿？先把防風與分層做好",
+    "category": "旅遊",
+    "summary": "用簡單分層概念準備溫差、風與短暫降雨，不把行李塞滿厚重單品。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "紐西蘭",
+      "冬季",
+      "行李"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [
+      "alishan-stay-areas-guide"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "冬季行李可以先想成三層：貼身排汗層、保暖中層，以及能擋風與短暫降雨的外層。行程中若會從室內移動到湖邊、山區或開闊地，方便穿脫通常比只帶一件非常厚的外套更實用。"
+      },
+      {
+        "type": "heading",
+        "text": "出發前再看地點與預報"
+      },
+      {
+        "type": "paragraph",
+        "text": "紐西蘭南北距離長，同一天在不同地區的體感可能差很多。請依實際城市、海拔、活動強度與出發前的官方天氣預報調整。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "外層優先確認防風性",
+          "鞋襪預留遇濕後替換的方案",
+          "帽子與手套可用小體積補足保暖",
+          "不要把單一城市的天氣套用到整段旅程"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "alishan-stay-areas-guide",
+    "route": "articles/alishan-stay-areas-guide/",
+    "section": "articles",
+    "title": "阿里山住宿怎麼選？先分清楚住宿區域與車程",
+    "category": "旅遊",
+    "summary": "先分清森林遊樂區、奮起湖／石棹、公路沿線與嘉義市區，再比較交通方式與實際車程。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "阿里山",
+      "住宿",
+      "交通"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [
+      "new-zealand-winter-clothing"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "搜尋阿里山住宿時，頁面常把不同山區與市區都寫成「阿里山附近」。訂房前應先確認住宿所在區域、抵達方式，以及隔天要前往的活動地點。"
+      },
+      {
+        "type": "heading",
+        "text": "先看區域，再看房型"
+      },
+      {
+        "type": "list",
+        "items": [
+          "森林遊樂區內：適合想減少清晨移動時間的旅客",
+          "奮起湖、石棹與公路沿線：住宿選擇較分散，需確認接駁或自駕車程",
+          "嘉義市區：交通與餐飲方便，但往返山區需要預留完整移動時間",
+          "山區地圖上的短距離，不等於城市道路的短車程"
+        ]
+      },
+      {
+        "type": "note",
+        "text": "實際路況、接駁與營業資訊可能變動，訂房前仍應向住宿方與交通單位確認。"
+      }
+    ]
+  },
+  {
+    "slug": "animal-family-meetup",
+    "route": "events/animal-family-meetup/",
+    "section": "events",
+    "title": "兒童台「動物家族」見面會資訊專區",
+    "category": "兒童與活動",
+    "summary": "集中查看「動物家族」見面會公告、場次異動與活動後報導。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "活動編輯部",
+    "heroImage": null,
+    "tags": [
+      "兒童活動",
+      "見面會",
+      "活動公告"
+    ],
+    "contentType": "event",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "note",
+        "text": "新一季見面會場次尚未公布。"
+      },
+      {
+        "type": "paragraph",
+        "text": "本頁彙整兒童台「動物家族」的公開活動資訊。場次、地點與登場角色以各次公告為準；異動消息會保留原公告時間，避免舊資訊與新場次混在一起。"
+      },
+      {
+        "type": "heading",
+        "text": "這裡會更新"
+      },
+      {
+        "type": "list",
+        "items": [
+          "最新見面會公告",
+          "延期與場次異動",
+          "參加方式與家長注意事項",
+          "活動結束報導",
+          "歷次活動整理"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "information-correction-hub",
+    "route": "news/information-correction-hub/",
+    "section": "news",
+    "title": "事件資訊、聲明與更正專區",
+    "category": "社會與網路",
+    "summary": "彙整報導、轉載、聲明、澄清與更正，保留各版本的發布時間。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "社會編輯部",
+    "heroImage": null,
+    "tags": [
+      "資訊查核",
+      "聲明",
+      "更正"
+    ],
+    "contentType": "narrative-evidence",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "note",
+        "text": "目前沒有新增更正事項。"
+      },
+      {
+        "type": "paragraph",
+        "text": "同一事件可能同時存在初始報導、轉載、網友反應、當事人或機構聲明，以及後續澄清與更正。本頁會保留各版本的發布時間與相互連結。"
+      },
+      {
+        "type": "heading",
+        "text": "資訊分類"
+      },
+      {
+        "type": "list",
+        "items": [
+          "初始報導",
+          "轉載與網友反應整理",
+          "當事人聲明",
+          "機構聲明",
+          "澄清與更正",
+          "更正後仍持續流傳的錯誤資訊"
+        ]
+      }
+    ]
+  }
+]

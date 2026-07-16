@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>雙人紐西蘭幸福之旅｜幸福地球</title>
+  <meta name="description" content="雙人紐西蘭幸福之旅限時登記活動。">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/lucky.css">
+  <link rel="stylesheet" href="../assets/css/travel.css">
+</head>
+<body class="lucky-page travel-page" data-prize-page data-page-kind="travel" data-prize-name="雙人紐西蘭幸福之旅">
+<div class="lucky-wrap">
+  <div class="lucky-header">旅遊｜雙人紐西蘭幸福之旅</div>
+  <section class="lucky-hero">
+    <p class="eyebrow">New Zealand Happiness Journey</p>
+    <h1>兩人同行，現在登記</h1>
+    <h2>完成簡短旅遊偏好，就有一次免費抽選資格</h2>
+    <p class="counter">本日登記名額即將額滿</p>
+  </section>
+
+  <section>
+    <div class="wheel-wrap">
+      <div class="pointer">▼</div>
+      <div class="wheel" id="wheel" data-label="幸福旅程"></div>
+    </div>
+    <button class="lucky-button" id="spinButton" type="button">立即抽選旅行資格</button>
+  </section>
+
+  <section class="prize-grid" aria-label="活動內容">
+    <div class="prize">雙人旅行資格</div>
+    <div class="prize">住宿升等機會</div>
+    <div class="prize">旅遊購物金</div>
+    <div class="prize">行李好禮</div>
+  </section>
+
+  <p class="travel-note">活動行程、日期與適用條件將於資格確認後顯示。本頁不會連接旅行社、付款系統或真實報名服務。</p>
+
+  <section class="claim-panel hidden" id="claimPanel">
+    <h2 id="stepTitle"></h2>
+    <div id="stepBody"></div>
+    <button class="lucky-button" id="stepButton" type="button"></button>
+  </section>
+
+  <section class="claim-panel hidden" id="trapPanel">
+    <div class="trap">
+      <h2>旅行資格無法被驗證。</h2>
+      <p>你填寫的內容沒有離開這個頁面，也沒有任何真實活動主辦單位收到資料。</p>
+      <p><strong>限時名額與旅行想像，也可能只是讓人繼續填寫的誘餌。</strong></p>
+      <button class="button ghost" id="repeatClaim" type="button">重新填寫領獎資料</button>
+      <button class="button ghost" data-restart type="button">重新開始</button>
+    </div>
+    <div class="hidden" id="cluePanel"></div>
+  </section>
+
+  <footer class="footer"><div class="container"><strong>幸福地球</strong><br>旅遊頻道｜由幸福地球數位內容有限公司營運。<br><a href="../">返回幸福地球</a> · <a href="../articles/new-zealand-winter-clothing/">紐西蘭冬季穿著</a></div></footer>
+</div>
+
+<div class="modal-backdrop" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="travelPrizeTitle" aria-hidden="true">
+  <div class="modal prize-modal">
+    <div class="prize-spark" aria-hidden="true">✈️</div>
+    <h2 id="travelPrizeTitle">恭喜獲選</h2>
+    <p class="prize-name" data-prize-name>雙人紐西蘭幸福之旅</p>
+    <p>請於 <strong class="countdown" data-countdown>09:58</strong> 內完成資格確認，逾期將釋出名額。</p>
+    <button class="lucky-button" id="claimStart" type="button">立即確認旅行資格</button>
+  </div>
+</div>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lucky.js"></script>
+</body>
+</html>

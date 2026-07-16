@@ -8,7 +8,11 @@
 - `/archive/`：地球網路文化衝擊資料庫
 - `/vigor/`：皇家命門研究院，生猛壯陽內容農場頁
 - `/lucky/`：桃園幸福生活節，可反覆填寫的假中獎流程
+- `/travel/`：雙人紐西蘭幸福之旅，獨立旅遊活動頁
 - `/origin/`：星際靈魂來源鑑定所
+- `/articles/`：生活與旅遊文章索引
+- `/events/`：活動公告與報導索引
+- `/news/`：社會報導、聲明與更正索引
 - `/backstage/`：幸福地球內容製作中心
 
 ## 安全界線
@@ -45,27 +49,25 @@ http://localhost:8000/
 
 不要直接雙擊 HTML；透過簡單 HTTP server 預覽，路徑會比較穩定。
 
-## 圖片替換
+## Vigor 圖片
 
-目前使用本地 SVG 佔位圖。詳見：
+Vigor 的六個語義化圖片位置詳見：
 
 ```text
 site/assets/images/README.md
 ```
 
-成人 GIF 的主要位置：
+六張 Vigor 原創生成圖已轉為 WebP 並接入公開頁；語義化檔名與用途請見 `IMAGE_SWAP_GUIDE.md`。
+
+## 文章系統
+
+完整治理 metadata 位於：
 
 ```text
-site/vigor/index.html
+content/articles-metadata.json
 ```
 
-搜尋：
-
-```text
-sensual-gif-placeholder.svg
-```
-
-收到正式圖片後，可以把檔案放進 `site/assets/images/`，再修改 `src`。所有資產都在 repo 內，不依賴 Manus Storage。
+此檔不會部署到 GitHub Pages。公開頁使用 `site/assets/data/content.json`；個別文章路由以 `data-slug` 套用 `site/assets/js/article-page.js` 共用模板。
 
 ## 文案修改
 
@@ -73,6 +75,9 @@ sensual-gif-placeholder.svg
 
 - 壯陽頁：`site/vigor/index.html`
 - 抽獎頁：`site/lucky/index.html`
+- 紐西蘭活動頁：`site/travel/index.html`
+- 公開文章資料：`site/assets/data/content.json`
+- 內部文章 metadata：`content/articles-metadata.json`
 - 靈魂測驗題目：`site/assets/js/origin.js`
 - 抽獎流程：`site/assets/js/lucky.js`
 - 共用樣式：`site/assets/css/`

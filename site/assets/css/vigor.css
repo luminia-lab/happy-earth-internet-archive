@@ -14,7 +14,8 @@ body.vigor-page { background: #f8f1e5; color: #2a120b; }
 .vigor-big { font-size: clamp(1.35rem,4vw,2.1rem); font-weight:900; color:#d00000; text-align:center; line-height:1.45; }
 .vigor-image { border: 8px solid #ead7ab; background:#f2e7cf; }
 .vigor-image img { width:100%; }
-.vigor-caption { text-align:center; font-weight:800; padding:8px; background:#f4e5bd; }
+figure.vigor-image { margin:18px 0; overflow:hidden; }
+.vigor-blanket img { transform-origin:center; animation:blanket-breathe 5.8s ease-in-out infinite; }
 .vigor-cta { position:sticky; bottom:0; z-index:15; background:#19a63b; color:white; width:100%; border:0; font-size:1.08rem; font-weight:900; padding:15px; }
 .claim-list { display:grid; gap:12px; }
 .claim { border-left:7px solid #8b0000; background:#fff7e6; padding:14px 16px; }
@@ -25,3 +26,12 @@ body.vigor-page { background: #f8f1e5; color: #2a120b; }
 .comment .meta { color:#9a7a5e; font-size:.82rem; }
 .fake-line { background:#23bd3e;color:#fff;border:0;border-radius:6px;padding:14px 18px;font-weight:900;width:100%;font-size:1.1rem; }
 .vigor-disclaimer { font-size:.75rem; color:#8b7355; text-align:center; padding:18px; }
+@keyframes blanket-breathe {
+  0%,100% { transform:translate3d(0,0,0) scale(1); }
+  42% { transform:translate3d(2px,-2px,0) scale(1.01); }
+  48% { transform:translate3d(-1px,-1px,0) scale(1.008) rotate(.12deg); }
+  54% { transform:translate3d(2px,0,0) scale(1.01) rotate(-.12deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vigor-blanket img { animation:none; transform:none; }
+}

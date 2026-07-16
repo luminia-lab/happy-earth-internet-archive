@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>桃園幸福生活節｜幸福地球活動</title>
+  <title>桃園幸福生活節｜幸福地球</title>
   <meta name="description" content="你可能已成為第8,888,888位特別訪客。">
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="../assets/css/lucky.css">
 </head>
-<body class="lucky-page">
+<body class="lucky-page" data-prize-page data-page-kind="lucky" data-prize-name="現金 50,000 元">
 <div class="lucky-wrap">
-  <div class="lucky-header">幸福地球活動｜桃園幸福生活節</div>
+  <div class="lucky-header">活動｜桃園幸福生活節</div>
   <section class="lucky-hero">
     <h1>恭喜！</h1>
     <h2>你的裝置已獲選為桃園幸福生活節特別用戶</h2>
@@ -21,7 +21,7 @@
   <section>
     <div class="wheel-wrap">
       <div class="pointer">▼</div>
-      <div class="wheel" id="wheel"></div>
+      <div class="wheel" id="wheel" data-label="幸福地球"></div>
     </div>
     <button class="lucky-button" id="spinButton">立即免費抽獎</button>
   </section>
@@ -33,13 +33,6 @@
     <div class="prize">按摩椅</div>
     <div class="prize">超商購物金</div>
     <div class="prize">再接再厲</div>
-  </section>
-
-  <section class="claim-panel hidden" id="resultPanel">
-    <img src="../assets/images/winner-placeholder.svg" alt="中獎示意圖">
-    <h2 style="text-align:center;color:#d71920;font-size:2rem">恭喜！你抽中現金 50,000 元！</h2>
-    <p style="text-align:center">請於 09:58 內完成資格確認，逾期將釋出名額。</p>
-    <button class="lucky-button" id="claimStart">立即領取獎品</button>
   </section>
 
   <section class="claim-panel hidden" id="claimPanel">
@@ -54,6 +47,7 @@
       <p style="font-size:1.3rem">你仍然相信自己中獎了嗎？</p>
       <p>地球網路文化衝擊記錄：<strong>祝賀也可能是一種誘餌。</strong></p>
       <button class="button" id="showClues">查看詐騙線索</button>
+      <button class="button ghost" id="repeatClaim">重新填寫領獎資料</button>
       <button class="button ghost" data-restart>重新開始</button>
     </div>
     <div class="clues hidden" id="cluePanel" style="margin-top:18px">
@@ -75,10 +69,18 @@
     <h2>本週得主</h2>
     <img src="../assets/images/couple-shared.svg" alt="雙人旅遊得主示意圖">
     <p><strong>桃園市林先生與伴侶：</strong>「原本只是隨手點進來，沒想到真的抽到雙人紐西蘭旅遊！」</p>
-    <p class="small">讀者考古提示：這對夫妻也出現在健康站與靈魂測驗站。</p>
   </section>
 
-  <footer class="footer"><div class="container"><strong>幸福地球活動</strong><br>由幸福地球數位內容有限公司營運。<br><a href="../">返回幸福地球</a> · <a href="../archive/">內容透明度資料庫</a></div></footer>
+  <footer class="footer"><div class="container"><strong>幸福地球</strong><br>活動頻道｜由幸福地球數位內容有限公司營運。<br><a href="../">返回幸福地球</a> · <a href="../archive/">內容透明度資料庫</a></div></footer>
+</div>
+<div class="modal-backdrop" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="prizeModalTitle" aria-hidden="true">
+  <div class="modal prize-modal">
+    <div class="prize-spark" aria-hidden="true">🎉</div>
+    <h2 id="prizeModalTitle">恭喜中獎</h2>
+    <p class="prize-name" data-prize-name>現金 50,000 元</p>
+    <p>請於 <strong class="countdown" data-countdown>09:58</strong> 內完成資格確認，逾期將釋出名額。</p>
+    <button class="lucky-button" id="claimStart" type="button">立即領取獎品</button>
+  </div>
 </div>
 <script src="../assets/js/common.js"></script>
 <script src="../assets/js/lucky.js"></script>

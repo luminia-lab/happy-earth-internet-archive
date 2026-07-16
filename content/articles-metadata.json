@@ -1,0 +1,118 @@
+[
+  {
+    "slug": "why-we-understand-dogs",
+    "route": "articles/why-we-understand-dogs/",
+    "title": "狗狗不會說話，為什麼人仍能理解牠？",
+    "category": "生活與動物",
+    "summary": "語言不是理解的唯一入口；姿勢、視線、距離與長期相處也會形成共同線索。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活編輯部",
+    "heroImage": null,
+    "tags": [
+      "狗狗",
+      "動物溝通",
+      "生活"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "relatedArticles": [
+      "new-zealand-winter-clothing"
+    ],
+    "sourceNote": "示範性短頁；未連結任何角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "new-zealand-winter-clothing",
+    "route": "articles/new-zealand-winter-clothing/",
+    "title": "紐西蘭冬季怎麼穿？先把防風與分層做好",
+    "category": "旅遊",
+    "summary": "用簡單分層概念準備溫差、風與短暫降雨，不把行李塞滿厚重單品。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "紐西蘭",
+      "冬季",
+      "行李"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "relatedArticles": [
+      "alishan-stay-areas-guide"
+    ],
+    "sourceNote": "示範性實用短頁；不構成特定行程建議。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "alishan-stay-areas-guide",
+    "route": "articles/alishan-stay-areas-guide/",
+    "title": "阿里山住宿怎麼選？先分清楚住宿區域與車程",
+    "category": "旅遊",
+    "summary": "先分清森林遊樂區、奮起湖／石棹、公路沿線與嘉義市區，再比較交通方式與實際車程。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "阿里山",
+      "住宿",
+      "交通"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "relatedArticles": [
+      "new-zealand-winter-clothing"
+    ],
+    "sourceNote": "等待主控台提供或核准實際推薦名單。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "animal-family-meetup",
+    "route": "events/animal-family-meetup/",
+    "title": "兒童台「動物家族」見面會資訊專區",
+    "category": "兒童與活動",
+    "summary": "集中查看「動物家族」見面會公告、場次異動與活動後報導。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "活動編輯部",
+    "heroImage": null,
+    "tags": [
+      "兒童活動",
+      "見面會",
+      "活動公告"
+    ],
+    "contentType": "event",
+    "canonicalStatus": "pending",
+    "relatedArticles": [],
+    "sourceNote": "不得自行建立動物家族角色、活動日期或事件結果。",
+    "characterLinks": [],
+    "timelineNote": "等待主控台裁決。"
+  },
+  {
+    "slug": "information-correction-hub",
+    "route": "news/information-correction-hub/",
+    "title": "事件資訊、聲明與更正專區",
+    "category": "社會與網路",
+    "summary": "彙整報導、轉載、聲明、澄清與更正，保留各版本的發布時間。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "社會編輯部",
+    "heroImage": null,
+    "tags": [
+      "資訊查核",
+      "聲明",
+      "更正"
+    ],
+    "contentType": "narrative-evidence",
+    "canonicalStatus": "pending",
+    "relatedArticles": [],
+    "sourceNote": "僅建立網路霸凌篇文章鏈模板，不填入事件真相。",
+    "characterLinks": [],
+    "timelineNote": "等待主控台提供事件順序。"
+  }
+]

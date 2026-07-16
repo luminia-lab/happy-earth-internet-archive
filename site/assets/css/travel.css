@@ -1,0 +1,16 @@
+body.travel-page{background:#edf8f6;color:#143c3a;}
+.travel-page .lucky-header{background:#087f73;}
+.travel-page .lucky-hero{background:linear-gradient(#d9f7ef,#fff);}
+.travel-page .lucky-hero h1{color:#087f73;}
+.travel-page .counter{color:#176b64;}
+.travel-page .wheel{border-color:#f7cc62;background:conic-gradient(#087f73 0 60deg,#f7cc62 60deg 120deg,#5bb98c 120deg 180deg,#4e86c6 180deg 240deg,#da6d4b 240deg 300deg,#b9d8d0 300deg 360deg);}
+.travel-page .wheel::after{color:#087f73;border-color:#f7cc62;}
+.travel-page .pointer{color:#087f73;}
+.travel-page .lucky-button{background:#087f73;}
+.travel-page .prize{border-color:#81c7b8;background:#f4fffc;}
+.travel-page .claim-panel{border-top-color:#81c7b8;}
+.travel-page .step-dot{background:#087f73;}
+.travel-page .prize-modal{border-color:#f7cc62;background:linear-gradient(#f4fffc,#fff);}
+.travel-page .prize-modal h2{color:#087f73;}
+.travel-page .prize-name{color:#176b64;}
+.travel-note{margin:20px;padding:14px 16px;border-radius:12px;background:#f2fbf9;color:#416c68;font-size:.9rem;}

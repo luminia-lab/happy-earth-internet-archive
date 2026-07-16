@@ -1,0 +1,18 @@
+執行：HAPPY_EARTH_V0_3_ARTICLE_BATCH_DEPLOY
+
+唯一輸入：happy-earth-v0.3-article-batch.zip
+
+任務：
+1. 以目前 GitHub main 最新 commit 為基準。
+2. 將 ZIP 內檔案覆蓋或新增到相同 repository 路徑。
+3. 不自行潤色、不新增圖片、不改 IP 設定。
+4. 執行 validate-site.mjs、全部 JavaScript 語法檢查與 390×844 Chromium 抽查。
+5. 驗證通過後 commit 到 main，commit message：
+   Happy Earth v0.3 article batch
+6. 等待 GitHub Pages 部署成功。
+
+特別限制：
+- 2026 世界盃文是 2026-07-16 決賽前版本。
+- 颱風文不可自行加上未核對的縣市停班停課名單。
+- 台南重機業者、政治人物與交通事件均為虛構。
+- 不把內部 metadata 的治理欄位放進公開 JSON。

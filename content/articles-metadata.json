@@ -15,10 +15,10 @@
       "生活"
     ],
     "contentType": "useful",
-    "canonicalStatus": "pending",
     "relatedArticles": [
       "new-zealand-winter-clothing"
     ],
+    "canonicalStatus": "pending",
     "sourceNote": "示範性短頁；未連結任何角色事件。",
     "characterLinks": [],
     "timelineNote": null
@@ -39,10 +39,10 @@
       "行李"
     ],
     "contentType": "useful",
-    "canonicalStatus": "pending",
     "relatedArticles": [
       "alishan-stay-areas-guide"
     ],
+    "canonicalStatus": "pending",
     "sourceNote": "示範性實用短頁；不構成特定行程建議。",
     "characterLinks": [],
     "timelineNote": null
@@ -63,10 +63,10 @@
       "交通"
     ],
     "contentType": "useful",
-    "canonicalStatus": "pending",
     "relatedArticles": [
       "new-zealand-winter-clothing"
     ],
+    "canonicalStatus": "pending",
     "sourceNote": "等待主控台提供或核准實際推薦名單。",
     "characterLinks": [],
     "timelineNote": null
@@ -87,8 +87,8 @@
       "活動公告"
     ],
     "contentType": "event",
-    "canonicalStatus": "pending",
     "relatedArticles": [],
+    "canonicalStatus": "pending",
     "sourceNote": "不得自行建立動物家族角色、活動日期或事件結果。",
     "characterLinks": [],
     "timelineNote": "等待主控台裁決。"
@@ -109,10 +109,540 @@
       "更正"
     ],
     "contentType": "narrative-evidence",
-    "canonicalStatus": "pending",
     "relatedArticles": [],
+    "canonicalStatus": "pending",
     "sourceNote": "僅建立網路霸凌篇文章鏈模板，不填入事件真相。",
     "characterLinks": [],
     "timelineNote": "等待主控台提供事件順序。"
+  },
+  {
+    "slug": "marine-aquarium-beginner-guide",
+    "route": "articles/marine-aquarium-beginner-guide/",
+    "title": "海水缸新手入門：先養水，再養魚",
+    "category": "生活與動物",
+    "summary": "從缸體、海鹽、比重、循環到入魚節奏，先把最容易出事的地方整理清楚。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活編輯部",
+    "heroImage": null,
+    "tags": [
+      "海水缸",
+      "養魚",
+      "新手"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [
+      "why-we-understand-dogs"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "使用者指定主題；公開內容為幸福地球網站文章。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "tainan-heavy-motorcycle-school-sponsored",
+    "route": "articles/tainan-heavy-motorcycle-school-sponsored/",
+    "title": "台南重機駕訓怎麼選？場地、車種與道路感一次看",
+    "category": "業配與交通",
+    "summary": "從封閉場訓、教練比、車輛保養到考照後練習，整理報名前應確認的重點。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "合作企劃部",
+    "heroImage": null,
+    "tags": [
+      "台南",
+      "重機駕訓",
+      "業配"
+    ],
+    "contentType": "sponsored",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "虛構業配，店名與方案不得對應真實業者。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "typhoon-closure-notice-20260711",
+    "route": "news/typhoon-closure-notice-20260711/",
+    "title": "2026年7月11日颱風停班停課資訊：請以官方公告為準",
+    "category": "生活公告",
+    "summary": "停班停課由各地方政府依法決定，轉傳截圖前先核對發布時間與官方來源。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "即時資訊組",
+    "heroImage": null,
+    "tags": [
+      "颱風",
+      "停班停課",
+      "公告"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "僅提供官方公告查詢與辨識方式，不自行宣告任何縣市停班停課。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "taiwanese-fried-chicken-hidden-combos",
+    "route": "articles/taiwanese-fried-chicken-hidden-combos/",
+    "title": "鹽酥雞隱藏吃法：不是全部加辣就叫會吃",
+    "category": "美食",
+    "summary": "九層塔、蒜片、酸菜、胡椒與甜辣醬，搭配得好比一直加料更重要。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "美食編輯部",
+    "heroImage": null,
+    "tags": [
+      "鹽酥雞",
+      "宵夜",
+      "搭配"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "使用者指定主題；公開內容為幸福地球網站文章。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "meeting-english-words-examples",
+    "route": "articles/meeting-english-words-examples/",
+    "title": "會議英文常用單字與例句：從開場到收尾都用得到",
+    "category": "職場與學習",
+    "summary": "整理 agenda、clarify、follow up 等高頻詞，附上不過度正式的實用例句。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "職場編輯部",
+    "heroImage": null,
+    "tags": [
+      "英文",
+      "會議",
+      "職場"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "使用者指定主題；公開內容為幸福地球網站文章。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "intersection-redesign-controversy-comments",
+    "route": "news/intersection-redesign-controversy-comments/",
+    "title": "路口改造引爭議：多一座庇護島，為什麼網友吵成兩派？",
+    "category": "社會與網路",
+    "summary": "一項虛構路口改造，引出行人安全、車流效率與資訊落差的典型爭論。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "社會編輯部",
+    "heroImage": null,
+    "tags": [
+      "交通",
+      "行人",
+      "網友評論"
+    ],
+    "contentType": "mixed",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "虛構交通爭議與留言，用於內容農場／輿論形式。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "fish-bone-stuck-in-throat",
+    "route": "articles/fish-bone-stuck-in-throat/",
+    "title": "魚刺卡到喉嚨怎麼辦？不要吞飯、喝醋或硬挖",
+    "category": "健康",
+    "summary": "先停止進食；若持續刺痛、吞嚥困難、流血或呼吸異常，應盡快就醫。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "健康編輯部",
+    "heroImage": null,
+    "tags": [
+      "魚刺",
+      "急救",
+      "就醫"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "健康安全文；避免民間偏方，採保守就醫建議。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "local-care-politician-press-release",
+    "route": "news/local-care-politician-press-release/",
+    "title": "林議員關懷地方建設：傾聽鄉親需求，持續為幸福市打拚",
+    "category": "地方政治",
+    "summary": "會勘、握手、聽取陳情與要求局處研議，一篇標準地方關懷公關稿。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "地方中心",
+    "heroImage": null,
+    "tags": [
+      "地方政治",
+      "會勘",
+      "新聞稿"
+    ],
+    "contentType": "sponsored",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "虛構政治公關文；人物與地點均不得對應真人。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "world-cup-2026-final-analysis",
+    "route": "articles/world-cup-2026-final-analysis/",
+    "title": "2026世界盃決賽前分析：西班牙對阿根廷，勝負可能在這三區",
+    "category": "體育",
+    "summary": "截至7月16日，決賽組合已確定；西班牙的控制力將碰上阿根廷的轉換與經驗。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "體育編輯部",
+    "heroImage": null,
+    "tags": [
+      "2026世界盃",
+      "西班牙",
+      "阿根廷"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "賽事資訊截至2026-07-16；決賽前分析，後續需依官方賽果更新。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "drunk-and-drug-impaired-driving",
+    "route": "news/drunk-and-drug-impaired-driving/",
+    "title": "酒駕、毒駕不是運氣問題：反應變慢之前，你通常不會先知道",
+    "category": "社會與交通",
+    "summary": "酒精、藥物與毒品都可能破壞判斷、注意力與反應，最安全的選項是不開車。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "社會編輯部",
+    "heroImage": null,
+    "tags": [
+      "酒駕",
+      "毒駕",
+      "交通安全"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "使用者指定主題；公開內容為幸福地球網站文章。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "the-meaning-of-meaning",
+    "route": "articles/the-meaning-of-meaning/",
+    "title": "看完這篇，你就會知道看完這篇代表你看完了",
+    "category": "生活",
+    "summary": "這是一篇有內容的文章，內容就是告訴你文章需要內容，而你正在閱讀內容。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "特約觀察員",
+    "heroImage": null,
+    "tags": [
+      "人生",
+      "道理",
+      "廢文"
+    ],
+    "contentType": "mixed",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "relationship-fades-signs",
+    "route": "articles/relationship-fades-signs/",
+    "title": "感情變淡不是不愛了？三個你早就知道的跡象",
+    "category": "感情",
+    "summary": "當聊天變少、期待下降、相處只剩日程，關係可能真的和以前不一樣。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "感情",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "silent-people-understand-most",
+    "route": "articles/silent-people-understand-most/",
+    "title": "真正懂你的人，往往什麼都不說",
+    "category": "心靈",
+    "summary": "不說話可能是理解，也可能只是沒有話要說。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "home-is-a-feeling",
+    "route": "articles/home-is-a-feeling/",
+    "title": "家不是一個地方，而是一種回到家裡的感覺",
+    "category": "家庭",
+    "summary": "有些地方叫住處，有些住處讓你想回去。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "家庭",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "after-thirty-realizations",
+    "route": "articles/after-thirty-realizations/",
+    "title": "三十歲以後才懂的五件事，看完沉默了",
+    "category": "生活",
+    "summary": "年紀增加後，人通常會比以前多活幾年。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "生活",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "family-needs-communication",
+    "route": "articles/family-needs-communication/",
+    "title": "一家人最重要的不是有話說，而是把話說出來",
+    "category": "家庭",
+    "summary": "如果有話卻完全不說，別人通常很難知道。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "家庭",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "letting-go-is-growing-up",
+    "route": "articles/letting-go-is-growing-up/",
+    "title": "真正的成熟，是學會放下你已經拿不動的東西",
+    "category": "心靈",
+    "summary": "放下之後，手上確實會比較空。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "details-show-love",
+    "route": "articles/details-show-love/",
+    "title": "在乎你的人，會記得那些他記得的小事",
+    "category": "感情",
+    "summary": "記得細節可能代表在意，也可能只是記性很好。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "感情",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "quality-life-small-habits",
+    "route": "articles/quality-life-small-habits/",
+    "title": "生活品質，往往藏在每天都會做的事情裡",
+    "category": "生活",
+    "summary": "把日常做好，日常就會變成被做好的日常。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "生活",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "tired-because-sensible",
+    "route": "articles/tired-because-sensible/",
+    "title": "你不是累，你只是太久沒有不累了",
+    "category": "心靈",
+    "summary": "有時候疲累的原因，就是持續感到疲累。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "breakfast-personality",
+    "route": "articles/breakfast-personality/",
+    "title": "早餐吃什麼，暴露了你今天早餐吃了什麼",
+    "category": "娛樂",
+    "summary": "選飯糰的人通常選了飯糰，喝豆漿的人多半喝了豆漿。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "娛樂",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "love-does-not-make-you-guess",
+    "route": "articles/love-does-not-make-you-guess/",
+    "title": "真正愛你的人，不會讓你猜，除非他沒有說",
+    "category": "感情",
+    "summary": "溝通可以減少猜測，沒有溝通時往往比較需要猜。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "感情",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "declutter-your-life",
+    "route": "articles/declutter-your-life/",
+    "title": "丟掉這七樣東西，家裡就會少七樣東西",
+    "category": "生活",
+    "summary": "斷捨離最直接的效果，是物品數量下降。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "生活",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "simple-happiness",
+    "route": "articles/simple-happiness/",
+    "title": "幸福其實很簡單，複雜的是把簡單說得很複雜",
+    "category": "心靈",
+    "summary": "當事情不複雜時，它通常比較簡單。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "canonicalStatus": "pending",
+    "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
   }
 ]

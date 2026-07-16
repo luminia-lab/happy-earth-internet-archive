@@ -212,5 +212,1105 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "marine-aquarium-beginner-guide",
+    "route": "articles/marine-aquarium-beginner-guide/",
+    "section": "articles",
+    "title": "海水缸新手入門：先養水，再養魚",
+    "category": "生活與動物",
+    "summary": "從缸體、海鹽、比重、循環到入魚節奏，先把最容易出事的地方整理清楚。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活編輯部",
+    "heroImage": null,
+    "tags": [
+      "海水缸",
+      "養魚",
+      "新手"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [
+      "why-we-understand-dogs"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "海水缸最常見的失敗，不是設備不夠昂貴，而是太快放魚。新缸需要時間建立能處理含氮廢物的菌相；水看起來透明，不代表氨與亞硝酸鹽已經安全。"
+      },
+      {
+        "type": "heading",
+        "text": "開缸前先準備"
+      },
+      {
+        "type": "list",
+        "items": [
+          "確認缸體、過濾、加溫或冷卻與造流設備能穩定運作",
+          "使用海水專用鹽，不用食鹽代替",
+          "用比重計或折射計確認鹽度，並維持穩定溫度",
+          "先完成循環與水質測試，再考慮第一批生物"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "第一批魚不要一次放滿"
+      },
+      {
+        "type": "paragraph",
+        "text": "循環完成後也要少量、分批加入，並觀察呼吸、食慾、體表與水質。新魚入缸前應做溫度與鹽度適應；不同來源的生物不宜把袋水直接倒進主缸。"
+      },
+      {
+        "type": "note",
+        "text": "缸內若出現魚隻急促喘氣、側躺、集體浮頭或氨／亞硝酸鹽升高，先停止餵食、加強溶氧並依水質狀況處理。不要靠大量添加不明藥劑掩蓋問題。"
+      }
+    ]
+  },
+  {
+    "slug": "tainan-heavy-motorcycle-school-sponsored",
+    "route": "articles/tainan-heavy-motorcycle-school-sponsored/",
+    "section": "articles",
+    "title": "台南重機駕訓怎麼選？場地、車種與道路感一次看",
+    "category": "業配與交通",
+    "summary": "從封閉場訓、教練比、車輛保養到考照後練習，整理報名前應確認的重點。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "合作企劃部",
+    "heroImage": null,
+    "tags": [
+      "台南",
+      "重機駕訓",
+      "業配"
+    ],
+    "contentType": "sponsored",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "note",
+        "text": "本文為虛構業配示範，文中「南風重機駕訓中心」為虛構名稱，沒有實際招生或收費。"
+      },
+      {
+        "type": "paragraph",
+        "text": "第一次接觸大型重型機車，真正需要的不是一開始追求速度，而是低速平衡、視線、離合器與油門控制。選駕訓班時，應先看場地是否足以反覆練習，而不是只看「最快幾天拿照」。"
+      },
+      {
+        "type": "heading",
+        "text": "報名前可先問四件事"
+      },
+      {
+        "type": "list",
+        "items": [
+          "練習車種與座高是否適合自己的體型",
+          "教練同時帶幾名學員，是否有足夠個別指導",
+          "雨天、補課與請假規則是否清楚",
+          "車輛保養、護具與場地安全措施是否公開"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "本次合作方案"
+      },
+      {
+        "type": "paragraph",
+        "text": "南風重機駕訓中心主打小班制與晚間班，提供封閉場地基礎訓練、考照流程說明與課後道路安全講座。實際費用、班次與資格仍應以正式契約與主管機關規定為準。"
+      }
+    ]
+  },
+  {
+    "slug": "typhoon-closure-notice-20260711",
+    "route": "news/typhoon-closure-notice-20260711/",
+    "section": "news",
+    "title": "2026年7月11日颱風停班停課資訊：請以官方公告為準",
+    "category": "生活公告",
+    "summary": "停班停課由各地方政府依法決定，轉傳截圖前先核對發布時間與官方來源。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "即時資訊組",
+    "heroImage": null,
+    "tags": [
+      "颱風",
+      "停班停課",
+      "公告"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "note",
+        "text": "本頁為資訊辨識說明，不代替行政院人事行政總處或地方政府公告。"
+      },
+      {
+        "type": "paragraph",
+        "text": "颱風期間，停班停課資訊可能因縣市、行政區與發布時段不同而更新。請直接查看行政院人事行政總處的天然災害停止上班及上課情形，並搭配所在地縣市政府公告。"
+      },
+      {
+        "type": "heading",
+        "text": "收到轉傳圖先看三件事"
+      },
+      {
+        "type": "list",
+        "items": [
+          "日期是否為2026年7月11日，而不是舊圖重傳",
+          "公告對象是整個縣市，還是特定鄉鎮、學校或機關",
+          "發布單位與時間是否清楚，是否有後續修正"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "醫療、消防、交通與其他必要服務可能另有出勤規定；民間勞工的出勤與工資問題，也不應只用「有沒有放颱風假」一句話處理。"
+      }
+    ]
+  },
+  {
+    "slug": "taiwanese-fried-chicken-hidden-combos",
+    "route": "articles/taiwanese-fried-chicken-hidden-combos/",
+    "section": "articles",
+    "title": "鹽酥雞隱藏吃法：不是全部加辣就叫會吃",
+    "category": "美食",
+    "summary": "九層塔、蒜片、酸菜、胡椒與甜辣醬，搭配得好比一直加料更重要。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "美食編輯部",
+    "heroImage": null,
+    "tags": [
+      "鹽酥雞",
+      "宵夜",
+      "搭配"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "鹽酥雞的樂趣不只在主角。真正讓整袋味道有層次的，常是九層塔、蒜片、洋蔥、酸菜與不同粉料。"
+      },
+      {
+        "type": "heading",
+        "text": "四種不容易失手的搭法"
+      },
+      {
+        "type": "list",
+        "items": [
+          "雞肉＋四季豆＋甜不辣：油香、脆感與澱粉感比較平衡",
+          "魷魚＋杏鮑菇＋九層塔：香氣重，但不會全部都是肉",
+          "米血＋豆干＋酸菜：適合喜歡鹹香、嚼感的人",
+          "雞皮＋玉米筍＋蒜片：用清甜配高油脂，吃到後段比較不膩"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "粉不要每一種都全加"
+      },
+      {
+        "type": "paragraph",
+        "text": "胡椒鹽、辣粉、梅粉與孜然會互相搶味。第一次點新店，先選一到兩種主調，才吃得出店家的炸功與原味。"
+      },
+      {
+        "type": "note",
+        "text": "炸物適合偶爾吃；有吞嚥困難、牙口問題或需限制油鹽者，應依個人狀況調整。"
+      }
+    ]
+  },
+  {
+    "slug": "meeting-english-words-examples",
+    "route": "articles/meeting-english-words-examples/",
+    "section": "articles",
+    "title": "會議英文常用單字與例句：從開場到收尾都用得到",
+    "category": "職場與學習",
+    "summary": "整理 agenda、clarify、follow up 等高頻詞，附上不過度正式的實用例句。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "職場編輯部",
+    "heroImage": null,
+    "tags": [
+      "英文",
+      "會議",
+      "職場"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "heading",
+        "text": "開場與議程"
+      },
+      {
+        "type": "list",
+        "items": [
+          "agenda 議程：Let’s go through today’s agenda first.",
+          "objective 目標：The main objective of this meeting is to confirm the launch date.",
+          "update 進度更新：Could you give us a quick update?"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "討論與確認"
+      },
+      {
+        "type": "list",
+        "items": [
+          "clarify 釐清：Could you clarify what you mean by “ready”?",
+          "concern 顧慮：My main concern is the delivery timeline.",
+          "option 選項：We have two practical options.",
+          "agree on 達成共識：Can we agree on the next step today?"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "收尾與追蹤"
+      },
+      {
+        "type": "list",
+        "items": [
+          "action item 待辦事項：Let’s review the action items before we finish.",
+          "follow up 後續追蹤：I’ll follow up by email tomorrow.",
+          "deadline 截止日：The deadline is Friday afternoon.",
+          "minutes 會議紀錄：I’ll share the meeting minutes after the call."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "會議英文的重點是清楚，不是把每句話變得很長。先說結論，再補原因與下一步，通常比堆疊艱深單字有效。"
+      }
+    ]
+  },
+  {
+    "slug": "intersection-redesign-controversy-comments",
+    "route": "news/intersection-redesign-controversy-comments/",
+    "section": "news",
+    "title": "路口改造引爭議：多一座庇護島，為什麼網友吵成兩派？",
+    "category": "社會與網路",
+    "summary": "一項虛構路口改造，引出行人安全、車流效率與資訊落差的典型爭論。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "社會編輯部",
+    "heroImage": null,
+    "tags": [
+      "交通",
+      "行人",
+      "網友評論"
+    ],
+    "contentType": "mixed",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "note",
+        "text": "本文事件、地點與留言帳號均為虛構，用於呈現網路輿論結構。"
+      },
+      {
+        "type": "paragraph",
+        "text": "幸福市中正東路新增行人庇護島並縮短部分車道後，尖峰時段回堵照片在社群平台流傳。支持者認為行人終於有安全停留空間，反對者則批評施工前缺乏車流評估。"
+      },
+      {
+        "type": "heading",
+        "text": "網友怎麼說"
+      },
+      {
+        "type": "list",
+        "items": [
+          "@天天開車：每天多塞十五分鐘，誰負責？",
+          "@推嬰兒車的爸：以前過一半就變燈，現在至少有地方停。",
+          "@附近住戶：不是不能改，是標線和號誌要一起調。",
+          "@路過一次的人：這設計一看就有問題。",
+          "@交通工程系路人：只看單張回堵照，不能判斷整體事故風險與通行效率。"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "爭議的核心往往不是「安全或效率只能選一個」，而是施工前後有沒有公開事故資料、號誌方案、尖離峰觀測與後續調整時程。"
+      },
+      {
+        "type": "note",
+        "text": "留言熱度不等於代表性。網路整理文應保留時間、來源與上下文，避免把少數極端留言寫成「全網怒了」。"
+      }
+    ]
+  },
+  {
+    "slug": "fish-bone-stuck-in-throat",
+    "route": "articles/fish-bone-stuck-in-throat/",
+    "section": "articles",
+    "title": "魚刺卡到喉嚨怎麼辦？不要吞飯、喝醋或硬挖",
+    "category": "健康",
+    "summary": "先停止進食；若持續刺痛、吞嚥困難、流血或呼吸異常，應盡快就醫。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "健康編輯部",
+    "heroImage": null,
+    "tags": [
+      "魚刺",
+      "急救",
+      "就醫"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "魚刺卡住後，最重要的是不要再用大口飯、麵包、香蕉或其他食物硬推。這可能讓魚刺扎得更深，甚至傷到咽喉或食道。喝醋也無法在短時間內安全溶解魚刺。"
+      },
+      {
+        "type": "heading",
+        "text": "可以先做什麼"
+      },
+      {
+        "type": "list",
+        "items": [
+          "停止繼續吃東西",
+          "能輕鬆吐出的口中殘渣可以吐掉，不要把手或工具伸進深處亂挖",
+          "記住疼痛位置、發生時間與魚種，盡快找耳鼻喉科或急診評估"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "這些情況不要等"
+      },
+      {
+        "type": "list",
+        "items": [
+          "呼吸困難、聲音改變或大量流口水",
+          "無法吞嚥、胸口痛、頸部腫痛",
+          "吐血、持續出血或劇烈疼痛",
+          "幼兒、高齡者或無法清楚描述症狀者"
+        ]
+      },
+      {
+        "type": "note",
+        "text": "即使刺痛稍微減輕，也可能只是黏膜被刮傷，或魚刺仍停留在較深處。症狀持續時應由醫療人員檢查。"
+      }
+    ]
+  },
+  {
+    "slug": "local-care-politician-press-release",
+    "route": "news/local-care-politician-press-release/",
+    "section": "news",
+    "title": "林議員關懷地方建設：傾聽鄉親需求，持續為幸福市打拚",
+    "category": "地方政治",
+    "summary": "會勘、握手、聽取陳情與要求局處研議，一篇標準地方關懷公關稿。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "地方中心",
+    "heroImage": null,
+    "tags": [
+      "地方政治",
+      "會勘",
+      "新聞稿"
+    ],
+    "contentType": "sponsored",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "note",
+        "text": "文中人物、地點與機關均為虛構。"
+      },
+      {
+        "type": "paragraph",
+        "text": "幸福市議員林家宏今日前往東安里關心排水、道路照明與長者共餐空間，並與里長、居民及相關局處現場交換意見。林家宏表示，地方建設沒有小事，民眾每天走的路、看得到的燈、下雨會不會積水，都是市民最直接的感受。"
+      },
+      {
+        "type": "paragraph",
+        "text": "針對居民反映巷道路面不平與夜間照明不足，林家宏要求相關單位儘速盤點，並在兼顧施工品質與交通安全的前提下提出改善方案。"
+      },
+      {
+        "type": "heading",
+        "text": "傾聽基層，讓建設更貼近生活"
+      },
+      {
+        "type": "paragraph",
+        "text": "林家宏強調，未來將持續走訪各里，整合民意並追蹤辦理進度，讓每一項建設真正回應地方需求。"
+      },
+      {
+        "type": "note",
+        "text": "本文為公關稿體裁示範，不代表幸福地球背書任何政治人物。"
+      }
+    ]
+  },
+  {
+    "slug": "world-cup-2026-final-analysis",
+    "route": "articles/world-cup-2026-final-analysis/",
+    "section": "articles",
+    "title": "2026世界盃決賽前分析：西班牙對阿根廷，勝負可能在這三區",
+    "category": "體育",
+    "summary": "截至7月16日，決賽組合已確定；西班牙的控制力將碰上阿根廷的轉換與經驗。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "體育編輯部",
+    "heroImage": null,
+    "tags": [
+      "2026世界盃",
+      "西班牙",
+      "阿根廷"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "note",
+        "text": "賽事資訊截至2026年7月16日。決賽尚未進行。"
+      },
+      {
+        "type": "paragraph",
+        "text": "西班牙在準決賽以2比0擊敗法國，阿根廷則以2比1逆轉英格蘭。兩隊將在7月19日爭奪冠軍；7月18日由法國與英格蘭進行季軍戰。"
+      },
+      {
+        "type": "heading",
+        "text": "一、中場能不能把壓力變成機會"
+      },
+      {
+        "type": "paragraph",
+        "text": "西班牙擅長用持球與位置交換壓縮對手；阿根廷若只退得太深，可能長時間承受二次進攻。反過來，西班牙前壓後留下的空間，也會成為阿根廷快速轉換的目標。"
+      },
+      {
+        "type": "heading",
+        "text": "二、邊路一對一與回防速度"
+      },
+      {
+        "type": "paragraph",
+        "text": "決賽不只看明星球員持球突破，也看另一側是否及時補位。邊後衛壓上時，後腰與中衛之間的保護可能直接決定失球風險。"
+      },
+      {
+        "type": "heading",
+        "text": "三、最後二十分鐘的換人"
+      },
+      {
+        "type": "paragraph",
+        "text": "淘汰賽後段常由體能、定位球與板凳選擇改變。阿根廷在準決賽最後階段完成逆轉，西班牙則展現控制領先局面的能力。先進球的一方未必能輕鬆守到終場。"
+      },
+      {
+        "type": "note",
+        "text": "本文為賽前分析，不是投注建議。"
+      }
+    ]
+  },
+  {
+    "slug": "drunk-and-drug-impaired-driving",
+    "route": "news/drunk-and-drug-impaired-driving/",
+    "section": "news",
+    "title": "酒駕、毒駕不是運氣問題：反應變慢之前，你通常不會先知道",
+    "category": "社會與交通",
+    "summary": "酒精、藥物與毒品都可能破壞判斷、注意力與反應，最安全的選項是不開車。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "社會編輯部",
+    "heroImage": null,
+    "tags": [
+      "酒駕",
+      "毒駕",
+      "交通安全"
+    ],
+    "contentType": "useful",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "駕駛人常高估自己「還很清醒」。酒精可能降低抑制與風險判斷；部分毒品、鎮靜藥物或混合使用，也可能造成注意力不集中、視覺判斷異常、嗜睡或衝動。"
+      },
+      {
+        "type": "heading",
+        "text": "不要用這些方法自我測試"
+      },
+      {
+        "type": "list",
+        "items": [
+          "喝咖啡、洗冷水澡不會讓酒精立刻消失",
+          "走直線成功不代表可以安全駕駛",
+          "睡一下不代表體內酒精或藥物作用已經結束",
+          "沒有被攔過，不代表之前的駕駛是安全的"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "出門前就決定回家方式"
+      },
+      {
+        "type": "list",
+        "items": [
+          "指定完全不飲酒、不使用影響駕駛物質的駕駛",
+          "搭乘大眾運輸、計程車或合法代駕",
+          "把車留在原地，隔天再處理",
+          "服用處方藥時先看標示並詢問醫師或藥師是否影響駕駛"
+        ]
+      },
+      {
+        "type": "note",
+        "text": "酒駕與毒駕涉及刑事、行政與民事責任，實際規定可能修正；請以現行法規與主管機關公告為準。"
+      }
+    ]
+  },
+  {
+    "slug": "the-meaning-of-meaning",
+    "route": "articles/the-meaning-of-meaning/",
+    "section": "articles",
+    "title": "看完這篇，你就會知道看完這篇代表你看完了",
+    "category": "生活",
+    "summary": "這是一篇有內容的文章，內容就是告訴你文章需要內容，而你正在閱讀內容。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "特約觀察員",
+    "heroImage": null,
+    "tags": [
+      "人生",
+      "道理",
+      "廢文"
+    ],
+    "contentType": "mixed",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "人之所以會往前走，是因為沒有往後走。當你站在原地時，看似沒有前進，其實你只是在原地站著。"
+      },
+      {
+        "type": "heading",
+        "text": "事情往往就是事情本身"
+      },
+      {
+        "type": "paragraph",
+        "text": "遇到問題的時候，首先要面對問題；如果沒有問題，那麼最大的問題，就是目前沒有需要解決的問題。"
+      },
+      {
+        "type": "paragraph",
+        "text": "有人問成功的祕訣是什麼。答案很簡單：成功的人之所以成功，是因為他最後成功了。"
+      },
+      {
+        "type": "heading",
+        "text": "最後的最後，就是文章快結束了"
+      },
+      {
+        "type": "paragraph",
+        "text": "聽君一席話，如聽一席話。看完這篇文章，你不只看完了這篇文章，也完成了閱讀這篇文章這件事。"
+      }
+    ]
+  },
+  {
+    "slug": "relationship-fades-signs",
+    "route": "articles/relationship-fades-signs/",
+    "section": "articles",
+    "title": "感情變淡不是不愛了？三個你早就知道的跡象",
+    "category": "感情",
+    "summary": "當聊天變少、期待下降、相處只剩日程，關係可能真的和以前不一樣。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "感情",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "當聊天變少、期待下降、相處只剩日程，關係可能真的和以前不一樣。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "silent-people-understand-most",
+    "route": "articles/silent-people-understand-most/",
+    "section": "articles",
+    "title": "真正懂你的人，往往什麼都不說",
+    "category": "心靈",
+    "summary": "不說話可能是理解，也可能只是沒有話要說。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "不說話可能是理解，也可能只是沒有話要說。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "home-is-a-feeling",
+    "route": "articles/home-is-a-feeling/",
+    "section": "articles",
+    "title": "家不是一個地方，而是一種回到家裡的感覺",
+    "category": "家庭",
+    "summary": "有些地方叫住處，有些住處讓你想回去。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "家庭",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "有些地方叫住處，有些住處讓你想回去。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "after-thirty-realizations",
+    "route": "articles/after-thirty-realizations/",
+    "section": "articles",
+    "title": "三十歲以後才懂的五件事，看完沉默了",
+    "category": "生活",
+    "summary": "年紀增加後，人通常會比以前多活幾年。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "生活",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "年紀增加後，人通常會比以前多活幾年。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "family-needs-communication",
+    "route": "articles/family-needs-communication/",
+    "section": "articles",
+    "title": "一家人最重要的不是有話說，而是把話說出來",
+    "category": "家庭",
+    "summary": "如果有話卻完全不說，別人通常很難知道。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "家庭",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "如果有話卻完全不說，別人通常很難知道。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "letting-go-is-growing-up",
+    "route": "articles/letting-go-is-growing-up/",
+    "section": "articles",
+    "title": "真正的成熟，是學會放下你已經拿不動的東西",
+    "category": "心靈",
+    "summary": "放下之後，手上確實會比較空。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "放下之後，手上確實會比較空。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "details-show-love",
+    "route": "articles/details-show-love/",
+    "section": "articles",
+    "title": "在乎你的人，會記得那些他記得的小事",
+    "category": "感情",
+    "summary": "記得細節可能代表在意，也可能只是記性很好。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "感情",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "記得細節可能代表在意，也可能只是記性很好。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "quality-life-small-habits",
+    "route": "articles/quality-life-small-habits/",
+    "section": "articles",
+    "title": "生活品質，往往藏在每天都會做的事情裡",
+    "category": "生活",
+    "summary": "把日常做好，日常就會變成被做好的日常。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "生活",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "把日常做好，日常就會變成被做好的日常。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "tired-because-sensible",
+    "route": "articles/tired-because-sensible/",
+    "section": "articles",
+    "title": "你不是累，你只是太久沒有不累了",
+    "category": "心靈",
+    "summary": "有時候疲累的原因，就是持續感到疲累。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "有時候疲累的原因，就是持續感到疲累。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "breakfast-personality",
+    "route": "articles/breakfast-personality/",
+    "section": "articles",
+    "title": "早餐吃什麼，暴露了你今天早餐吃了什麼",
+    "category": "娛樂",
+    "summary": "選飯糰的人通常選了飯糰，喝豆漿的人多半喝了豆漿。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "娛樂",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "選飯糰的人通常選了飯糰，喝豆漿的人多半喝了豆漿。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "love-does-not-make-you-guess",
+    "route": "articles/love-does-not-make-you-guess/",
+    "section": "articles",
+    "title": "真正愛你的人，不會讓你猜，除非他沒有說",
+    "category": "感情",
+    "summary": "溝通可以減少猜測，沒有溝通時往往比較需要猜。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "感情",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "溝通可以減少猜測，沒有溝通時往往比較需要猜。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "declutter-your-life",
+    "route": "articles/declutter-your-life/",
+    "section": "articles",
+    "title": "丟掉這七樣東西，家裡就會少七樣東西",
+    "category": "生活",
+    "summary": "斷捨離最直接的效果，是物品數量下降。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "生活",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "斷捨離最直接的效果，是物品數量下降。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
+  },
+  {
+    "slug": "simple-happiness",
+    "route": "articles/simple-happiness/",
+    "section": "articles",
+    "title": "幸福其實很簡單，複雜的是把簡單說得很複雜",
+    "category": "心靈",
+    "summary": "當事情不複雜時，它通常比較簡單。",
+    "publishedDate": "2026-07-16",
+    "updatedDate": "2026-07-16",
+    "author": "生活觀察室",
+    "heroImage": null,
+    "tags": [
+      "心靈",
+      "人生",
+      "熱門"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "當事情不複雜時，它通常比較簡單。"
+      },
+      {
+        "type": "heading",
+        "text": "很多人直到現在才發現"
+      },
+      {
+        "type": "paragraph",
+        "text": "每個人的情況都不一樣，但不一樣的地方，正是每個人各自不同的地方。"
+      },
+      {
+        "type": "paragraph",
+        "text": "生活沒有標準答案，不過當你找到適合自己的答案，那個答案通常就比較適合你。"
+      },
+      {
+        "type": "note",
+        "text": "本文提供一般生活觀察，不構成醫療、心理、法律或財務建議。"
+      }
+    ]
   }
 ]

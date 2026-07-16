@@ -5,6 +5,17 @@
   if (!host) return;
   const root = host.dataset.root || '../';
   const section = host.dataset.section || 'all';
+  const channel = new URLSearchParams(window.location.search).get('channel');
+
+  const channelMatches = (item) => {
+    if (!channel) return true;
+    const category = item.category || '';
+    const tags = item.tags || [];
+    if (channel === 'entertainment') {
+      return ['娛樂', '體育', '感情', '心靈'].some((label) => category.includes(label) || tags.includes(label));
+    }
+    return category.includes(channel) || tags.includes(channel);
+  };
 
   const makeCard = (item) => {
     const article = document.createElement('article');
@@ -32,7 +43,16 @@
       return response.json();
     })
     .then((items) => {
-      const visible = section === 'all' ? items : items.filter((item) => item.section === section);
+      const visible = items
+        .filter((item) => section === 'all' || item.section === section)
+        .filter(channelMatches);
+      if (!visible.length) {
+        const message = document.createElement('p');
+        message.className = 'small';
+        message.textContent = '這個頻道目前沒有可顯示的內容。';
+        host.replaceChildren(message);
+        return;
+      }
       host.replaceChildren(...visible.map(makeCard));
     })
     .catch(() => {

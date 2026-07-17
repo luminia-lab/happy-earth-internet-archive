@@ -474,57 +474,6 @@
     ]
   },
   {
-    "slug": "intersection-redesign-controversy-comments",
-    "route": "news/intersection-redesign-controversy-comments/",
-    "section": "news",
-    "title": "路口改造引爭議：多一座庇護島，為什麼網友吵成兩派？",
-    "category": "社會與網路",
-    "summary": "一項虛構路口改造，引出行人安全、車流效率與資訊落差的典型爭論。",
-    "publishedDate": "2026-07-16",
-    "updatedDate": "2026-07-16",
-    "author": "社會編輯部",
-    "heroImage": null,
-    "tags": [
-      "交通",
-      "行人",
-      "網友評論"
-    ],
-    "contentType": "mixed",
-    "relatedArticles": [],
-    "content": [
-      {
-        "type": "note",
-        "text": "本文事件、地點與留言帳號均為虛構，用於呈現網路輿論結構。"
-      },
-      {
-        "type": "paragraph",
-        "text": "幸福市中正東路新增行人庇護島並縮短部分車道後，尖峰時段回堵照片在社群平台流傳。支持者認為行人終於有安全停留空間，反對者則批評施工前缺乏車流評估。"
-      },
-      {
-        "type": "heading",
-        "text": "網友怎麼說"
-      },
-      {
-        "type": "list",
-        "items": [
-          "@天天開車：每天多塞十五分鐘，誰負責？",
-          "@推嬰兒車的爸：以前過一半就變燈，現在至少有地方停。",
-          "@附近住戶：不是不能改，是標線和號誌要一起調。",
-          "@路過一次的人：這設計一看就有問題。",
-          "@交通工程系路人：只看單張回堵照，不能判斷整體事故風險與通行效率。"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "爭議的核心往往不是「安全或效率只能選一個」，而是施工前後有沒有公開事故資料、號誌方案、尖離峰觀測與後續調整時程。"
-      },
-      {
-        "type": "note",
-        "text": "留言熱度不等於代表性。網路整理文應保留時間、來源與上下文，避免把少數極端留言寫成「全網怒了」。"
-      }
-    ]
-  },
-  {
     "slug": "fish-bone-stuck-in-throat",
     "route": "articles/fish-bone-stuck-in-throat/",
     "section": "articles",
@@ -1362,6 +1311,1024 @@
       {
         "type": "note",
         "text": "幸福可能很簡單；這篇文章主要負責把它說得比較長。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japanese-storage-boxes-create-more-boxes"
+    ],
+    "slug": "japan-drugstore-shopping-list-sponsored",
+    "route": "articles/japan-drugstore-shopping-list-sponsored/",
+    "section": "articles",
+    "title": "日本藥妝店買什麼？先把清單分成需要、想要與被包裝吸引",
+    "category": "日本購物",
+    "summary": "走進藥妝店以前先分好清單，避免把促銷標示、熱門排行與真正需要混在一起。",
+    "publishedDate": "2026-04-17",
+    "updatedDate": "2026-04-17",
+    "author": "消費編輯部",
+    "tags": [
+      "日本",
+      "藥妝",
+      "購物"
+    ],
+    "contentType": "sponsored",
+    "content": [
+      {
+        "type": "note",
+        "text": "本文含商業合作內容；不提供藥品、保健品或醫療療效推薦。"
+      },
+      {
+        "type": "paragraph",
+        "text": "藥妝店的燈光、陳列、排行貼紙與組合價，很容易讓原本只想買一樣東西的人，最後提著一整袋回飯店。真正能控制預算的方法，不是進店後一直算折扣，而是先把清單分成三層。"
+      },
+      {
+        "type": "heading",
+        "text": "先分成三張清單"
+      },
+      {
+        "type": "list",
+        "items": [
+          "需要：已經確認用途、數量與使用方式的日用品",
+          "想要：有興趣，但價格不合適就可以放回去的東西",
+          "被包裝吸引：只是當下覺得可愛、熱門或看起來很厲害"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "購買前仍要看成分、標示、有效期限與攜帶限制。看不懂用途的產品，不要因為「日本限定」就假設適合自己；需要醫療判斷的問題，應詢問合格專業人員。"
+      },
+      {
+        "type": "heading",
+        "text": "最後再看行李空間"
+      },
+      {
+        "type": "paragraph",
+        "text": "同一類用品先確認家裡還剩多少，也別把液體、易碎品與需要特別保存的商品全塞進同一袋。清單的作用不是禁止購物，而是讓你知道這一刻買的是需要，還是氣氛。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japanese-curry-roux-storage",
+      "lunchbox-room-temperature-safety"
+    ],
+    "slug": "air-fryer-oven-cleaning-comparison",
+    "route": "articles/air-fryer-oven-cleaning-comparison/",
+    "section": "articles",
+    "title": "氣炸鍋、烤箱與小烤箱怎麼選？先看你願不願意洗",
+    "category": "家電與生活",
+    "summary": "容量和功能之外，使用頻率、清潔方式與檯面空間，才是買回家後會不會繼續用的關鍵。",
+    "publishedDate": "2025-11-08",
+    "updatedDate": "2025-11-08",
+    "author": "消費編輯部",
+    "tags": [
+      "氣炸鍋",
+      "烤箱",
+      "廚房家電"
+    ],
+    "contentType": "sponsored",
+    "content": [
+      {
+        "type": "note",
+        "text": "本文含商業合作內容。文中為一般選購原則，不對應或宣稱任何真實品牌規格。"
+      },
+      {
+        "type": "paragraph",
+        "text": "氣炸鍋、烤箱與小烤箱都能把食物加熱上色，但真正決定一台家電會不會被收進櫃子裡的，常常不是最高溫度，而是一次能做多少、預熱多久，以及吃完以後要洗幾個地方。"
+      },
+      {
+        "type": "heading",
+        "text": "氣炸鍋：少量、快，但炸籃要洗"
+      },
+      {
+        "type": "paragraph",
+        "text": "氣炸鍋適合一到數人份的冷凍食品、回烤與簡單肉類。熱風集中、操作直接，但油脂與碎屑會留在炸籃、網架和內壁；如果不願意每次處理，方便感很快就會消失。"
+      },
+      {
+        "type": "heading",
+        "text": "烤箱：容量大，但要給它空間"
+      },
+      {
+        "type": "paragraph",
+        "text": "需要烤盤、多人份、烘焙或同時處理不同食材時，完整烤箱通常比較從容。代價是預熱、檯面或櫥櫃空間，以及烤盤與內腔清潔。購買前應依產品說明保留散熱距離，不要只量機身寬度。"
+      },
+      {
+        "type": "heading",
+        "text": "小烤箱：任務單純，限制也直接"
+      },
+      {
+        "type": "paragraph",
+        "text": "小烤箱適合吐司、薄片與少量回烤，結構簡單，但溫控、空間與可用容器會因機型不同而差很多。若你期待它包辦厚肉、整雞與精細烘焙，買回家後容易一直覺得不夠用。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "先列出一週最常加熱的三種食物",
+          "量檯面、插座位置與散熱空間",
+          "確認炸籃、烤盤與集屑盤能否容易拆洗",
+          "依說明書使用合適容器，不用紙張或墊材阻塞熱風"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "最適合的不是功能最多的那一台，而是容量夠、放得下，而且你願意在每次使用後把它清乾淨的那一台。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "intersection-redesign-controversy-comments",
+    "route": "news/intersection-redesign-controversy-comments/",
+    "section": "news",
+    "title": "路口改造引爭議：多一座庇護島，為什麼網友吵成兩派？",
+    "category": "交通",
+    "summary": "一項虛構路口改造，引出行人安全、車流效率與資訊落差的典型爭論。",
+    "publishedDate": "2025-09-22",
+    "updatedDate": "2025-09-22",
+    "author": "社會編輯部",
+    "tags": [
+      "交通",
+      "行人",
+      "網友評論"
+    ],
+    "contentType": "mixed",
+    "content": [
+      {
+        "type": "note",
+        "text": "本文事件、地點與留言帳號均為虛構，用於呈現網路輿論結構。"
+      },
+      {
+        "type": "paragraph",
+        "text": "幸福市中正東路新增行人庇護島並縮短部分車道後，尖峰時段回堵照片在社群平台流傳。支持者認為行人終於有安全停留空間，反對者則批評施工前缺乏車流評估。"
+      },
+      {
+        "type": "heading",
+        "text": "網友怎麼說"
+      },
+      {
+        "type": "list",
+        "items": [
+          "@天天開車：每天多塞十五分鐘，誰負責？",
+          "@推嬰兒車的爸：以前過一半就變燈，現在至少有地方停。",
+          "@附近住戶：這裡真的不是第一次出大事。我以前親眼看過一個年輕人倒在路口，救護人員到場時已經沒有呼吸心跳。庇護島不是交通裝飾，是拿來保命的。",
+          "@巷口店家：不是不能改，是標線和號誌要一起調。",
+          "@路過一次的人：這設計一看就有問題。",
+          "@交通工程系路人：只看單張回堵照，不能判斷整體事故風險與通行效率。"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "爭議的核心往往不是「安全或效率只能選一個」，而是施工前後有沒有公開事故資料、號誌方案、尖離峰觀測與後續調整時程。"
+      },
+      {
+        "type": "note",
+        "text": "留言熱度不等於代表性。網路整理文應保留時間、來源與上下文，避免把少數極端留言寫成「全網怒了」。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "declutter-your-life"
+    ],
+    "slug": "japanese-storage-boxes-create-more-boxes",
+    "route": "articles/japanese-storage-boxes-create-more-boxes/",
+    "section": "articles",
+    "title": "買了日系收納盒之後，家裡通常會多出幾個收納盒",
+    "category": "生活與收納",
+    "summary": "盒子不會自動完成收納；先決定物品、位置與尺寸，才能少收納一點空氣。",
+    "publishedDate": "2025-01-29",
+    "updatedDate": "2025-01-29",
+    "author": "生活編輯部",
+    "tags": [
+      "日本雜貨",
+      "收納",
+      "生活"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "買了收納盒之後，家裡通常會多出幾個收納盒。這句話聽起來沒有提供任何資訊，但很多人的收納確實從買盒子開始，也停在買盒子。"
+      },
+      {
+        "type": "heading",
+        "text": "不知道裝什麼的盒子，暫時只裝空氣"
+      },
+      {
+        "type": "paragraph",
+        "text": "看到整齊陳列時，很容易以為同款同色就是整潔。可是物品沒有先分類，盒子只會把混亂變成看不見的混亂；尺寸不合的收納盒，最後甚至需要另外找地方收納。"
+      },
+      {
+        "type": "heading",
+        "text": "先量，再買"
+      },
+      {
+        "type": "list",
+        "items": [
+          "先決定要收的是哪一類物品",
+          "量櫃內的寬、深、高與門片開啟空間",
+          "保留拿取動作，不把每個縫隙都塞滿",
+          "常用物放在容易看見與拿到的位置"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "真正有效的收納，通常先從減少不需要的東西開始。盒子只是容器，不是讓物品自動消失的魔法。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "lunchbox-room-temperature-safety"
+    ],
+    "slug": "japanese-curry-roux-storage",
+    "route": "articles/japanese-curry-roux-storage/",
+    "section": "articles",
+    "title": "日本咖哩塊開封後怎麼保存？不要連著紙盒直接塞回櫃子",
+    "category": "日料與料理",
+    "summary": "開封後先看包裝指示，做好密封、防潮與日期標記，別只靠外紙盒保護剩下的咖哩塊。",
+    "publishedDate": "2024-10-05",
+    "updatedDate": "2024-10-05",
+    "author": "美食編輯部",
+    "tags": [
+      "日本",
+      "咖哩",
+      "保存"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "從日本帶回來的咖哩塊，開封後最常見的動作是把剩下的內包裝折一折，再連著紙盒塞回櫃子。但紙盒主要負責外包裝，未必能替已開封內容物隔絕濕氣、氣味與高溫。"
+      },
+      {
+        "type": "heading",
+        "text": "先以原包裝標示為準"
+      },
+      {
+        "type": "paragraph",
+        "text": "不同產品的油脂、調味與包裝方式不同，開封後保存條件也可能不同。先看製造商對冷藏、密封與食用期限的說明；看不懂日文時，可利用包裝圖示或可靠翻譯確認，不要只憑過去習慣。"
+      },
+      {
+        "type": "heading",
+        "text": "剩下的咖哩塊這樣整理"
+      },
+      {
+        "type": "list",
+        "items": [
+          "保持手與容器乾燥，避免把水分帶入",
+          "以密封容器或密封袋隔絕氣味與濕氣",
+          "標記開封日期，先使用較早開封的份量",
+          "若出現異味、變質或包裝異常，不勉強使用"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "把咖哩煮好後，又是另一套熟食保存問題。應儘快以合適方式降溫、冷藏並充分復熱，不要因為香料味重就認為放久也沒關係。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-ryokan-breakfast-time"
+    ],
+    "slug": "british-hotel-kettle-observation",
+    "route": "articles/british-hotel-kettle-observation/",
+    "section": "articles",
+    "title": "英國飯店房間看到熱水壺，通常代表房間裡有一個熱水壺",
+    "category": "英國旅遊",
+    "summary": "確認壺內清潔、插座與使用規則後，它就可以繼續作為一個熱水壺。",
+    "publishedDate": "2024-03-30",
+    "updatedDate": "2024-03-30",
+    "author": "旅遊編輯部",
+    "tags": [
+      "英國",
+      "飯店",
+      "熱水壺"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "英國飯店房間看到熱水壺，通常代表房間裡有一個熱水壺。它可能放在茶包旁邊，也可能放在一個讓你找了半天才發現的位置，但這不改變它是一個熱水壺。"
+      },
+      {
+        "type": "heading",
+        "text": "使用以前，先看一眼"
+      },
+      {
+        "type": "paragraph",
+        "text": "檢查壺內是否乾淨、有沒有異味或明顯損傷；狀況不對就請櫃檯處理。不要在壺內煮泡麵、蛋或其他食物，這不只難清，也會把味道與殘留留給下一位房客。"
+      },
+      {
+        "type": "heading",
+        "text": "插座不是看到洞就插"
+      },
+      {
+        "type": "paragraph",
+        "text": "自帶電器應確認產品可接受的電壓、頻率與插頭轉接需求。轉接頭只改變插頭形狀，不一定能轉換電壓。飯店設備則依房內說明使用，不任意搬到浴室或潮濕處。"
+      },
+      {
+        "type": "paragraph",
+        "text": "完成以上確認後，你可以用熱水壺燒水。燒好的水，通常會是熱水。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "ohca-accident-report-meaning",
+    "route": "articles/ohca-accident-report-meaning/",
+    "section": "articles",
+    "title": "新聞寫「OHCA 送醫」代表什麼？先別把它直接等同死亡判定",
+    "category": "急救與新聞識讀",
+    "summary": "OHCA 描述到院前心肺功能停止的狀態；初期快訊不等於完整醫療結果或死亡判定。",
+    "publishedDate": "2023-06-18",
+    "updatedDate": "2023-06-18",
+    "author": "生活安全編輯部",
+    "tags": [
+      "OHCA",
+      "急救",
+      "新聞識讀"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "新聞快訊中的 OHCA，是英文 out-of-hospital cardiac arrest 的縮寫，中文常譯為到院前心肺功能停止。它描述救護與送醫前觀察到的危急狀態，不等於媒體可以只憑這個詞自行宣布死亡。"
+      },
+      {
+        "type": "heading",
+        "text": "初期報導常常還不完整"
+      },
+      {
+        "type": "paragraph",
+        "text": "現場是否有人目擊、是否立即急救、送醫後反應與醫院判斷，都可能在第一則快訊發布時尚未確認。讀者不應根據幾個字猜測當事人的生死、責任或後續狀況。"
+      },
+      {
+        "type": "paragraph",
+        "text": "若身邊有人失去反應且沒有正常呼吸，應立即呼叫緊急救援並依調度人員指示處理；新聞名詞的解釋，不能取代現場急救。"
+      },
+      {
+        "type": "heading",
+        "text": "別把傷者的過去當成急救資格"
+      },
+      {
+        "type": "paragraph",
+        "text": "幸福市曾有一宗年輕騎士事故，初期報導只留下「OHCA 送醫」幾個字，之後社群討論卻很快轉向傷者的過去，而不是現場究竟發生了什麼。事故新聞中的刑事紀錄、外貌與私生活，都不應被拿來判斷一個人是否值得急救。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-ryokan-breakfast-time"
+    ],
+    "slug": "japan-onsen-small-towel-etiquette",
+    "route": "articles/japan-onsen-small-towel-etiquette/",
+    "section": "articles",
+    "title": "去日本泡湯，小毛巾到底放哪裡？先看浴場規則",
+    "category": "日本旅遊",
+    "summary": "小毛巾通常不泡進浴池，但各浴場設備與規則不同，入浴前先讀現場標示。",
+    "publishedDate": "2023-03-18",
+    "updatedDate": "2023-03-18",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "溫泉",
+      "禮儀"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "第一次進日本大浴場，最讓人忙亂的往往不是水溫，而是手上的小毛巾：帶進去嗎？放頭上嗎？可以泡水嗎？最穩妥的原則是先看浴場自己的標示。"
+      },
+      {
+        "type": "heading",
+        "text": "通常先洗淨身體再入池"
+      },
+      {
+        "type": "paragraph",
+        "text": "許多浴場會要求先在洗浴區清洗身體，並避免讓毛巾進入浴池。小毛巾可放在浴池外的合適位置；有人會折好放在頭上，但這不是每個人或每個場所都必須照做的儀式。"
+      },
+      {
+        "type": "heading",
+        "text": "現場規則比網路口訣重要"
+      },
+      {
+        "type": "list",
+        "items": [
+          "確認刺青、年齡、長髮與泳衣等入浴規定",
+          "不在浴池內搓洗或使用清潔用品",
+          "長髮依現場要求束起，避免浸入池水",
+          "身體不適、飲酒後或不確定水溫時，不勉強久泡"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "不同旅館、公共浴場與溫泉設施可能有不同設備與習慣。看到標示不懂時，禮貌詢問工作人員，比把某一家旅館的做法當成全日本法律更可靠。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "new-zealand-winter-clothing"
+    ],
+    "slug": "iceland-windproof-before-umbrella",
+    "route": "articles/iceland-windproof-before-umbrella/",
+    "section": "articles",
+    "title": "去冰島帶傘之前，先確認外套到底能不能擋風",
+    "category": "冰島旅遊",
+    "summary": "冰島行李先處理防風、防潑水與分層，並讓穿著跟著地區、季節和活動調整。",
+    "publishedDate": "2022-11-06",
+    "updatedDate": "2022-11-06",
+    "author": "旅遊編輯部",
+    "tags": [
+      "冰島",
+      "防風",
+      "穿搭"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "冰島的體感不只由溫度決定。風、降水、停留時間和你是在市區走路、瀑布旁停留，還是長時間戶外活動，都會改變同一件外套的表現。"
+      },
+      {
+        "type": "heading",
+        "text": "先處理外層，再堆厚度"
+      },
+      {
+        "type": "list",
+        "items": [
+          "貼身層保持乾爽，避免流汗後一直濕著",
+          "中層依活動量保暖，方便穿脫",
+          "外層重視防風，並依行程準備防潑水或防水能力",
+          "鞋襪、帽子與手套也要能應付風與濕氣"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "傘在某些城市短程仍可能有用，但風大時不好控制，也不能取代防風外套。出發前與每天上路前，都應查看當地天氣、道路與安全資訊，必要時調整行程。"
+      },
+      {
+        "type": "note",
+        "text": "本文不提供即時天氣，也不保證任何季節一定晴朗或寒冷。高地、海岸、市區與自駕行程所需裝備可能不同。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "platform-removal-does-not-equal-safety",
+    "route": "news/platform-removal-does-not-equal-safety/",
+    "section": "news",
+    "title": "系統越管越嚴，高風險貼文被刪除後，人就安全了嗎？",
+    "category": "網路與心理健康",
+    "summary": "移除內容可以降低擴散，但平台完成處置，不等於現實中已有人確認當事人安全。",
+    "publishedDate": "2022-05-09",
+    "updatedDate": "2022-05-12",
+    "author": "社會編輯部",
+    "tags": [
+      "平台治理",
+      "心理健康",
+      "網路安全"
+    ],
+    "contentType": "mixed",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "平台可能依文字、圖片與使用行為判斷高風險內容，採取降低觸及、移除貼文或限制帳號等措施。這些處置可以減少傷害內容擴散，卻不能證明貼文背後的人已經獲得協助。"
+      },
+      {
+        "type": "heading",
+        "text": "內容消失，不代表危機消失"
+      },
+      {
+        "type": "paragraph",
+        "text": "有些帳號會反覆發布、刪除，再用更模糊的方式表達痛苦。某個帳號曾在數月內反覆發布帶有告別意味的內容；系統多次移除貼文，但帳號持有人是否曾獲得實際協助，公開資料沒有答案。"
+      },
+      {
+        "type": "paragraph",
+        "text": "旁觀者若擔心當事人，不應留言嘲笑、責罵、起鬨或鼓吹傷害。能確認身分時，可聯絡可信任的親友、當地緊急服務或專業支持；若有立即危險，應優先尋求現實世界的緊急協助。"
+      },
+      {
+        "type": "heading",
+        "text": "治理不能只計算刪了幾篇"
+      },
+      {
+        "type": "paragraph",
+        "text": "平台仍需要處理可能傷害他人的內容，但成效不能只用移除速度衡量。警示、求助入口、人工複核與後續支持如何銜接，才決定系統是在整理版面，還是在接住真人。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "meeting-english-words-examples"
+    ],
+    "slug": "meeting-too-long-because-not-ended",
+    "route": "articles/meeting-too-long-because-not-ended/",
+    "section": "articles",
+    "title": "會議開太久，可能是因為會議還沒有結束",
+    "category": "職場",
+    "summary": "沒有結束的會議通常還在進行；想讓它變短，可以先決定今天到底要決定什麼。",
+    "publishedDate": "2021-11-30",
+    "updatedDate": "2021-11-30",
+    "author": "職場編輯部",
+    "tags": [
+      "會議",
+      "職場",
+      "效率"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "會議超過一小時的人，通常已經開會超過六十分鐘。這不是管理學的新發現，而是時間在會議室裡仍然會繼續前進。"
+      },
+      {
+        "type": "heading",
+        "text": "沒有結論，常見特徵是尚未得出結論"
+      },
+      {
+        "type": "paragraph",
+        "text": "有人補充背景、有人回顧上次會議、有人提出下一次再討論。當大家都在說話，但沒有人知道今天要決定什麼，會議自然很難知道何時已經完成。"
+      },
+      {
+        "type": "paragraph",
+        "text": "想提早結束會議，最直接的方法之一是結束會議。但在那之前，最好先讓結束不只是主持人突然關掉視訊。"
+      },
+      {
+        "type": "heading",
+        "text": "最後提供一點真的有用的"
+      },
+      {
+        "type": "list",
+        "items": [
+          "會前寫清楚 agenda 與需要決定的問題",
+          "為每個決策指定最後負責人",
+          "把延伸討論移出本次會議，不讓每個問題都長出下一個問題",
+          "結束前記錄結論、待辦、負責人與期限"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "會議結束以後，會議就不再繼續。若還要再開，那會是另一場會議。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japanese-curry-roux-storage"
+    ],
+    "slug": "japan-supermarket-discount-sticker",
+    "route": "articles/japan-supermarket-discount-sticker/",
+    "section": "articles",
+    "title": "日本超市晚間貼折扣，不代表買回飯店後可以放到隔天",
+    "category": "日本美食",
+    "summary": "折扣反映販售安排，不會延長保存期限；購買熟食前先看標示、冷藏條件與食用時間。",
+    "publishedDate": "2021-10-12",
+    "updatedDate": "2025-04-06",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "超市",
+      "熟食"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "晚上逛日本超市看到熟食貼上折扣，確實很有吸引力。但折扣貼紙代表店家調整售價，不代表便當、生魚片或炸物因此多出一晚的保存時間。"
+      },
+      {
+        "type": "heading",
+        "text": "先看標示，再看折數"
+      },
+      {
+        "type": "list",
+        "items": [
+          "確認消費期限或賞味期限的標示與差別",
+          "查看商品是否需要冷藏，以及飯店是否有合適設備",
+          "估算回程、用餐與退房時間，不買明知吃不完的份量",
+          "包裝破損、溫度異常或氣味可疑時不要購買"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "不同店家、分店、日期與商品的貼標時間都可能不同，不存在「每天幾點一定半價」的通用保證。為了等更低折扣而讓冷藏熟食長時間留在不合適的環境，也不會比較省。"
+      },
+      {
+        "type": "paragraph",
+        "text": "買回飯店後應依標示保存並在合適時間食用。吃不完時，不要只因為看起來正常或聞起來沒壞，就假設隔天仍然安全。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "cash-job-scam-mule-warning",
+    "route": "articles/cash-job-scam-mule-warning/",
+    "section": "articles",
+    "title": "急徵現金工讀、當日領薪：看到這幾種工作內容先停一下",
+    "category": "防詐與職場",
+    "summary": "工作只談快速現領，卻不肯說清楚雇主、地點與任務，可能不是普通的臨時工。",
+    "publishedDate": "2020-08-19",
+    "updatedDate": "2020-08-19",
+    "author": "生活安全編輯部",
+    "tags": [
+      "求職",
+      "詐騙",
+      "打工"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "「免經驗、快速錄取、當日現領」不一定都是詐騙，但如果徵才內容只強調錢，卻故意說不清楚公司、工作地點、負責人與實際任務，就應先停下來查證。"
+      },
+      {
+        "type": "heading",
+        "text": "這些要求不要當成普通跑腿"
+      },
+      {
+        "type": "list",
+        "items": [
+          "代收、代領或轉交來源不明的物品",
+          "提供自己的帳戶、提款卡、密碼或驗證資料",
+          "替陌生人處理金流，或依指示把東西交給下一個人",
+          "要求刪除對話、隱瞞雇主身分，或拒絕提供正式工作資訊"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "有人一開始並不知道自己在整條鏈裡扮演什麼角色。一名年輕人最初被告知只需要幫忙拿東西，直到第二次才發現事情不是普通跑腿。「只幫一次」仍可能留下身分、對話紀錄或法律風險。"
+      },
+      {
+        "type": "heading",
+        "text": "先保存，再求助"
+      },
+      {
+        "type": "paragraph",
+        "text": "不要繼續依可疑指示行動，也不要為了證明自己沒問題而私下對質。保存徵才頁面、帳號與對話，向可信任成人、警方、正式反詐或勞政管道求助；若已交出帳戶或證件資料，應儘快向相關機構說明。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "iceland-windproof-before-umbrella"
+    ],
+    "slug": "philippines-island-hopping-dry-bag",
+    "route": "articles/philippines-island-hopping-dry-bag/",
+    "section": "articles",
+    "title": "菲律賓跳島行程怎麼收隨身物品？防水袋不是塞滿就好",
+    "category": "菲律賓旅遊",
+    "summary": "手機、證件與乾衣分層收納，出發前檢查封口與破損，也別把所有重要物品押在同一袋。",
+    "publishedDate": "2020-02-22",
+    "updatedDate": "2020-02-22",
+    "author": "旅遊編輯部",
+    "tags": [
+      "菲律賓",
+      "跳島",
+      "行李"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "跳島行程會反覆上下船、碰到浪花、濕腳與沙子。把所有東西塞進一個防水袋看似簡單，但袋子一旦沒封好，手機、證件、現金與乾衣就會一起受影響。"
+      },
+      {
+        "type": "heading",
+        "text": "重要物品分層，也分散"
+      },
+      {
+        "type": "list",
+        "items": [
+          "手機與小型電子用品另加可密封內袋",
+          "證件只帶行程必要部分，並依需求保留備份",
+          "乾衣與濕衣分開，避免回程才發現全部潮掉",
+          "少量現金分開收，不把所有重要物品放在同一處"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "每次出發前檢查袋身、接縫與封口是否破損，依產品方式正確捲折或密封。所謂防水仍有使用條件，不代表任何袋子在所有深度、時間與碰撞下都絕對不進水。"
+      },
+      {
+        "type": "paragraph",
+        "text": "船家、島嶼與活動內容不同，能帶上船的行李和安全裝備也可能不同。先問清楚當天安排，貴重物品能不帶就不要全帶。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-supermarket-discount-sticker"
+    ],
+    "slug": "japan-onigiri-wrapper-guide",
+    "route": "articles/japan-onigiri-wrapper-guide/",
+    "section": "articles",
+    "title": "日本便利商店飯糰包裝怎麼拆？先不要一次把塑膠全撕掉",
+    "category": "日本美食",
+    "summary": "海苔與飯分開的三段式包裝，照著 1、2、3 拆，通常比整包剝開更容易成功。",
+    "publishedDate": "2019-09-26",
+    "updatedDate": "2019-09-26",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "便利商店",
+      "飯糰"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "第一次拆日本便利商店飯糰，很容易看到一條線就一路撕到底，最後海苔留在塑膠裡，飯則握在手上。包裝上的 1、2、3 通常不是商品排名，而是拆封順序。"
+      },
+      {
+        "type": "heading",
+        "text": "常見三段式包裝"
+      },
+      {
+        "type": "list",
+        "items": [
+          "先沿著標示 1 的中線撕開，繞過飯糰底部",
+          "依標示抽出一側塑膠，再抽出另一側",
+          "讓外層海苔包回飯糰表面，再開始吃"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "動作不需要快，也不要一開始把整張塑膠攤平。海苔和飯原本被不同塑膠層隔開，就是為了在拆封前減少海苔受潮。"
+      },
+      {
+        "type": "note",
+        "text": "飯糰包裝不只一種。圓形、手卷、已包上海苔或特殊造型商品，應直接看包裝箭頭與圖示，不必硬套三段式方法。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "fish-bone-stuck-in-throat"
+    ],
+    "slug": "lunchbox-room-temperature-safety",
+    "route": "articles/lunchbox-room-temperature-safety/",
+    "section": "articles",
+    "title": "便當放到下午還能吃嗎？不要只靠聞起來有沒有壞",
+    "category": "飲食與生活",
+    "summary": "能不能吃取決於食材、溫度、放置時間與保存方式；沒有異味不代表一定安全。",
+    "publishedDate": "2019-05-17",
+    "updatedDate": "2023-08-11",
+    "author": "生活編輯部",
+    "tags": [
+      "便當",
+      "保存",
+      "食品安全"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "早上帶出的便當到了下午能不能吃，不能只看時鐘，也不能只靠聞味道。食材原本的衛生、環境溫度、放了多久、是否持續冷藏或保溫，都會影響風險。"
+      },
+      {
+        "type": "heading",
+        "text": "先問保存過程"
+      },
+      {
+        "type": "list",
+        "items": [
+          "煮好後是否在合適時間內降溫與冷藏",
+          "通勤途中是否長時間放在高溫車內或日照處",
+          "抵達後有沒有立即冷藏，或使用可靠的保冷、保溫方式",
+          "是否含有較容易變質的肉、蛋、海鮮、乳製品或高含水食材"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "有些造成食物中毒的微生物，不一定會讓食物立刻出現酸味、黏液或明顯外觀變化。重新加熱也不能保證消除所有因不當保存產生的風險。"
+      },
+      {
+        "type": "heading",
+        "text": "不確定時，不要用一口來測試"
+      },
+      {
+        "type": "paragraph",
+        "text": "若便當在不明或不適合的溫度下放了很久、容器膨脹滲漏，或你無法確認保存過程，丟棄通常比勉強吃完安全。幼兒、孕婦、高齡者與免疫力較弱者更不適合冒險。"
+      },
+      {
+        "type": "note",
+        "text": "不同食材與設備條件不同，本文不提供一個適用所有便當的固定小時數。應依食品標示與當地食安機關指引處理。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-onsen-small-towel-etiquette"
+    ],
+    "slug": "japan-ryokan-breakfast-time",
+    "route": "articles/japan-ryokan-breakfast-time/",
+    "section": "articles",
+    "title": "日本旅館早餐為什麼常常這麼早？入住時先確認這三件事",
+    "category": "日本旅遊",
+    "summary": "供餐時段可能配合備餐、用餐空間與退房安排；入住時先確認時間、地點和隔天交通。",
+    "publishedDate": "2018-11-03",
+    "updatedDate": "2024-09-18",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "旅館",
+      "早餐"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "日本旅館的早餐有時會在入住時就請你選時段，對想睡到退房前的人來說確實偏早。原因可能包括備餐流程、有限的用餐席次、房務與退房安排，但不是所有旅館都有相同制度。"
+      },
+      {
+        "type": "heading",
+        "text": "入住時先確認三件事"
+      },
+      {
+        "type": "list",
+        "items": [
+          "供餐是固定時間、分流時段，還是可在一段時間內自由入場",
+          "用餐地點在餐廳、宴會空間或房內，是否需要準時到場",
+          "隔天電車、巴士、接駁與退房時間，會不會和早餐衝突"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "若隔天必須很早出發，可在入住時詢問是否能調整、放棄早餐或有其他安排，但不要假設每家旅館都能打包，也不要到了供餐結束後才要求重新準備。"
+      },
+      {
+        "type": "paragraph",
+        "text": "旅館規模、房價與住宿方案都會影響服務方式。訂房頁與入住說明才是該次住宿的依據，不需要把一次經驗當成全日本旅館都一樣。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "school-nickname-bullying-boundary",
+    "route": "articles/school-nickname-bullying-boundary/",
+    "section": "articles",
+    "title": "被叫綽號只是玩笑？有些校園霸凌，連受害者都很難說清楚",
+    "category": "校園與心理",
+    "summary": "當全班只剩綽號、外貌嘲笑與「大家都這樣叫」，玩笑可能已經變成沒人負責的壓力。",
+    "publishedDate": "2018-02-06",
+    "updatedDate": "2018-02-06",
+    "author": "生活編輯部",
+    "tags": [
+      "校園",
+      "綽號",
+      "人際關係"
+    ],
+    "contentType": "mixed",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "有些綽號單獨看並不嚴重，甚至最初來自朋友間的玩笑。但當全班只用綽號、不再使用本名，還把外貌、身體特徵或家庭背景反覆變成笑點時，它的意義就可能改變。"
+      },
+      {
+        "type": "heading",
+        "text": "跟著笑，不代表真正同意"
+      },
+      {
+        "type": "paragraph",
+        "text": "被笑的人可能一起笑、主動重複綽號，或在別人詢問時說「沒關係」。這有時是為了讓場面趕快過去，也可能是因為反對只會帶來更多注意。表面配合不能直接當成長期同意。"
+      },
+      {
+        "type": "paragraph",
+        "text": "當老師或家長詢問時，旁人常回答「大家都這樣叫」。問題正可能藏在這句話裡：沒有單一個人承認自己在欺負誰，但每個人都參與了一點，最後形成一整套沒有人願意負責的氣氛。"
+      },
+      {
+        "type": "heading",
+        "text": "判斷邊界，看的是影響"
+      },
+      {
+        "type": "paragraph",
+        "text": "可以觀察對方是否曾要求停止、是否刻意避開群體、稱呼是否只針對某個特徵，以及拒絕後是否遭到報復。最簡單的起點，是恢復使用對方希望被稱呼的名字，並讓求助不必先證明自己「真的受不了」。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "philippines-island-hopping-dry-bag"
+    ],
+    "slug": "singapore-hawker-centre-first-timer",
+    "route": "articles/singapore-hawker-centre-first-timer/",
+    "section": "articles",
+    "title": "第一次去新加坡熟食中心，先找座位還是先點餐？",
+    "category": "新加坡旅遊",
+    "summary": "先觀察現場動線、人潮與桌面規則，再分工找位、點餐和取餐，吃完記得歸還餐具。",
+    "publishedDate": "2017-12-02",
+    "updatedDate": "2024-01-15",
+    "author": "旅遊編輯部",
+    "tags": [
+      "新加坡",
+      "熟食中心",
+      "自由行"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "熟食中心用餐尖峰人很多，第一次去最容易卡在「先排隊還是先找位」。沒有適用所有場所的單一答案：有人同行時可以分工，獨自用餐則要先觀察座位、人潮、攤位取餐方式與現場標示。"
+      },
+      {
+        "type": "heading",
+        "text": "先看一圈再行動"
+      },
+      {
+        "type": "list",
+        "items": [
+          "確認攤位是現場等候、自取，還是會送到桌邊",
+          "熱門時段先估計座位與排隊時間，不讓餐點拿到後無處可坐",
+          "桌上若有物品或明確占位訊號，不要直接移動",
+          "備妥合適付款方式，但各攤接受方式可能不同"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "點餐時可先看菜單與編號，不確定配料、辣度或價格就先問。熟食中心由許多不同攤商組成，不應假設每一家都使用同一套點餐與收款方式。"
+      },
+      {
+        "type": "heading",
+        "text": "吃完不是把碗留在桌上就走"
+      },
+      {
+        "type": "paragraph",
+        "text": "依現場標示把托盤、餐具與垃圾送到指定回收處，並留意不同餐具的分類。規則可能隨場所調整，當地告示比多年前的網路攻略更可靠。"
+      }
+    ]
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "quality-life-small-habits"
+    ],
+    "slug": "air-conditioner-dripping-checklist",
+    "route": "articles/air-conditioner-dripping-checklist/",
+    "section": "articles",
+    "title": "冷氣室內機滴水怎麼辦？先檢查這幾個常見原因",
+    "category": "居家",
+    "summary": "先停機、保護電器與地面，再從濾網、排水、濕度與安裝狀況判斷是否需要專業檢查。",
+    "publishedDate": "2017-09-14",
+    "updatedDate": "2024-06-20",
+    "author": "生活編輯部",
+    "tags": [
+      "冷氣",
+      "居家維修",
+      "夏天"
+    ],
+    "contentType": "useful",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "冷氣室內機滴水時，先把下方怕水的電器、家具與地板保護好。水若接近插座、延長線或機內電路，應停止使用並交由專業人員處理，不要一邊滴水一邊繼續運轉。"
+      },
+      {
+        "type": "heading",
+        "text": "常見原因不只一個"
+      },
+      {
+        "type": "list",
+        "items": [
+          "濾網積塵造成風量下降，冷凝與結霜狀況異常",
+          "排水管阻塞、折彎、脫落或坡度不合",
+          "室內濕度高，出風口或管線表面凝結水氣",
+          "機體安裝角度、保溫材或管線施工出現問題"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "使用者可依說明書清潔可拆式濾網，並觀察滴水位置與發生時機。但不要自行拆開機殼、碰觸電路、灌入不明清潔劑，或用尖銳工具深入排水管。"
+      },
+      {
+        "type": "heading",
+        "text": "什麼時候直接找人檢查"
+      },
+      {
+        "type": "paragraph",
+        "text": "清潔濾網後仍持續漏水、反覆結冰、有異味或異音、排水流向牆內，或機器近期才安裝維修，都應由原廠或合格冷氣技術人員檢查。把機型、滴水位置與發生時間拍下來，有助於說明問題。"
       }
     ]
   }

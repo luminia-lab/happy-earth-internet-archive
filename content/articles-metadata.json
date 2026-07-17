@@ -228,28 +228,6 @@
     "timelineNote": null
   },
   {
-    "slug": "intersection-redesign-controversy-comments",
-    "route": "news/intersection-redesign-controversy-comments/",
-    "title": "路口改造引爭議：多一座庇護島，為什麼網友吵成兩派？",
-    "category": "社會與網路",
-    "summary": "一項虛構路口改造，引出行人安全、車流效率與資訊落差的典型爭論。",
-    "publishedDate": "2026-07-16",
-    "updatedDate": "2026-07-16",
-    "author": "社會編輯部",
-    "heroImage": null,
-    "tags": [
-      "交通",
-      "行人",
-      "網友評論"
-    ],
-    "contentType": "mixed",
-    "relatedArticles": [],
-    "canonicalStatus": "pending",
-    "sourceNote": "虛構交通爭議與留言，用於內容農場／輿論形式。",
-    "characterLinks": [],
-    "timelineNote": null
-  },
-  {
     "slug": "fish-bone-stuck-in-throat",
     "route": "articles/fish-bone-stuck-in-throat/",
     "title": "魚刺卡到喉嚨怎麼辦？不要吞飯、喝醋或硬挖",
@@ -642,6 +620,487 @@
     "relatedArticles": [],
     "canonicalStatus": "pending",
     "sourceNote": "刻意製作的廢文／內容農場文，無角色或正典承諾。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japanese-storage-boxes-create-more-boxes"
+    ],
+    "slug": "japan-drugstore-shopping-list-sponsored",
+    "route": "articles/japan-drugstore-shopping-list-sponsored/",
+    "title": "日本藥妝店買什麼？先把清單分成需要、想要與被包裝吸引",
+    "category": "日本購物",
+    "summary": "走進藥妝店以前先分好清單，避免把促銷標示、熱門排行與真正需要混在一起。",
+    "publishedDate": "2026-04-17",
+    "updatedDate": "2026-04-17",
+    "author": "消費編輯部",
+    "tags": [
+      "日本",
+      "藥妝",
+      "購物"
+    ],
+    "contentType": "sponsored",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japanese-curry-roux-storage",
+      "lunchbox-room-temperature-safety"
+    ],
+    "slug": "air-fryer-oven-cleaning-comparison",
+    "route": "articles/air-fryer-oven-cleaning-comparison/",
+    "title": "氣炸鍋、烤箱與小烤箱怎麼選？先看你願不願意洗",
+    "category": "家電與生活",
+    "summary": "容量和功能之外，使用頻率、清潔方式與檯面空間，才是買回家後會不會繼續用的關鍵。",
+    "publishedDate": "2025-11-08",
+    "updatedDate": "2025-11-08",
+    "author": "消費編輯部",
+    "tags": [
+      "氣炸鍋",
+      "烤箱",
+      "廚房家電"
+    ],
+    "contentType": "sponsored",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "intersection-redesign-controversy-comments",
+    "route": "news/intersection-redesign-controversy-comments/",
+    "title": "路口改造引爭議：多一座庇護島，為什麼網友吵成兩派？",
+    "category": "交通",
+    "summary": "一項虛構路口改造，引出行人安全、車流效率與資訊落差的典型爭論。",
+    "publishedDate": "2025-09-22",
+    "updatedDate": "2025-09-22",
+    "author": "社會編輯部",
+    "tags": [
+      "交通",
+      "行人",
+      "網友評論"
+    ],
+    "contentType": "mixed",
+    "canonicalStatus": "pending",
+    "sourceNote": "附近住戶留言可能指向何東和車禍。公開頁不得確認。",
+    "characterLinks": [
+      "何東和"
+    ],
+    "timelineNote": "多年後的目擊者殘留，不建立事故日期。"
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "declutter-your-life"
+    ],
+    "slug": "japanese-storage-boxes-create-more-boxes",
+    "route": "articles/japanese-storage-boxes-create-more-boxes/",
+    "title": "買了日系收納盒之後，家裡通常會多出幾個收納盒",
+    "category": "生活與收納",
+    "summary": "盒子不會自動完成收納；先決定物品、位置與尺寸，才能少收納一點空氣。",
+    "publishedDate": "2025-01-29",
+    "updatedDate": "2025-01-29",
+    "author": "生活編輯部",
+    "tags": [
+      "日本雜貨",
+      "收納",
+      "生活"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "lunchbox-room-temperature-safety"
+    ],
+    "slug": "japanese-curry-roux-storage",
+    "route": "articles/japanese-curry-roux-storage/",
+    "title": "日本咖哩塊開封後怎麼保存？不要連著紙盒直接塞回櫃子",
+    "category": "日料與料理",
+    "summary": "開封後先看包裝指示，做好密封、防潮與日期標記，別只靠外紙盒保護剩下的咖哩塊。",
+    "publishedDate": "2024-10-05",
+    "updatedDate": "2024-10-05",
+    "author": "美食編輯部",
+    "tags": [
+      "日本",
+      "咖哩",
+      "保存"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-ryokan-breakfast-time"
+    ],
+    "slug": "british-hotel-kettle-observation",
+    "route": "articles/british-hotel-kettle-observation/",
+    "title": "英國飯店房間看到熱水壺，通常代表房間裡有一個熱水壺",
+    "category": "英國旅遊",
+    "summary": "確認壺內清潔、插座與使用規則後，它就可以繼續作為一個熱水壺。",
+    "publishedDate": "2024-03-30",
+    "updatedDate": "2024-03-30",
+    "author": "旅遊編輯部",
+    "tags": [
+      "英國",
+      "飯店",
+      "熱水壺"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "ohca-accident-report-meaning",
+    "route": "articles/ohca-accident-report-meaning/",
+    "title": "新聞寫「OHCA 送醫」代表什麼？先別把它直接等同死亡判定",
+    "category": "急救與新聞識讀",
+    "summary": "OHCA 描述到院前心肺功能停止的狀態；初期快訊不等於完整醫療結果或死亡判定。",
+    "publishedDate": "2023-06-18",
+    "updatedDate": "2023-06-18",
+    "author": "生活安全編輯部",
+    "tags": [
+      "OHCA",
+      "急救",
+      "新聞識讀"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "可能影射何東和車禍，但本文不是正式事故紀錄。",
+    "characterLinks": [
+      "何東和"
+    ],
+    "timelineNote": "暫避2022/03/03與2023/05/09日期衝突；不得據本文裁決事故日。"
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-ryokan-breakfast-time"
+    ],
+    "slug": "japan-onsen-small-towel-etiquette",
+    "route": "articles/japan-onsen-small-towel-etiquette/",
+    "title": "去日本泡湯，小毛巾到底放哪裡？先看浴場規則",
+    "category": "日本旅遊",
+    "summary": "小毛巾通常不泡進浴池，但各浴場設備與規則不同，入浴前先讀現場標示。",
+    "publishedDate": "2023-03-18",
+    "updatedDate": "2023-03-18",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "溫泉",
+      "禮儀"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "new-zealand-winter-clothing"
+    ],
+    "slug": "iceland-windproof-before-umbrella",
+    "route": "articles/iceland-windproof-before-umbrella/",
+    "title": "去冰島帶傘之前，先確認外套到底能不能擋風",
+    "category": "冰島旅遊",
+    "summary": "冰島行李先處理防風、防潑水與分層，並讓穿著跟著地區、季節和活動調整。",
+    "publishedDate": "2022-11-06",
+    "updatedDate": "2022-11-06",
+    "author": "旅遊編輯部",
+    "tags": [
+      "冰島",
+      "防風",
+      "穿搭"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "platform-removal-does-not-equal-safety",
+    "route": "news/platform-removal-does-not-equal-safety/",
+    "title": "系統越管越嚴，高風險貼文被刪除後，人就安全了嗎？",
+    "category": "網路與心理健康",
+    "summary": "移除內容可以降低擴散，但平台完成處置，不等於現實中已有人確認當事人安全。",
+    "publishedDate": "2022-05-09",
+    "updatedDate": "2022-05-12",
+    "author": "社會編輯部",
+    "tags": [
+      "平台治理",
+      "心理健康",
+      "網路安全"
+    ],
+    "contentType": "mixed",
+    "canonicalStatus": "pending",
+    "sourceNote": "承接何東和曾反覆發布自傷相關文字、遭平台限制或刪除的設定。不得公開原文。",
+    "characterLinks": [
+      "何東和"
+    ],
+    "timelineNote": "刊登日期不等於角色發文日期。"
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "meeting-english-words-examples"
+    ],
+    "slug": "meeting-too-long-because-not-ended",
+    "route": "articles/meeting-too-long-because-not-ended/",
+    "title": "會議開太久，可能是因為會議還沒有結束",
+    "category": "職場",
+    "summary": "沒有結束的會議通常還在進行；想讓它變短，可以先決定今天到底要決定什麼。",
+    "publishedDate": "2021-11-30",
+    "updatedDate": "2021-11-30",
+    "author": "職場編輯部",
+    "tags": [
+      "會議",
+      "職場",
+      "效率"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japanese-curry-roux-storage"
+    ],
+    "slug": "japan-supermarket-discount-sticker",
+    "route": "articles/japan-supermarket-discount-sticker/",
+    "title": "日本超市晚間貼折扣，不代表買回飯店後可以放到隔天",
+    "category": "日本美食",
+    "summary": "折扣反映販售安排，不會延長保存期限；購買熟食前先看標示、冷藏條件與食用時間。",
+    "publishedDate": "2021-10-12",
+    "updatedDate": "2025-04-06",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "超市",
+      "熟食"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "cash-job-scam-mule-warning",
+    "route": "articles/cash-job-scam-mule-warning/",
+    "title": "急徵現金工讀、當日領薪：看到這幾種工作內容先停一下",
+    "category": "防詐與職場",
+    "summary": "工作只談快速現領，卻不肯說清楚雇主、地點與任務，可能不是普通的臨時工。",
+    "publishedDate": "2020-08-19",
+    "updatedDate": "2020-08-19",
+    "author": "生活安全編輯部",
+    "tags": [
+      "求職",
+      "詐騙",
+      "打工"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "可作為何東和成為詐騙車手前的公共背景，不裁決他實際被招募的具體方式。",
+    "characterLinks": [
+      "何東和"
+    ],
+    "timelineNote": "不得由本文推導他於2020年已參與詐騙。刊登日只是網站文章日期。"
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "iceland-windproof-before-umbrella"
+    ],
+    "slug": "philippines-island-hopping-dry-bag",
+    "route": "articles/philippines-island-hopping-dry-bag/",
+    "title": "菲律賓跳島行程怎麼收隨身物品？防水袋不是塞滿就好",
+    "category": "菲律賓旅遊",
+    "summary": "手機、證件與乾衣分層收納，出發前檢查封口與破損，也別把所有重要物品押在同一袋。",
+    "publishedDate": "2020-02-22",
+    "updatedDate": "2020-02-22",
+    "author": "旅遊編輯部",
+    "tags": [
+      "菲律賓",
+      "跳島",
+      "行李"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-supermarket-discount-sticker"
+    ],
+    "slug": "japan-onigiri-wrapper-guide",
+    "route": "articles/japan-onigiri-wrapper-guide/",
+    "title": "日本便利商店飯糰包裝怎麼拆？先不要一次把塑膠全撕掉",
+    "category": "日本美食",
+    "summary": "海苔與飯分開的三段式包裝，照著 1、2、3 拆，通常比整包剝開更容易成功。",
+    "publishedDate": "2019-09-26",
+    "updatedDate": "2019-09-26",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "便利商店",
+      "飯糰"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "fish-bone-stuck-in-throat"
+    ],
+    "slug": "lunchbox-room-temperature-safety",
+    "route": "articles/lunchbox-room-temperature-safety/",
+    "title": "便當放到下午還能吃嗎？不要只靠聞起來有沒有壞",
+    "category": "飲食與生活",
+    "summary": "能不能吃取決於食材、溫度、放置時間與保存方式；沒有異味不代表一定安全。",
+    "publishedDate": "2019-05-17",
+    "updatedDate": "2023-08-11",
+    "author": "生活編輯部",
+    "tags": [
+      "便當",
+      "保存",
+      "食品安全"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "japan-onsen-small-towel-etiquette"
+    ],
+    "slug": "japan-ryokan-breakfast-time",
+    "route": "articles/japan-ryokan-breakfast-time/",
+    "title": "日本旅館早餐為什麼常常這麼早？入住時先確認這三件事",
+    "category": "日本旅遊",
+    "summary": "供餐時段可能配合備餐、用餐空間與退房安排；入住時先確認時間、地點和隔天交通。",
+    "publishedDate": "2018-11-03",
+    "updatedDate": "2024-09-18",
+    "author": "旅遊編輯部",
+    "tags": [
+      "日本",
+      "旅館",
+      "早餐"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [],
+    "slug": "school-nickname-bullying-boundary",
+    "route": "articles/school-nickname-bullying-boundary/",
+    "title": "被叫綽號只是玩笑？有些校園霸凌，連受害者都很難說清楚",
+    "category": "校園與心理",
+    "summary": "當全班只剩綽號、外貌嘲笑與「大家都這樣叫」，玩笑可能已經變成沒人負責的壓力。",
+    "publishedDate": "2018-02-06",
+    "updatedDate": "2018-02-06",
+    "author": "生活編輯部",
+    "tags": [
+      "校園",
+      "綽號",
+      "人際關係"
+    ],
+    "contentType": "mixed",
+    "canonicalStatus": "pending",
+    "sourceNote": "可能承接何東和國中時期被外貌化與綽號化的背景，但不得自行補綽號。",
+    "characterLinks": [
+      "何東和"
+    ],
+    "timelineNote": "僅為社會背景，不建立單一事件日期。"
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "philippines-island-hopping-dry-bag"
+    ],
+    "slug": "singapore-hawker-centre-first-timer",
+    "route": "articles/singapore-hawker-centre-first-timer/",
+    "title": "第一次去新加坡熟食中心，先找座位還是先點餐？",
+    "category": "新加坡旅遊",
+    "summary": "先觀察現場動線、人潮與桌面規則，再分工找位、點餐和取餐，吃完記得歸還餐具。",
+    "publishedDate": "2017-12-02",
+    "updatedDate": "2024-01-15",
+    "author": "旅遊編輯部",
+    "tags": [
+      "新加坡",
+      "熟食中心",
+      "自由行"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "heroImage": null,
+    "relatedArticles": [
+      "quality-life-small-habits"
+    ],
+    "slug": "air-conditioner-dripping-checklist",
+    "route": "articles/air-conditioner-dripping-checklist/",
+    "title": "冷氣室內機滴水怎麼辦？先檢查這幾個常見原因",
+    "category": "居家",
+    "summary": "先停機、保護電器與地面，再從濾網、排水、濕度與安裝狀況判斷是否需要專業檢查。",
+    "publishedDate": "2017-09-14",
+    "updatedDate": "2024-06-20",
+    "author": "生活編輯部",
+    "tags": [
+      "冷氣",
+      "居家維修",
+      "夏天"
+    ],
+    "contentType": "useful",
+    "canonicalStatus": "pending",
+    "sourceNote": "作者核准之第二批內容；不連結角色事件。",
     "characterLinks": [],
     "timelineNote": null
   }

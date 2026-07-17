@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luminia-lab.github.io/happy-earth-internet-archive/sitemap.xml

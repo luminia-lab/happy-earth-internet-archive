@@ -276,6 +276,7 @@
 
 .summer-authority { background: #fff; }
 .summer-two-column { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(30px, 6vw, 76px); align-items: start; }
+.summer-authority-portrait { width: 100%; margin-bottom: 24px; aspect-ratio: 16 / 10; border: 5px solid #d7aa32; background: #eef2f8; box-shadow: 0 14px 35px rgba(9, 31, 75, .14); object-fit: cover; object-position: center 20%; }
 .summer-intro { margin-top: 0; font-size: 1.12rem; }
 .summer-two-column blockquote { margin: 28px 0 0; padding: 18px 22px; border-left: 6px solid var(--summer-gold); background: #fff8df; color: var(--summer-blue); font-size: 1.2rem; font-weight: 900; }
 

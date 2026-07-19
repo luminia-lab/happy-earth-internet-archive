@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Summer 六大國際生活教學圈地圖</title>
+  <desc id="desc">台灣地圖上以航線串連台西、美濃、加蚋仔、英才路、澳底與日月潭六個教學據點。</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#09255d"/><stop offset="1" stop-color="#1a55a2"/>
+    </linearGradient>
+    <linearGradient id="island" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff2b0"/><stop offset=".55" stop-color="#e0b846"/><stop offset="1" stop-color="#b77a0b"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020a1f" flood-opacity=".45"/></filter>
+  </defs>
+  <rect width="960" height="720" rx="34" fill="url(#sea)"/>
+  <g opacity=".2" stroke="#fff" fill="none">
+    <path d="M0 130h960M0 280h960M0 430h960M0 580h960"/>
+    <path d="M160 0v720M320 0v720M480 0v720M640 0v720M800 0v720"/>
+  </g>
+  <path d="M535 60c28 18 47 61 41 107-7 51-39 91-52 139-16 57-20 112-53 170-29 51-68 95-103 154-18 31-36 45-53 27-17-19-1-56 18-91 28-51 52-97 65-150 13-52 11-101 27-155 19-65 42-120 68-173 15-29 27-38 42-28z" fill="url(#island)" stroke="#fff8d7" stroke-width="7" filter="url(#shadow)"/>
+  <path d="M535 82c-30 70-54 126-70 192-20 80-31 157-73 229-23 40-48 77-67 127" fill="none" stroke="#fff8d7" stroke-width="4" opacity=".65"/>
+
+  <g fill="none" stroke="#ffdf68" stroke-width="5" stroke-dasharray="14 11">
+    <path d="M398 357C310 315 210 325 166 391"/>
+    <path d="M446 508C350 530 244 560 174 621"/>
+    <path d="M514 180C629 138 735 155 810 215"/>
+    <path d="M463 309C627 290 730 338 824 390"/>
+    <path d="M486 265C361 214 260 170 165 150"/>
+    <path d="M443 403C573 470 687 516 813 543"/>
+  </g>
+
+  <g font-family="system-ui, sans-serif" font-weight="800">
+    <g transform="translate(84 102)">
+      <rect width="185" height="94" rx="18" fill="#fff"/><circle cx="37" cy="31" r="22" fill="#d8212b"/><text x="72" y="35" font-size="25" fill="#102759">台｜台西</text><text x="22" y="72" font-size="18" fill="#52627c">國際啟蒙基地</text>
+    </g>
+    <g transform="translate(58 347)">
+      <rect width="220" height="94" rx="18" fill="#fff"/><rect x="19" y="12" width="42" height="34" fill="#234f9c"/><path d="M19 12l42 34M61 12L19 46" stroke="#fff" stroke-width="5"/><text x="78" y="35" font-size="25" fill="#102759">美｜美濃</text><text x="22" y="72" font-size="18" fill="#52627c">語言研習總部</text>
+    </g>
+    <g transform="translate(58 579)">
+      <rect width="236" height="94" rx="18" fill="#fff"/><path d="M42 10l8 18 17 2-13 12 4 18-16-9-16 9 4-18-13-12 17-2z" fill="#d8212b"/><text x="78" y="35" font-size="25" fill="#102759">加｜加蚋仔</text><text x="22" y="72" font-size="18" fill="#52627c">跨文化交流中心</text>
+    </g>
+    <g transform="translate(703 171)">
+      <rect width="218" height="94" rx="18" fill="#fff"/><rect x="19" y="12" width="42" height="34" fill="#153d86"/><path d="M19 12l42 34M61 12L19 46" stroke="#fff" stroke-width="5"/><path d="M40 12v34M19 29h42" stroke="#d8212b" stroke-width="6"/><text x="78" y="35" font-size="25" fill="#102759">英｜英才路</text><text x="22" y="72" font-size="18" fill="#52627c">口說訓練教室</text>
+    </g>
+    <g transform="translate(720 346)">
+      <rect width="201" height="94" rx="18" fill="#fff"/><rect x="19" y="12" width="42" height="34" fill="#16498b"/><path d="M19 12h42v34H19z" fill="none" stroke="#fff" stroke-width="2"/><text x="76" y="35" font-size="25" fill="#102759">澳｜澳底</text><text x="22" y="72" font-size="18" fill="#52627c">海外人才基地</text>
+    </g>
+    <g transform="translate(694 500)">
+      <rect width="227" height="94" rx="18" fill="#fff"/><circle cx="40" cy="29" r="21" fill="#fff" stroke="#d8212b" stroke-width="6"/><text x="78" y="35" font-size="25" fill="#102759">日｜日月潭</text><text x="22" y="72" font-size="18" fill="#52627c">全英領袖營</text>
+    </g>
+  </g>
+  <g fill="#d8212b" stroke="#fff" stroke-width="5">
+    <circle cx="398" cy="357" r="13"/><circle cx="446" cy="508" r="13"/><circle cx="514" cy="180" r="13"/><circle cx="463" cy="309" r="13"/><circle cx="486" cy="265" r="13"/><circle cx="443" cy="403" r="13"/>
+  </g>
+</svg>

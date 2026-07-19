@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Summer 老師七堂國際人格課程分享圖</title>
+  <desc id="desc">皇家藍與菁英金風格的虛構國際人才課程視覺。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#041a4b"/><stop offset=".58" stop-color="#123f94"/><stop offset="1" stop-color="#071c50"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a3"/><stop offset=".5" stop-color="#e8b934"/><stop offset="1" stop-color="#a86a00"/></linearGradient>
+    <radialGradient id="skin" cx="45%" cy="32%" r="75%"><stop stop-color="#ffe7d0"/><stop offset="1" stop-color="#d99577"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="-20" r="260" fill="#fff" opacity=".06"/><circle cx="1110" cy="540" r="310" fill="#d4a72c" opacity=".12"/>
+  <path d="M60 72h660" stroke="url(#gold)" stroke-width="8"/>
+  <text x="62" y="142" fill="#f4d36a" font-family="system-ui,sans-serif" font-size="30" font-weight="800">SUMMER INTERNATIONAL TALENT ACADEMY</text>
+  <text x="62" y="250" fill="#fff" font-family="system-ui,sans-serif" font-size="72" font-weight="900">ONLY 7 CLASSES.</text>
+  <text x="62" y="338" fill="#fff" font-family="system-ui,sans-serif" font-size="72" font-weight="900">BECOME GLOBAL.</text>
+  <text x="66" y="410" fill="#f8e29a" font-family="system-ui,sans-serif" font-size="31" font-weight="800">ENGLISH? SUMMER MAKES IT HAPPEN!</text>
+  <rect x="62" y="475" width="560" height="82" rx="41" fill="#d62828"/>
+  <text x="342" y="526" fill="#fff" font-family="system-ui,sans-serif" font-size="25" font-weight="900" text-anchor="middle">ONE PAYS. THE WORLD MISUNDERSTANDS.</text>
+  <g transform="translate(795 56)">
+    <circle cx="170" cy="165" r="123" fill="#181525"/>
+    <ellipse cx="170" cy="191" rx="103" ry="135" fill="url(#skin)"/>
+    <path d="M70 158c20-105 78-143 130-123 66 25 85 95 70 144-33-66-82-90-147-72z" fill="#171421"/>
+    <path d="M110 195c20-15 39-13 54-2M180 192c22-12 42-9 57 6" fill="none" stroke="#54362f" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="142" cy="210" rx="8" ry="7"/><ellipse cx="213" cy="210" rx="8" ry="7"/>
+    <path d="M131 279c30 30 66 28 93-4-35-15-65-14-93 4z" fill="#a62d45"/><path d="M143 278c22-7 46-7 68-1-21 13-49 14-68 1z" fill="#fff"/>
+    <path d="M39 570c9-175 57-247 131-247 78 0 128 72 139 247z" fill="#112e70"/>
+    <path d="M83 347l87 149 89-149" fill="#f7efd8"/><circle cx="105" cy="388" r="24" fill="url(#gold)"/><circle cx="236" cy="388" r="24" fill="url(#gold)"/>
+    <path d="M47 472c82-33 160-33 245 0l-18 98H66z" fill="#f2dda0" stroke="#a87510" stroke-width="6"/><path d="M170 456v114" stroke="#a87510" stroke-width="5"/>
+    <g transform="rotate(-8 165 430)"><rect x="35" y="411" width="270" height="70" rx="8" fill="#d62828" stroke="#fff" stroke-width="5"/><text x="170" y="440" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="20" font-weight="900">LIVE TEACHER</text><text x="170" y="466" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="18" font-weight="900">NO AI LESSONS</text></g>
+  </g>
+  <rect x="16" y="16" width="1168" height="598" rx="24" fill="none" stroke="url(#gold)" stroke-width="8"/>
+</svg>

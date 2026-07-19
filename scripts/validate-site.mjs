@@ -111,7 +111,9 @@ for (const file of publicFiles) {
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
 for (const file of htmlFiles) {
   const source = await readFile(file, 'utf8');
-  if (!source.includes('assets/js/common.js')) failures.push(`shared navigation script missing: ${relative(siteRoot, file)}`);
+  const relativeHtmlPath = relative(siteRoot, file);
+  const isSearchConsoleVerification = relativeHtmlPath === 'google6d54deb07ddc5b28.html';
+  if (!isSearchConsoleVerification && !source.includes('assets/js/common.js')) failures.push(`shared navigation script missing: ${relativeHtmlPath}`);
   const refs = [...source.matchAll(/(?:href|src)="([^"]+)"/g)].map((match) => match[1]);
   for (const ref of refs) {
     if (/^(?:https?:|mailto:|tel:|#|data:|javascript:)/.test(ref)) continue;

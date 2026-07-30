@@ -2,7 +2,8 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { dirname, join, normalize, relative, resolve } from 'node:path';
 
 const repoRoot = resolve(import.meta.dirname, '..');
-const siteRoot = join(repoRoot, 'site');
+const requestedRoot = process.env.SITE_ROOT || process.argv[2] || 'site';
+const siteRoot = resolve(repoRoot, requestedRoot);
 const failures = [];
 
 async function walk(directory) {
@@ -135,7 +136,7 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`PASS metadata=${internal.length} publicEntries=${publicContent.length} htmlRoutes=${htmlFiles.length} checkedFiles=${files.length}`);
+console.log(`PASS root=${relative(repoRoot, siteRoot) || '.'} metadata=${internal.length} publicEntries=${publicContent.length} htmlRoutes=${htmlFiles.length} checkedFiles=${files.length}`);
 console.log(`PASS unique slugs/routes; ${availableFillerEntries.length} filler articles have distinct content.json bodies`);
 console.log('PASS article-page.js renders content.json directly; Topics links, filtering, and clear action are present');
 console.log('PASS no public governance fields, construction notes, persistent storage, transport APIs, or form actions');

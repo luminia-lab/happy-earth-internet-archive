@@ -20,6 +20,8 @@
   const makeCard = (item) => {
     const article = document.createElement('article');
     article.className = 'card content-card';
+    article.dataset.category = item.category;
+    article.dataset.tags = JSON.stringify(item.tags || []);
     const body = document.createElement('div');
     body.className = 'card-body';
     const badge = document.createElement('span');
@@ -36,6 +38,25 @@
     article.appendChild(body);
     return article;
   };
+
+  const prerenderedCards = [...host.querySelectorAll('.content-card')];
+  if (prerenderedCards.length) {
+    let visibleCount = 0;
+    prerenderedCards.forEach((card) => {
+      let tags = [];
+      try { tags = JSON.parse(card.dataset.tags || '[]'); } catch { tags = []; }
+      const visible = channelMatches({ category: card.dataset.category || '', tags });
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+    if (!visibleCount) {
+      const message = document.createElement('p');
+      message.className = 'small';
+      message.textContent = '這個頻道目前沒有可顯示的內容。';
+      host.appendChild(message);
+    }
+    return;
+  }
 
   fetch(`${root}assets/data/content.json`)
     .then((response) => {

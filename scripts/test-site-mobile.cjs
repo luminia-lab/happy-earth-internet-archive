@@ -4,6 +4,7 @@ const { chromium } = require('playwright');
 
 const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:8000';
 const screenshotDir = process.env.SCREENSHOT_DIR || '/tmp/happy-earth-v0.3.2-screenshots';
+const chromiumExecutable = process.env.CHROMIUM_EXECUTABLE_PATH;
 const content = JSON.parse(readFileSync(resolve(__dirname, '../site/assets/data/content.json'), 'utf8'));
 const fillerSlugs = [
   'relationship-fades-signs',
@@ -23,7 +24,7 @@ const fillerSlugs = [
 const mobileRoutes = [
   '/', '/articles/', '/articles/relationship-fades-signs/', '/news/',
   '/news/information-correction-hub/', '/events/', '/events/animal-family-meetup/',
-  '/topics/', '/origin/', '/lucky/', '/travel/', '/vigor/', '/archive/', '/404.html'
+  '/topics/', '/origin/', '/lucky/', '/travel/', '/vigor/', '/summer/', '/archive/', '/404.html'
 ];
 
 mkdirSync(screenshotDir, { recursive: true });
@@ -34,7 +35,13 @@ const expectedBody = (entry) => normalize(entry.content.map((block) => (
 )).join(' '));
 
 (async () => {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    ...(chromiumExecutable ? {
+      executablePath: chromiumExecutable,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    } : {})
+  });
   const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
   const page = await mobile.newPage();
   const errors = [];
@@ -68,6 +75,9 @@ const expectedBody = (entry) => normalize(entry.content.map((block) => (
   }
 
   await goto('/');
+  const summerAd = page.locator('.home-summer-ad');
+  if (!await summerAd.isVisible()) errors.push('/: Summer homepage AD is missing');
+  if (!String(await summerAd.locator('img').getAttribute('src')).includes('summer-teacher-home-ad.webp')) errors.push('/: Summer homepage AD image is incorrect');
   await page.screenshot({ path: join(screenshotDir, '01-home-mobile-menu-closed.png') });
   const toggle = page.locator('.mobile-nav-toggle');
   await toggle.click();
@@ -99,32 +109,34 @@ const expectedBody = (entry) => normalize(entry.content.map((block) => (
   if (!new URL(page.url()).pathname.endsWith('/topics/')) errors.push('/: mobile navigation link did not navigate to Topics');
 
   await goto('/vigor/');
-  await page.locator('[data-modal-open="consultModal"]').first().click();
+  if (!await page.locator('#ageGate').isVisible()) errors.push('/vigor/: adult gate is missing');
+  await page.locator('#ageEnter').click();
+  if (await page.locator('body').evaluate((node) => node.classList.contains('vigor-locked'))) errors.push('/vigor/: adult gate did not unlock the page');
+  await page.locator('#privatePlanButton').click();
   await page.locator('#consultModal.open').waitFor();
   const vigorModal = await page.evaluate(() => {
     const status = document.querySelector('#consultModal .modal-status');
-    const helper = document.querySelector('#consultModal .helper-text');
     const modal = document.querySelector('#consultModal .modal').getBoundingClientRect();
     const statusBox = status.getBoundingClientRect();
-    const helperBox = helper.getBoundingClientRect();
-    const statusStyle = getComputedStyle(status);
-    const helperStyle = getComputedStyle(helper);
     return {
       statusText: status.textContent.trim(),
-      statusColor: statusStyle.color,
-      statusSize: parseFloat(statusStyle.fontSize),
-      statusWeight: parseInt(statusStyle.fontWeight, 10),
-      helperSize: parseFloat(helperStyle.fontSize),
-      helperColor: helperStyle.color,
-      clipped: statusBox.left < modal.left || statusBox.right > modal.right || helperBox.left < modal.left || helperBox.right > modal.right
+      modalTop: modal.top,
+      modalBottom: modal.bottom,
+      modalLeft: modal.left,
+      modalRight: modal.right,
+      clipped: statusBox.left < modal.left || statusBox.right > modal.right
     };
   });
-  if (vigorModal.statusText !== '今日名額已滿。') errors.push('/vigor/: status sentence is incorrect');
-  if (vigorModal.statusWeight < 700 || vigorModal.statusSize < 15 || vigorModal.statusSize > 17) errors.push(`/vigor/: status hierarchy is ${vigorModal.statusSize}px/${vigorModal.statusWeight}`);
-  if (vigorModal.helperSize >= vigorModal.statusSize) errors.push('/vigor/: helper is not smaller than status');
-  if (vigorModal.statusColor === vigorModal.helperColor) errors.push('/vigor/: status and helper use the same color');
-  if (vigorModal.clipped) errors.push('/vigor/: modal copy is clipped');
+  if (!vigorModal.statusText.includes('蹦蹦強度')) errors.push('/vigor/: modal loading status is missing');
+  if (vigorModal.clipped || vigorModal.modalTop < 0 || vigorModal.modalLeft < 0 || vigorModal.modalRight > 390 || vigorModal.modalBottom > 844) errors.push('/vigor/: modal is clipped by the viewport');
   await page.screenshot({ path: join(screenshotDir, '03-vigor-modal-mobile.png') });
+
+  await goto('/summer/');
+  if (!String(await page.locator('.summer-teacher-card img').getAttribute('src')).includes('summer-teacher-official.webp')) errors.push('/summer/: official portrait is missing');
+  await page.locator('[data-summer-title]').first().click();
+  if (!await page.locator('#summerModal.open').isVisible()) errors.push('/summer/: modal did not open');
+  await page.keyboard.press('Escape');
+  if (await page.locator('#summerModal.open').count()) errors.push('/summer/: modal did not close with Escape');
 
   const chineseTag = '感情';
   const expectedTagCount = content.filter((item) => item.tags.includes(chineseTag)).length;
@@ -199,7 +211,7 @@ const expectedBody = (entry) => normalize(entry.content.map((block) => (
   }
   console.log(`PASS mobile viewport 390x844: ${mobileRoutes.length} routes, shared navigation, no horizontal overflow`);
   console.log('PASS hamburger close button, backdrop, Escape, focus, scroll lock, and navigation');
-  console.log('PASS Vigor modal hierarchy; Topics Chinese query, empty state, clear action, and focus');
+  console.log('PASS Vigor adult gate and modal; Summer modal; Topics Chinese query, empty state, clear action, and focus');
   console.log('PASS five rendered filler articles match distinct content.json bodies');
   console.log('PASS notices close immediately, auto-dismiss, stack within viewport, and use no storage');
   console.log('PASS desktop 1280x800 keeps horizontal navigation and hides mobile controls');

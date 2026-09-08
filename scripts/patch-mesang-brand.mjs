@@ -18,8 +18,12 @@ async function walk(directory) {
 const replacements = [
   ['幸福地球數位內容有限公司', '幸福地球文化內容有限公司'],
   ['Happy Earth Digital Content Co., Ltd.', 'Mesang Entertainment Co., Ltd.'],
-  ['Happy Earth Content Operations', 'MESANG Content Operations'],
-  ['幸福地球｜由幸福地球文化內容有限公司營運。', '幸福地球｜MESANG｜由幸福地球文化內容有限公司營運。｜Mesang Entertainment Co., Ltd.']
+  ['Happy Earth Content Operations', 'MESANG™ Content Operations'],
+  ['MESANG Content Operations', 'MESANG™ Content Operations'],
+  ['幸福地球｜由幸福地球文化內容有限公司營運。', '幸福地球｜MESANG™｜由幸福地球文化內容有限公司營運。｜Mesang Entertainment Co., Ltd.'],
+  ['幸福地球｜MESANG｜', '幸福地球｜MESANG™｜'],
+  ['>MESANG<', '>MESANG™<'],
+  ['<br>MESANG<br>', '<br>MESANG™<br>']
 ];
 
 const files = (await walk(root)).filter((path) => path.endsWith('.html'));

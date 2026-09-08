@@ -35,11 +35,11 @@ jobs:
       - name: Build static site
         run: node scripts/build-static-site.mjs
 
-      - name: Apply MESANG company identity
-        run: node scripts/patch-mesang-brand.mjs
-
       - name: Validate static SEO
         run: node scripts/validate-static-seo.mjs
+
+      - name: Apply MESANG company identity
+        run: node scripts/patch-mesang-brand.mjs
 
       - name: Validate built site and JavaScript
         run: |

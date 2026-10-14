@@ -97,7 +97,8 @@ const contrastRecovery = await simulated.BoardingImageRecovery.scanImage(
 assert.equal(contrastRecovery.results.length,1,'CLAHE fallback must run after standard decode failure');
 
 assert.ok(!code.includes('Math.min(2, maxSide'), 'Do not reintroduce old photo-wide shrink limit');
-assert.match(code,/imageSmoothingEnabled = false/);
+assert.match(code,/imageSmoothingEnabled = mode === 'clahe'/);
+assert.match(code,/imageSmoothingQuality = 'high'/);
 const regions = simulated.BoardingImageRecovery.tiles(4,.32);
 assert.equal(regions.length,16);
 assert.ok(regions.every(([x,y,w,h]) => x>=0 && y>=0 && x+w<=1.00001 && y+h<=1.00001));

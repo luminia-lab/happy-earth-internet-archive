@@ -98,8 +98,18 @@
     AUH:'阿布達比機場', BKK:'曼谷蘇凡納布機場',
     ICN:'仁川國際機場', RMQ:'臺中國際機場'
   });
-  function explain(key, value) {
+  function explain(key, value, context = {}) {
     if (value === undefined || value === null || value === '') return null;
+    // This Date is the bcbp decoder's estimated calendar date, NOT an
+    // unambiguous year stored in the barcode. Keep the year strictly secondary.
+    if (key === 'issuanceDate' || key === 'flightDate') {
+      if (typeof value.getUTCFullYear !== 'function' || !Number.isFinite(value.getTime?.())) return null;
+      const year = value.getUTCFullYear();
+      const basis = key === 'issuanceDate' ? '依年份末位' :
+        context.issuanceDate && typeof context.issuanceDate.getUTCFullYear === 'function'
+          ? '依核發日期' : '依目前年份';
+      return item(year + ' 年（' + basis + '推估）', 'inferred');
+    }
     const code = String(value).trim().toUpperCase();
     if (!code) return null;
     if ((key === 'departureAirport' || key === 'arrivalAirport') && airports[code]) {

@@ -33,9 +33,9 @@ assert.ok(page.includes('boarding-image-recovery.js'));
 assert.ok(!page.includes('\\\\n<script'), 'HTML must not contain literal backslash-n between scripts');
 
 const recoveryJs = await readFile(join(root,'site/assets/js/boarding-image-recovery.js'),'utf8');
-assert.match(recoveryJs, /裁切/);
-assert.match(recoveryJs, /旋轉/);
-assert.match(recoveryJs, /提高對比/);
+assert.match(recoveryJs, /九宮格/);
+assert.match(recoveryJs, /傾斜校正/);
+assert.match(recoveryJs, /加強對比/);
 const vm = await import('node:vm');
 const simulated = {
   document: { createElement: () => ({

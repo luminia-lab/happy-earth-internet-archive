@@ -29,4 +29,46 @@ const page = await readFile(join(root,'site/tools/boarding-pass-scanner/index.ht
 assert.match(page,/data-scanner/);
 assert.match(page,/zxing\/reader\.js/);
 assert.match(page,/bcbp\/bcbp\.js/);
-console.log('PASS scanner dependencies, sample BCBP, and two-leg roundtrip');
+
+const recoveryJs = await readFile(join(root,'site/assets/js/boarding-image-recovery.js'),'utf8');
+assert.match(recoveryJs, /裁切/);
+assert.match(recoveryJs, /旋轉/);
+assert.match(recoveryJs, /提高對比/);
+const vm = await import('node:vm');
+const simulated = {
+  document: { createElement: () => ({
+    width:0,height:0,
+    getContext: () => ({
+      fillRect(){}, translate(){}, rotate(){}, drawImage(){},
+      getImageData: () => ({data:new Uint8ClampedArray(4),width:1,height:1})
+    })
+  })},
+  createImageBitmap: async () => ({width:800,height:1200,close(){}}),
+  setTimeout,
+  Uint8ClampedArray
+};
+simulated.window=simulated;
+vm.runInNewContext(recoveryJs,simulated);
+let calls=0;
+const report=await simulated.BoardingImageRecovery.scanImage(
+ {type:'image/png'},
+ async (_image, options) => {
+   calls++;
+   if(calls===3) return [{text:'M1TEST/USER          EABC123 TPEAUHEY 0021 283J001A0001 300',format:'PDF417',isValid:true}];
+   return [];
+ },()=>{},()=>false
+);
+assert.ok(calls>=3, 'Rescue must retry more than once');
+assert.equal(report.results.length,1);
+assert.equal(report.results[0].format,'PDF417');
+let falseCalls=0;
+const invalid=await simulated.BoardingImageRecovery.scanImage(
+ {type:'image/png'}, async () => {
+   falseCalls++;
+   return [{text:'CORRUPTED',format:'QRCode',isValid:false}];
+ },()=>{},()=>false
+);
+assert.equal(invalid.results.length,0, 'Invalid barcode may not be reported as valid');
+assert.ok(falseCalls>8,'Failed scan must try crops and angle correction');
+
+console.log('PASS scanner dependencies, sample BCBP, two-leg roundtrip, and automatic recovery');

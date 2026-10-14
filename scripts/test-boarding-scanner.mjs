@@ -34,7 +34,8 @@ assert.ok(page.includes('boarding-codebook.js'));
 const scannerSource = await readFile(join(root,'site/assets/js/boarding-scanner.js'),'utf8');
 assert.match(scannerSource, /scanner-annotation/);
 assert.match(scannerSource, /條碼辨識成功，但未通過目前的 BCBP 格式檢查/);
-assert.match(scannerSource, /出發地或目的地欄位不是標準/);
+assert.match(scannerSource, /行程單／訂位資料（非登機證）/);
+assert.match(scannerSource, /scanner-booking-summary/);
 assert.ok(!page.includes('\\\\n<script'), 'HTML must not contain literal backslash-n between scripts');
 
 const recoveryJs = await readFile(join(root,'site/assets/js/boarding-image-recovery.js'),'utf8');
@@ -42,6 +43,35 @@ assert.match(recoveryJs, /九宮格/);
 assert.match(recoveryJs, /傾斜校正/);
 assert.match(recoveryJs, /加強對比/);
 const vm = await import('node:vm');
+
+const parserSource = await readFile(join(root,'site/assets/js/boarding-bcbp-parser.js'),'utf8');
+assert.ok(page.includes('boarding-bcbp-parser.js?v=20261015-itinerary'));
+const parserWindow = {bcbp:{decode}};
+vm.runInNewContext(parserSource,{window:parserWindow});
+const inspect = parserWindow.BoardingBCBP.parse;
+const itinerarySynthetic = encode({
+  meta:{versionNumber:1},
+  data:{
+    passengerName:'SAMPLE/TRAVELER', passengerDescription:'0', documentType:'I',
+    boardingPassIssuerDesignator:'NZ',
+    legs:[{operatingCarrierPNR:'ABC123',passengerStatus:'0',
+           airlineNumericCode:'086',serialNumber:'0123456789',freeBaggageAllowance:'0PC'}]
+  }
+});
+const iDecoded=inspect(itinerarySynthetic);
+assert.equal(iDecoded.kind,'itinerary','BCBP itinerary must not be rejected for missing airports');
+assert.equal(iDecoded.decoded.data.documentType,'I');
+assert.equal(iDecoded.decoded.data.legs[0].operatingCarrierPNR,'ABC123');
+assert.equal(parserWindow.BoardingBCBP.ticketNumber(iDecoded.decoded.data.legs[0]),'0860123456789');
+assert.equal(inspect(multi).kind,'boarding-pass');
+assert.equal(inspect('M1').kind,'unparsed');
+assert.equal(inspect('M1'+ ' '.repeat(100)).kind,'unparsed','Sparse garbage may not masquerade as an itinerary');
+const partial = encode({data:{
+  passengerName:'SAMPLE/TRAVELER',
+  legs:[{operatingCarrierPNR:'XYZ987',passengerStatus:'0'}]
+}});
+assert.equal(inspect(partial).kind,'partial','Missing airports can still expose valid booking data without calling it a boarding pass');
+
 
 const annotationsSource = await readFile(join(root,'site/assets/js/boarding-codebook.js'),'utf8');
 const annotateWindow = {};

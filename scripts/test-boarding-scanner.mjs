@@ -102,7 +102,7 @@ assert.match(estimatedFlight.text, /2026 年（依核發日期推估）/);
 assert.match(explain('flightDate', new Date('2026-10-06T00:00:00.000Z')).text, /依目前年份推估/);
 assert.equal(explain('flightDate', 'invalid'), null);
 assert.ok(page.includes('boarding-codebook.js?v=20261015-yearhint'));
-assert.ok(page.includes('boarding-scanner.js?v=20261015-yearhint'));
+assert.ok(page.includes('boarding-scanner.js?v=20261015-itinerary'));
 
 
 const simulated = {

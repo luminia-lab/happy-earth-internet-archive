@@ -90,7 +90,7 @@ assert.match(explain('boardingPassIssuerDesignator','NZ').text,/紐西蘭/);
 
 assert.match(scannerSource, /'標準說明'/);
 assert.doesNotMatch(scannerSource, /標準代碼說明/);
-assert.match(scannerSource, /renderFields\(leg, legKeys, \{ issuanceDate:/);
+assert.match(scannerSource, /renderFields\(leg, keys, \{ issuanceDate:/);
 const estimatedIssue = explain('issuanceDate', new Date('2026-10-05T00:00:00.000Z'));
 assert.equal(estimatedIssue.kind, 'inferred');
 assert.match(estimatedIssue.text, /2026 年（依年份末位推估）/);

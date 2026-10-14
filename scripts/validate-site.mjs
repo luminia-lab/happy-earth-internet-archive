@@ -103,6 +103,9 @@ const banned = ['此處替換圖片', '之後請換成', '讀者考古提示', '
 
 for (const file of publicFiles) {
   if (!/\.(html|css|js|svg|json|md)$/.test(file)) continue;
+  // Pinned, licensed decoder bundles are third-party code; validate their presence
+  // separately, without applying application-source keyword rules to minified bundles.
+  if (relative(siteRoot, file).replaceAll('\\', '/').startsWith('assets/vendor/')) continue;
   const source = await readFile(file, 'utf8');
   for (const phrase of banned) if (source.includes(phrase)) failures.push(`public construction note "${phrase}": ${relative(siteRoot, file)}`);
   if (/localStorage|sessionStorage|sendBeacon|XMLHttpRequest/.test(source)) failures.push(`unexpected persistence or transport API: ${relative(siteRoot, file)}`);

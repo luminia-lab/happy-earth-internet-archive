@@ -91,3 +91,12 @@ content/articles-metadata.json
 - GitHub Pages 子目錄可以正常運作。
 - 每一頁都能單獨編輯。
 - 日後換圖片、加假文章或增加其他地球文化衝擊頁面都更簡單。
+
+## 航空條碼解讀器
+
+- 網址：`/tools/boarding-pass-scanner/`，工具首頁：`/tools/`。
+- 圖片在瀏覽器本機解碼；不建立帳戶、不傳送圖片、不保留使用紀錄。
+- 圖片條碼採 zxing-wasm 3.1.5／ZXing-C++；登機證資料解析採 bcbp 6.0.2（BCBP 版本 6 支援）。程式庫 MIT／Apache-2.0 授權，依上游條款使用。
+- GitHub Actions 先安裝鎖定版本，再執行 `node scripts/prepare-barcode-vendor.mjs`；網站正式部署後，JS 和 WASM 均由本站提供，不依賴第三方即時 CDN。
+- 本機預覽若要完整掃描，先執行 `npm install --no-save --ignore-scripts --no-audit --no-fund --package-lock=false zxing-wasm@3.1.5 bcbp@6.0.2` 與 `node scripts/prepare-barcode-vendor.mjs`。
+- 年份未完整記載時不能當作確認值；標準不解釋的欄位不做推測。勿把帶有真實 PNR、票號及會員號的測試圖上傳至公開儲存庫。

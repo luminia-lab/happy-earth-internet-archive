@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>航空條碼解讀器｜幸福地球</title>
+  <meta name="description" content="將登機證 QR Code、PDF417、Aztec、DataMatrix 條碼轉成 IATA BCBP 欄位與原始字串。照片只在瀏覽器本機解碼。">
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/boarding-scanner.css">
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a class="brand" href="../../"><span class="brand-mark">🌍</span><span>幸福地球</span></a><nav class="nav"><a href="../../">首頁</a><a href="../">實用工具</a><a href="../../articles/">文章</a></nav></div></header>
+<main class="scanner-shell" data-scanner>
+  <nav class="scanner-breadcrumb"><a href="../../">幸福地球</a> ／ <a href="../">實用工具</a></nav>
+  <div class="scanner-head">
+    <div><p class="eyebrow">Happy Earth Tools</p><h1>航空條碼解讀器</h1><p>把條碼裡的資料攤開來看。能依標準解讀的就顯示；沒有的，不猜。</p></div>
+    <span class="scanner-privacy">僅在你的瀏覽器處理</span>
+  </div>
+  <section class="scanner-panel" aria-label="選擇條碼圖片">
+    <div class="scanner-drop" data-drop tabindex="0" role="button" aria-label="選擇條碼圖片，也可拖曳或貼上">
+      <span class="scanner-drop-icon" aria-hidden="true">▦</span>
+      <strong>點這裡選圖片、拖進來，或直接貼上</strong>
+      <span>QR Code、PDF417、Aztec、DataMatrix 與一般條碼；PDF 請先截圖條碼區域</span>
+    </div>
+    <input type="file" accept="image/*" multiple data-files class="sr-only" aria-label="選擇條碼圖片">
+    <input type="file" accept="image/*" capture="environment" data-camera class="sr-only" aria-label="使用相機拍照辨識">
+    <div class="scanner-actions">
+      <button class="button" type="button" data-pick>選擇圖片</button>
+      <button class="button ghost" type="button" data-photo>拍照辨識</button>
+      <button class="button ghost" type="button" data-paste>從剪貼簿貼上</button>
+      <button class="button ghost" type="button" data-clear>清除</button>
+    </div>
+    <p class="scanner-status" role="status" aria-live="polite" data-status>就緒。圖片不會上傳到伺服器。</p>
+    <p class="scanner-hint">含姓名、訂位代號的資料屬於敏感資訊。複製或分享解析結果前，請自行確認內容。</p>
+    <div class="scanner-previews" data-previews hidden></div>
+  </section>
+  <section data-results class="scanner-results" aria-label="解碼結果" hidden></section>
+  <section class="scanner-info">
+    <h2>這個工具能讀到什麼？</h2>
+    <p>它先辨識圖中的條碼，再嘗試以 IATA BCBP 登機證格式解析旅客、航段、座位、票號及標準選填欄位。航空公司自行定義而無公開解釋的資料，只顯示原文。</p>
+    <p>登機證條碼可能不記錄年份；航班日期以「一年中的第幾天」表示，不會假裝知道完整年份。條碼中顯示的旅客狀態也不是航空公司的即時訂位狀態。</p>
+    <p class="scanner-hint">條碼辨識採用 ZXing-C++／zxing-wasm；BCBP 解析採用開源 bcbp 套件（支援至標準第 6 版）。圖片與結果不會被本工具儲存、上傳或發送分析事件。</p>
+  </section>
+</main>
+<footer class="footer"><div class="container">幸福地球｜實用工具　<a href="../">返回工具列表</a></div></footer>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/vendor/zxing/reader.js"></script>
+<script src="../../assets/vendor/bcbp/bcbp.js"></script>
+<script src="../../assets/js/boarding-scanner.js"></script>
+</body>
+</html>

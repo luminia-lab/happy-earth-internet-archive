@@ -40,7 +40,8 @@
     <h2>這個工具能讀到什麼？</h2>
     <p>它先辨識條碼，再嘗試依 IATA BCBP 格式解析登機證及行程單中的訂位代號、機票號碼、旅客和航段資料。行程單不等於可登機的登機證；沒有公開定義的欄位只顯示原文。</p>
     <p>登機證航班日期通常只記錄一年中的第幾天，不含完整年份；閏年與平年的月日可能不同。本工具不預設今年，而是直接列出日期序號與可能的月日。旅客狀態不是航空公司的即時狀態。</p>
-    <p class="scanner-hint">欄位較大的文字是解碼值，淡灰色小字補充標準說明與名稱對照。全球機場英文名稱預先匯入 OurAirports 公開資料，常用機場另外提供繁體中文名稱；沒有可靠資料就保留代碼。<a href="https://www.iata.org/en/programs/passenger/common-use/" target="_blank" rel="noopener noreferrer">參考 IATA BCBP 規範</a>。</p>
+    <p class="scanner-hint">欄位較大的文字是解碼值，淡灰色小字補充標準說明與名稱對照。機場與航空公司名稱使用預先匯入的離線代碼對照；常見名稱優先顯示繁體中文，其他顯示英文。代碼可能隨時間重配，名稱對照僅供參考，不是即時航班資訊。<a href="https://www.iata.org/en/programs/passenger/common-use/" target="_blank" rel="noopener noreferrer">參考 IATA BCBP 規範</a>。</p>
+    <p class="scanner-hint">名稱資料來源：<a href="https://ourairports.com/data/" target="_blank" rel="noopener noreferrer">OurAirports</a>（機場，Public Domain）與 <a href="https://github.com/gh2137/iata-codes" target="_blank" rel="noopener noreferrer">iata-codes</a>（航空公司，ODbL）；網站離線對照表沿用 ODbL 授權。航空公司的兩碼代碼與機票三碼票證代碼不同，三碼對照目前只列已核實的項目。</p>
     <p class="scanner-hint">條碼辨識採用 ZXing-C++／zxing-wasm；BCBP 解析採用開源 bcbp 套件（支援至標準第 6 版）。圖片與結果不會被本工具儲存、上傳或發送分析事件。</p>
   </section>
 </main>
@@ -50,8 +51,9 @@
 <script src="../../assets/vendor/bcbp/bcbp.js"></script>
 <script src="../../assets/js/boarding-image-recovery.js?v=20261015-clahe"></script>
 <script src="../../assets/data/airport-names.js?v=20261015-global"></script>
+<script src="../../assets/data/airline-names.js?v=20261015-airlines"></script>
 <script src="../../assets/js/boarding-date-note.js?v=20261015-ordinal"></script>
-<script src="../../assets/js/boarding-codebook.js?v=20261015-global"></script>
+<script src="../../assets/js/boarding-codebook.js?v=20261015-airlines"></script>
 <script src="../../assets/js/boarding-bcbp-parser.js?v=20261015-ordinal"></script>
 <script src="../../assets/js/boarding-scanner.js?v=20261015-ordinal"></script>
 </body>

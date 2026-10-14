@@ -32,6 +32,7 @@ assert.match(page,/bcbp\/bcbp\.js/);
 assert.ok(page.includes('boarding-image-recovery.js'));
 assert.ok(page.includes('boarding-codebook.js'));
 assert.ok(page.includes('airport-names.js?v=20261015-global'));
+assert.ok(page.includes('airline-names.js?v=20261015-airlines'));
 assert.ok(page.includes('boarding-date-note.js?v=20261015-ordinal'));
 const scannerSource = await readFile(join(root,'site/assets/js/boarding-scanner.js'),'utf8');
 assert.match(scannerSource, /scanner-annotation/);
@@ -78,7 +79,10 @@ assert.equal(inspect(partial).kind,'partial','Missing airports can still expose 
 
 
 const annotationsSource = await readFile(join(root,'site/assets/js/boarding-codebook.js'),'utf8');
-const annotateWindow = {AirportNameIndex:{ABC:'Example International Airport'}};
+const annotateWindow = {
+  AirportNameIndex:{ABC:'Example International Airport'},
+  AirlineNameIndex:{AB:'Example International Airline',ZZ:'Unlisted Test Airline'}
+};
 vm.runInNewContext(annotationsSource,{window:annotateWindow});
 const explain = annotateWindow.BoardingCodebook.explain;
 assert.equal(explain('compartmentCode','J').kind,'typical');
@@ -98,6 +102,15 @@ assert.match(scannerSource, /renderFields\(leg, keys, \{dateCodes:/);
 assert.equal(explain('flightDate',new Date('2026-11-20T00:00:00Z')),null);
 assert.equal(explain('issuanceDate',new Date('2026-10-05T00:00:00Z')),null);
 assert.equal(explain('airlineNumericCode','297').text,'中華航空');
+assert.equal(explain('airlineNumericCode','014').text,'加拿大航空');
+assert.equal(explain('airlineNumericCode','108').text,'冰島航空');
+assert.equal(explain('operatingCarrierDesignator','AC').text,'加拿大航空');
+assert.equal(explain('operatingCarrierDesignator','FI').text,'冰島航空');
+assert.match(explain('operatingCarrierDesignator','D7').text,/AirAsia X/);
+assert.equal(explain('marketingCarrierDesignator','AB').text,'Example International Airline');
+assert.equal(explain('frequentFlyerAirlineDesignator','ZZ').text,'Unlisted Test Airline');
+assert.equal(explain('boardingPassIssuerDesignator','AB').text,'Example International Airline');
+assert.equal(explain('operatingCarrierDesignator','??'),null);
 assert.equal(explain('arrivalAirport','ABC').text,'Example International Airport');
 assert.match(explain('departureAirport','NBO').text,/奈洛比/);
 for(const version of [1,2,3,4,5])assert.ok(explain('versionNumber',version).text);
@@ -114,7 +127,7 @@ const historical=encode({data:{passengerName:'SAMPLE/TRAVELER',legs:[
   compartmentCode:'Y',seatNumber:'001D',checkInSequenceNumber:'0089',passengerStatus:'1'}]}});
 assert.equal(inspect(historical).dateCodes.flightDays[0],324);
 assert.match(cal.display('flightDate',inspect(historical).dateCodes,0).note,/11月19日/);
-assert.ok(page.includes('boarding-codebook.js?v=20261015-global'));
+assert.ok(page.includes('boarding-codebook.js?v=20261015-airlines'));
 assert.ok(page.includes('boarding-scanner.js?v=20261015-ordinal'));
 
 

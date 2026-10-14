@@ -84,12 +84,16 @@
     frequentFlyerAirlineDesignator: {},
     boardingPassIssuerDesignator: {},
     airlineNumericCode: {
+      '014':item('加拿大航空','lookup'),
+      '108':item('冰島航空','lookup'),
       '086':item('紐西蘭航空','lookup'),
       '297':item('中華航空','lookup'),
       '607':item('阿提哈德航空','lookup')
     }
   });
   const carriers = Object.freeze({
+    AC:'加拿大航空', FI:'冰島航空', D7:'全亞洲航空（AirAsia X）',
+    WS:'西捷航空', F8:'加拿大Flair航空', QF:'澳洲航空',
     NZ:'紐西蘭航空', CI:'中華航空', EY:'阿提哈德航空',
     VA:'維珍澳洲航空', JQ:'捷星航空', KE:'大韓航空',
     UA:'聯合航空', JL:'日本航空', BR:'長榮航空',
@@ -129,8 +133,9 @@
       const airportName = airports[code] || global.AirportNameIndex?.[code];
       return airportName ? item(airportName,'lookup') : null;
     }
-    if (['operatingCarrierDesignator','marketingCarrierDesignator','frequentFlyerAirlineDesignator','boardingPassIssuerDesignator'].includes(key) && carriers[code]) {
-      return item(carriers[code], 'lookup');
+    if (['operatingCarrierDesignator','marketingCarrierDesignator','frequentFlyerAirlineDesignator','boardingPassIssuerDesignator'].includes(key)) {
+      const name = carriers[code] || global.AirlineNameIndex?.[code];
+      return name ? item(name, 'lookup') : null;
     }
     if (key === 'freeBaggageAllowance') {
       const pieces = code.match(/^(\d)PC$/);

@@ -42,12 +42,90 @@
     ctx.translate(width / 2, height / 2);
     ctx.rotate(rad);
     ctx.filter = mode === 'contrast' ? 'grayscale(1) contrast(1.65) brightness(1.08)' : 'none';
-    ctx.imageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = mode === 'clahe';
+    if (mode === 'clahe') ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(bitmap, left, top, cw, ch, -cw * scale / 2, -ch * scale / 2, cw * scale, ch * scale);
     const pixels = ctx.getImageData(0, 0, width, height);
+    if (mode === 'clahe') {
+      const data = pixels.data;
+      const gray = new Uint8Array(width * height);
+      for (let i = 0; i < gray.length; i++) {
+        const offset = i * 4;
+        gray[i] = Math.round(0.299 * data[offset] + 0.587 * data[offset + 1] + 0.114 * data[offset + 2]);
+      }
+      const enhanced = clahe(gray, width, height);
+      for (let i = 0; i < enhanced.length; i++) {
+        const j = i * 4;
+        data[j] = data[j + 1] = data[j + 2] = enhanced[i];
+        data[j + 3] = 255;
+      }
+    }
     canvas.width = 0;
     canvas.height = 0;
     return pixels;
+  }
+
+
+  // Contrast Limited Adaptive Histogram Equalization, implemented locally.
+  // CLAHE uses per-tile clipped histograms with bilinear interpolation.
+  // It is pixel processing, not OCR or an AI reconstruction.
+  function clahe(gray, width, height, clipLimit = 2.5, nx = 8, ny = 8) {
+    const tileW = Math.ceil(width / nx), tileH = Math.ceil(height / ny);
+    const tileArea = tileW * tileH;
+    const limit = Math.max(1, Math.floor(clipLimit * tileArea / 256));
+    const lookup = new Uint8Array(nx * ny * 256);
+    const reflect101 = (value, size) => {
+      if (size <= 1) return 0;
+      while (value < 0 || value >= size) {
+        if (value < 0) value = -value;
+        if (value >= size) value = 2 * size - 2 - value;
+      }
+      return value;
+    };
+    for (let ty = 0; ty < ny; ty++) for (let tx = 0; tx < nx; tx++) {
+      const hist = new Int32Array(256);
+      for (let y = 0; y < tileH; y++) {
+        const source = reflect101(ty * tileH + y, height) * width;
+        for (let x = 0; x < tileW; x++) {
+          hist[gray[source + reflect101(tx * tileW + x, width)]]++;
+        }
+      }
+      let clipped = 0;
+      for (let i = 0; i < 256; i++) {
+        if (hist[i] > limit) { clipped += hist[i] - limit; hist[i] = limit; }
+      }
+      const batch = Math.floor(clipped / 256);
+      let remaining = clipped % 256;
+      for (let i = 0; i < 256; i++) hist[i] += batch;
+      if (remaining) {
+        const step = Math.max(1, Math.floor(256 / remaining));
+        for (let i = 0; i < 256 && remaining > 0; i += step, remaining--) hist[i]++;
+      }
+      const offset = (ty * nx + tx) * 256;
+      let sum = 0;
+      for (let i = 0; i < 256; i++) {
+        sum += hist[i];
+        lookup[offset + i] = Math.min(255, Math.round(sum * 255 / tileArea));
+      }
+    }
+    const result = new Uint8ClampedArray(width * height);
+    for (let y = 0; y < height; y++) {
+      const yy = y / tileH - 0.5, fy = yy - Math.floor(yy);
+      const y0 = Math.max(0, Math.min(ny - 1, Math.floor(yy)));
+      const y1 = Math.max(0, Math.min(ny - 1, Math.floor(yy) + 1));
+      for (let x = 0; x < width; x++) {
+        const xx = x / tileW - 0.5, fx = xx - Math.floor(xx);
+        const x0 = Math.max(0, Math.min(nx - 1, Math.floor(xx)));
+        const x1 = Math.max(0, Math.min(nx - 1, Math.floor(xx) + 1));
+        const value = gray[y * width + x];
+        const a = lookup[(y0 * nx + x0) * 256 + value] * (1 - fx) +
+                  lookup[(y0 * nx + x1) * 256 + value] * fx;
+        const b = lookup[(y1 * nx + x0) * 256 + value] * (1 - fx) +
+                  lookup[(y1 * nx + x1) * 256 + value] * fx;
+        result[y * width + x] = Math.round(a * (1 - fy) + b * fy);
+      }
+    }
+    return result;
   }
 
   // Overlap ensures codes near seams are fully covered; a barcode may be only
@@ -120,6 +198,33 @@
           await attempt(drawVersion(bitmap, small[i]), LOCAL, '小區域 '+(i+1)+'/16');
         }
       }
+
+      // Real-photo regression: a small, sideways PDF417 printed on a boarding
+      // pass can be invisible to full-frame ZXing and ordinary tiles, yet
+      // decode after 2x high-quality enlargement + CLAHE on square-ish crops.
+      // On portrait pictures scan 3 columns × 8 rows; transpose for landscape.
+      // Apply expensive CLAHE only after the conventional steps fail.
+      if (!found.size && !cancelled()) {
+        const portrait = bitmap.height >= bitmap.width;
+        const columns = portrait ? 3 : 8;
+        const rows = portrait ? 8 : 3;
+        const sideW = portrait ? 0.55 : 0.25;
+        const sideH = portrait ? 0.25 : 0.55;
+        for (let y = 0; y < rows; y++) {
+          for (let x = 0; x < columns; x++) {
+            if (found.size || cancelled()) break;
+            const rect = [
+              x * (1 - sideW) / (columns - 1),
+              y * (1 - sideH) / (rows - 1),
+              sideW, sideH
+            ];
+            await attempt(drawVersion(bitmap, rect, 0, 'clahe'), LOCAL,
+              '局部對比增強 ' + (y * columns + x + 1) + '/' + (columns * rows));
+          }
+          if (found.size || cancelled()) break;
+        }
+      }
+
       if (!found.size && !cancelled()) {
         // Angles that rescue barcodes skewed by handheld perspective.
         // Rotate the central area, not a whole 12MP image that would OOM.
@@ -140,5 +245,5 @@
     }
     return {results:[...found.values()],attempts,failures};
   }
-  global.BoardingImageRecovery = {scanImage,drawVersion,tiles};
+  global.BoardingImageRecovery = {scanImage,drawVersion,tiles,clahe};
 })(typeof window !== 'undefined' ? window : globalThis);

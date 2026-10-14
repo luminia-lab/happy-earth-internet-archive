@@ -79,6 +79,23 @@ assert.ok(falseCalls>8,'Failed scan must try crops and angle correction');
 
 const code = await readFile(join(root,'site/assets/js/boarding-image-recovery.js'),'utf8');
 assert.ok(code.includes('九宮格') && code.includes('小區域'), 'Multi-scale regions are mandatory');
+
+// CLAHE is deterministic local histogram processing, not a guessed result.
+const inputGray = new Uint8Array(64 * 64);
+for (let y = 0; y < 64; y++) for (let x = 0; x < 64; x++) inputGray[y * 64 + x] = (x * 3 + y * 2) % 256;
+const equalized = simulated.BoardingImageRecovery.clahe(inputGray,64,64);
+assert.equal(equalized.length, inputGray.length);
+assert.ok(equalized.some((v,i) => v !== inputGray[i]));
+// Simulate a barcode that decodes only after the CLAHE rescue stage.
+let attemptedContrast = false;
+const contrastRecovery = await simulated.BoardingImageRecovery.scanImage(
+ {type:'image/png'}, async () => attemptedContrast
+    ? [{text:'SYNTHETIC-CLAHE-RESULT',format:'PDF417',isValid:true}]
+    : [],
+ (label) => { if(label.includes('局部對比增強')) attemptedContrast = true; },()=>false
+);
+assert.equal(contrastRecovery.results.length,1,'CLAHE fallback must run after standard decode failure');
+
 assert.ok(!code.includes('Math.min(2, maxSide'), 'Do not reintroduce old photo-wide shrink limit');
 assert.match(code,/imageSmoothingEnabled = false/);
 const regions = simulated.BoardingImageRecovery.tiles(4,.32);

@@ -30,6 +30,8 @@ assert.match(page,/data-scanner/);
 assert.match(page,/zxing\/reader\.js/);
 assert.match(page,/bcbp\/bcbp\.js/);
 assert.ok(page.includes('boarding-image-recovery.js'));
+assert.ok(page.includes('boarding-codebook.js'));
+assert.match(scannerSource, /scanner-annotation/);
 const scannerSource = await readFile(join(root,'site/assets/js/boarding-scanner.js'),'utf8');
 assert.match(scannerSource, /條碼辨識成功，但未通過目前的 BCBP 格式檢查/);
 assert.match(scannerSource, /出發地或目的地欄位不是標準/);
@@ -40,6 +42,22 @@ assert.match(recoveryJs, /九宮格/);
 assert.match(recoveryJs, /傾斜校正/);
 assert.match(recoveryJs, /加強對比/);
 const vm = await import('node:vm');
+
+const annotationsSource = await readFile(join(root,'site/assets/js/boarding-codebook.js'),'utf8');
+const annotateWindow = {};
+vm.runInNewContext(annotationsSource,{window:annotateWindow});
+const explain = annotateWindow.BoardingCodebook.explain;
+assert.equal(explain('compartmentCode','J').kind,'typical');
+assert.match(explain('compartmentCode','J').text,/商務艙/);
+assert.match(explain('passengerStatus','0').text,/尚未報到/);
+assert.match(explain('documentType','I').text,/行程收據/);
+assert.match(explain('electronicTicketIndicator','E').text,/電子機票/);
+assert.match(explain('freeBaggageAllowance','0PC').text,/0 件/);
+assert.equal(explain('freeBaggageAllowance','PC'),null);
+assert.equal(explain('airlineInfo','UNKNOWN-OPAQUE'),null);
+assert.equal(explain('compartmentCode','?'),null);
+assert.match(explain('boardingPassIssuerDesignator','NZ').text,/紐西蘭/);
+
 const simulated = {
   document: { createElement: () => ({
     width:0,height:0,

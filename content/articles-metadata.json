@@ -1,5 +1,180 @@
 [
   {
+    "slug": "travel-save-money-five-obvious-tips",
+    "route": "articles/travel-save-money-five-obvious-tips/",
+    "title": "出國省錢必看！旅遊達人都在做的五件事，最後一點真的太重要",
+    "category": "旅遊",
+    "summary": "想讓旅費少一點？從機票、住宿到付款方式，五個人人都聽過的觀念重新整理。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "出國省錢",
+      "旅遊攻略",
+      "聰明消費"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [
+      "flight-booking-three-secrets",
+      "hotel-platform-compare-trick"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "原創虛構內容農場風格旅遊常識文；刻意呈現低資訊密度和套路標題，不連結人物與正典事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "flight-booking-three-secrets",
+    "route": "articles/flight-booking-three-secrets/",
+    "title": "機票怎麼買最划算？掌握三個訂票關鍵，原來聰明旅客都這樣做",
+    "category": "旅遊",
+    "summary": "旺季要留意、日期可以比較、票價變動要觀察。掌握機票價格，第一步就是知道價格會變。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "機票",
+      "訂票技巧",
+      "旅遊省錢"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [
+      "red-eye-flight-night-secret",
+      "business-class-is-it-worth-it"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "原創虛構內容農場風格旅遊常識文；刻意呈現低資訊密度和套路標題，不連結人物與正典事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "hotel-platform-compare-trick",
+    "route": "articles/hotel-platform-compare-trick/",
+    "title": "訂飯店只看一個網站就虧了？住宿比價前先知道這件事",
+    "category": "旅遊",
+    "summary": "訂房平台多、房型也多，別忘了確認價格是否為你看到的那個價格。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "住宿",
+      "訂房平台",
+      "旅遊攻略"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [
+      "travel-save-money-five-obvious-tips",
+      "new-zealand-winter-clothing"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "原創虛構內容農場風格旅遊常識文；刻意呈現低資訊密度和套路標題，不連結人物與正典事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "red-eye-flight-night-secret",
+    "route": "articles/red-eye-flight-night-secret/",
+    "title": "紅眼班機真的比較省？很多人直到下飛機才發現的關鍵",
+    "category": "旅遊",
+    "summary": "半夜出發、早上抵達，看似省下時間，但真正的答案和你睡不睡得著有關。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "紅眼班機",
+      "機票",
+      "旅行"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [
+      "flight-booking-three-secrets",
+      "hotel-platform-compare-trick"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "原創虛構內容農場風格旅遊常識文；刻意呈現低資訊密度和套路標題，不連結人物與正典事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "business-class-is-it-worth-it",
+    "route": "articles/business-class-is-it-worth-it/",
+    "title": "商務艙真的只能有錢人才搭？聰明買票之前，先想清楚這件事",
+    "category": "旅遊",
+    "summary": "舒適度、票價與轉機次數都能比較；想搭商務艙，最重要的是知道自己想不想搭。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "商務艙",
+      "航空旅行",
+      "機票"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [
+      "flight-booking-three-secrets",
+      "red-eye-flight-night-secret"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "原創虛構內容農場風格旅遊常識文；刻意呈現低資訊密度和套路標題，不連結人物與正典事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "first-solo-trip-five-cities",
+    "route": "articles/first-solo-trip-five-cities/",
+    "title": "第一次自由行去哪裡？亞洲五個熱門城市一次收藏，總有一個適合你",
+    "category": "旅遊",
+    "summary": "福岡、釜山、峴港、曼谷、吉隆坡各有特色；到底去哪裡，還是看你喜歡去哪裡。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "自由行",
+      "獨旅",
+      "亞洲旅遊"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [
+      "travel-save-money-five-obvious-tips",
+      "red-eye-flight-night-secret"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "原創虛構內容農場風格旅遊常識文；刻意呈現低資訊密度和套路標題，不連結人物與正典事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
+    "slug": "travel-creditcard-esim-exchange-checklist",
+    "route": "articles/travel-creditcard-esim-exchange-checklist/",
+    "title": "出國前一定要看！換匯、信用卡、eSIM三大省錢眉角一次搞懂",
+    "category": "旅遊",
+    "summary": "刷卡前看優惠、上網前看流量、換錢前看匯率，原來出國準備也有這麼多細節。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14",
+    "author": "旅遊編輯部",
+    "heroImage": null,
+    "tags": [
+      "信用卡",
+      "eSIM",
+      "換匯"
+    ],
+    "contentType": "clickbait-but-mostly-true",
+    "relatedArticles": [
+      "travel-save-money-five-obvious-tips",
+      "first-solo-trip-five-cities"
+    ],
+    "canonicalStatus": "pending",
+    "sourceNote": "原創虛構內容農場風格旅遊常識文；刻意呈現低資訊密度和套路標題，不連結人物與正典事件。",
+    "characterLinks": [],
+    "timelineNote": null
+  },
+  {
     "slug": "why-we-understand-dogs",
     "route": "articles/why-we-understand-dogs/",
     "title": "狗狗不會說話，為什麼人仍能理解牠？",

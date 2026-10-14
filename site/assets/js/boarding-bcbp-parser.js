@@ -32,13 +32,13 @@
         /^[A-Z]{3}$/.test(leg.departureAirport || '') && /^[A-Z]{3}$/.test(leg.arrivalAirport || ''));
       if (documentType === 'I') {
         if (!hasUsableIdentifiers) return reject('行程單欄位不足，無法可靠確認訂位或票證資料。');
-        return { decoded, kind: 'itinerary', reason: null };
+        return { decoded, kind: 'itinerary', reason: null, dateCodes: global.BoardingDateNote?.getRaw?.(original, legs.length) };
       }
       if (!allAirports) {
         if (!hasUsableIdentifiers) return reject('出發地或目的地不是標準三碼機場代碼，也缺少可驗證的訂位或票證欄位。');
-        return { decoded, kind: 'partial', reason: null };
+        return { decoded, kind: 'partial', reason: null, dateCodes: global.BoardingDateNote?.getRaw?.(original, legs.length) };
       }
-      return { decoded, kind: 'boarding-pass', reason: null };
+      return { decoded, kind: 'boarding-pass', reason: null, dateCodes: global.BoardingDateNote?.getRaw?.(original, legs.length) };
     } catch (_) {
       return reject('無法依目前支援的 BCBP 版本解析固定欄位。');
     }

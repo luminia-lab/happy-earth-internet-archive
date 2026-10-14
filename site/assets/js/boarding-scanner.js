@@ -93,19 +93,27 @@
     return count ? dl : null;
   }
   function parseBCBP(value) {
+    // The decoder and the detector are independent. Explain why a real
+    // decoded barcode is not accepted as a standard boarding pass.
+    // Never guess missing travel details from surrounding printed text.
     const original = value.replace(/\r|\n/g, '');
-    if (!/^M[1-9]/.test(original) || original.length < 60) return null;
+    if (!/^M[1-9]/.test(original)) return { decoded: null, reason: '條碼內容不符合 IATA BCBP 的 M 開頭格式。' };
+    if (original.length < 60) return { decoded: null, reason: '內容以 M 開頭，但短於 BCBP 第一航段的 60 字元固定區段。' };
     const decode = window.bcbp && window.bcbp.decode;
-    if (typeof decode !== 'function') return null;
+    if (typeof decode !== 'function') return { decoded: null, reason: '標準解析元件未載入。' };
     try {
       const parsed = decode(original);
       const legs = parsed?.data?.legs || [];
       const number = parsed?.meta?.numberOfLegs;
-      if (!Array.isArray(legs) || legs.length === 0 || legs.length !== number) return null;
-      if (!legs.every((leg) => /^[A-Z]{3}$/.test(leg.departureAirport || '') && /^[A-Z]{3}$/.test(leg.arrivalAirport || ''))) return null;
-      return parsed;
+      if (!Array.isArray(legs) || legs.length === 0 || legs.length !== number) {
+        return { decoded: null, reason: '航段數與固定欄位結構不一致。' };
+      }
+      if (!legs.every((leg) => /^[A-Z]{3}$/.test(leg.departureAirport || '') && /^[A-Z]{3}$/.test(leg.arrivalAirport || ''))) {
+        return { decoded: null, reason: '條碼雖以 M 開頭，但出發地或目的地欄位不是標準的三碼機場代碼；可能是非標準行程單。' };
+      }
+      return { decoded: parsed, reason: null };
     } catch (_) {
-      return null;
+      return { decoded: null, reason: '無法依目前支援的 BCBP 版本解析固定欄位。' };
     }
   }
   function addResult(item, index) {
@@ -113,7 +121,8 @@
     const head = make('div', undefined, 'scanner-result-header');
     const titleBlock = make('div');
     titleBlock.append(make('span', item.format || 'Barcode', 'scanner-type'));
-    const decoded = parseBCBP(item.text);
+    const inspection = parseBCBP(item.text);
+    const decoded = inspection.decoded;
     titleBlock.append(make('h2', decoded ? '登機證（IATA BCBP）' : '條碼原始內容'));
     head.append(titleBlock, make('span', '第 ' + (index + 1) + ' 個條碼', 'scanner-dim'));
     card.append(head);
@@ -136,7 +145,7 @@
       });
       card.append(make('p', '日期的年份可能是解析套件依目前時間推定，並非條碼直接提供。艙等代碼不等於付費訂位艙等；旅客狀態也非即時查詢。', 'scanner-warning'));
     } else {
-      card.append(make('p', '已讀到條碼，但未識別為可支援的 IATA BCBP 登機證。保留原始字串，不強行猜測其內容。', 'scanner-hint'));
+      card.append(make('p', '條碼辨識成功，但未通過目前的 BCBP 格式檢查：' + inspection.reason + ' 已保留完整原文，不從圖片上的印刷文字猜測航班資料。', 'scanner-hint'));
     }
     const details = make('details', undefined, 'scanner-raw');
     details.append(make('summary', '完整條碼原文'), make('pre', item.text));

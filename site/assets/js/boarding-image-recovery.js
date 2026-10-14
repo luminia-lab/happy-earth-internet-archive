@@ -109,9 +109,11 @@
         if(cancelled()) break;
         await attempt(drawVersion(bitmap, medium[i]), LOCAL, '九宮格 '+(i+1)+'/9');
       }
-      // If any barcode is decoded, run one complete tile grid but avoid the
-      // expensive rotated fallback. This finds neighboring boarding passes.
-      if (!found.size && !cancelled()) {
+      // A hit in one region does NOT prove all barcodes in a multi-pass photo
+      // were found. Always check smaller overlapping tiles, even after a hit.
+      // This fixes photos where the first pass is detected but a second/third
+      // barcode is too small to survive the half-photo or 3×3 passes.
+      if (!cancelled()) {
         const small = tiles(4,.32);
         for(let i=0;i<small.length;i++){
           if(cancelled()) break;

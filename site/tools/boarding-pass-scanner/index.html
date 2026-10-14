@@ -31,7 +31,7 @@
       <button class="button ghost" type="button" data-clear>清除</button>
     </div>
     <p class="scanner-status" role="status" aria-live="polite" data-status>就緒。圖片不會上傳到伺服器。</p>
-    <p class="scanner-hint" data-build-version>辨識版本：2026-10-15・局部對比增強版｜支援行程單訂位資料</p>
+    <p class="scanner-hint" data-build-version>辨識版本：2026-10-15・局部對比增強版｜世界機場名稱・保守日期</p>
     <p class="scanner-hint">含姓名、訂位代號的資料屬於敏感資訊。複製或分享解析結果前，請自行確認內容。</p>
     <div class="scanner-previews" data-previews hidden></div>
   </section>
@@ -39,8 +39,8 @@
   <section class="scanner-info">
     <h2>這個工具能讀到什麼？</h2>
     <p>它先辨識條碼，再嘗試依 IATA BCBP 格式解析登機證及行程單中的訂位代號、機票號碼、旅客和航段資料。行程單不等於可登機的登機證；沒有公開定義的欄位只顯示原文。</p>
-    <p>登機證可能只記錄年份末位，航班日期通常只有一年中的第幾天。本工具會以灰字註明推測年份，不將估計值當作確定資料。條碼中的旅客狀態也不是航空公司的即時狀態。</p>
-    <p class="scanner-hint">欄位較大的文字是解碼值；淡灰色小字是標準說明、常見對應、名稱對照或明確標示的年份推測。沒有可靠依據的欄位仍保留原碼，不補造資料。<a href="https://www.iata.org/en/programs/passenger/common-use/" target="_blank" rel="noopener noreferrer">參考 IATA BCBP 規範</a>。</p>
+    <p>登機證航班日期通常只記錄一年中的第幾天，不含完整年份；閏年與平年的月日可能不同。本工具不預設今年，而是直接列出日期序號與可能的月日。旅客狀態不是航空公司的即時狀態。</p>
+    <p class="scanner-hint">欄位較大的文字是解碼值，淡灰色小字補充標準說明與名稱對照。全球機場英文名稱預先匯入 OurAirports 公開資料，常用機場另外提供繁體中文名稱；沒有可靠資料就保留代碼。<a href="https://www.iata.org/en/programs/passenger/common-use/" target="_blank" rel="noopener noreferrer">參考 IATA BCBP 規範</a>。</p>
     <p class="scanner-hint">條碼辨識採用 ZXing-C++／zxing-wasm；BCBP 解析採用開源 bcbp 套件（支援至標準第 6 版）。圖片與結果不會被本工具儲存、上傳或發送分析事件。</p>
   </section>
 </main>
@@ -49,8 +49,10 @@
 <script src="../../assets/vendor/zxing/reader.js"></script>
 <script src="../../assets/vendor/bcbp/bcbp.js"></script>
 <script src="../../assets/js/boarding-image-recovery.js?v=20261015-clahe"></script>
-<script src="../../assets/js/boarding-codebook.js?v=20261015-yearhint"></script>
-<script src="../../assets/js/boarding-bcbp-parser.js?v=20261015-itinerary"></script>
-<script src="../../assets/js/boarding-scanner.js?v=20261015-itinerary"></script>
+<script src="../../assets/data/airport-names.js?v=20261015-global"></script>
+<script src="../../assets/js/boarding-date-note.js?v=20261015-ordinal"></script>
+<script src="../../assets/js/boarding-codebook.js?v=20261015-global"></script>
+<script src="../../assets/js/boarding-bcbp-parser.js?v=20261015-ordinal"></script>
+<script src="../../assets/js/boarding-scanner.js?v=20261015-ordinal"></script>
 </body>
 </html>

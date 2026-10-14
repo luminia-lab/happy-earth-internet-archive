@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFile,stat} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import vm from 'node:vm';
+import {compile} from './generate-airport-names.mjs';
+const sample='iata_code,name,type,scheduled_service\nABC,"Airport, Example",large_airport,yes\nABC,"Airport Spare",closed,no\n';
+assert.equal(compile(sample).ABC,'Airport, Example');
+const path=resolve(import.meta.dirname,'../site/assets/data/airport-names.js');
+const src=await readFile(path,'utf8'),window={};
+assert.ok((await stat(path)).size<1500000);
+vm.runInNewContext(src,{window});
+assert.ok(Object.keys(window.AirportNameIndex).length>6500);
+for(const code of ['TPE','NBO','KUL','DOH','BKK'])assert.ok(window.AirportNameIndex[code],code);
+console.log('PASS offline airport code table');

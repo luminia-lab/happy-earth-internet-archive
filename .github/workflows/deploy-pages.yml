@@ -37,6 +37,11 @@ jobs:
           node scripts/prepare-barcode-vendor.mjs
           node scripts/test-boarding-scanner.mjs
 
+      - name: Generate first-party airport names from OurAirports
+        run: |
+          node scripts/generate-airport-names.mjs
+          node scripts/test-airport-names.mjs
+
       - name: Validate source
         run: node scripts/validate-site.mjs
 

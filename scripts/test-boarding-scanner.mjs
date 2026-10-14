@@ -31,6 +31,8 @@ assert.match(page,/zxing\/reader\.js/);
 assert.match(page,/bcbp\/bcbp\.js/);
 assert.ok(page.includes('boarding-image-recovery.js'));
 assert.ok(page.includes('boarding-codebook.js'));
+assert.ok(page.includes('airport-names.js?v=20261015-global'));
+assert.ok(page.includes('boarding-date-note.js?v=20261015-ordinal'));
 const scannerSource = await readFile(join(root,'site/assets/js/boarding-scanner.js'),'utf8');
 assert.match(scannerSource, /scanner-annotation/);
 assert.match(scannerSource, /條碼辨識成功，但未通過目前的 BCBP 格式檢查/);
@@ -44,9 +46,11 @@ assert.match(recoveryJs, /傾斜校正/);
 assert.match(recoveryJs, /加強對比/);
 const vm = await import('node:vm');
 
+const dateSource = await readFile(join(root,'site/assets/js/boarding-date-note.js'),'utf8');
 const parserSource = await readFile(join(root,'site/assets/js/boarding-bcbp-parser.js'),'utf8');
-assert.ok(page.includes('boarding-bcbp-parser.js?v=20261015-itinerary'));
+assert.ok(page.includes('boarding-bcbp-parser.js?v=20261015-ordinal'));
 const parserWindow = {bcbp:{decode}};
+vm.runInNewContext(dateSource,{window:parserWindow});
 vm.runInNewContext(parserSource,{window:parserWindow});
 const inspect = parserWindow.BoardingBCBP.parse;
 const itinerarySynthetic = encode({
@@ -74,7 +78,7 @@ assert.equal(inspect(partial).kind,'partial','Missing airports can still expose 
 
 
 const annotationsSource = await readFile(join(root,'site/assets/js/boarding-codebook.js'),'utf8');
-const annotateWindow = {};
+const annotateWindow = {AirportNameIndex:{ABC:'Example International Airport'}};
 vm.runInNewContext(annotationsSource,{window:annotateWindow});
 const explain = annotateWindow.BoardingCodebook.explain;
 assert.equal(explain('compartmentCode','J').kind,'typical');
@@ -90,19 +94,28 @@ assert.match(explain('boardingPassIssuerDesignator','NZ').text,/紐西蘭/);
 
 assert.match(scannerSource, /'標準說明'/);
 assert.doesNotMatch(scannerSource, /標準代碼說明/);
-assert.match(scannerSource, /renderFields\(leg, keys, \{ issuanceDate:/);
-const estimatedIssue = explain('issuanceDate', new Date('2026-10-05T00:00:00.000Z'));
-assert.equal(estimatedIssue.kind, 'inferred');
-assert.match(estimatedIssue.text, /2026 年（依年份末位推估）/);
-const estimatedFlight = explain('flightDate', new Date('2026-10-06T00:00:00.000Z'), {
-  issuanceDate: new Date('2026-10-05T00:00:00.000Z')
-});
-assert.equal(estimatedFlight.kind, 'inferred');
-assert.match(estimatedFlight.text, /2026 年（依核發日期推估）/);
-assert.match(explain('flightDate', new Date('2026-10-06T00:00:00.000Z')).text, /依目前年份推估/);
-assert.equal(explain('flightDate', 'invalid'), null);
-assert.ok(page.includes('boarding-codebook.js?v=20261015-yearhint'));
-assert.ok(page.includes('boarding-scanner.js?v=20261015-itinerary'));
+assert.match(scannerSource, /renderFields\(leg, keys, \{dateCodes:/);
+assert.equal(explain('flightDate',new Date('2026-11-20T00:00:00Z')),null);
+assert.equal(explain('issuanceDate',new Date('2026-10-05T00:00:00Z')),null);
+assert.equal(explain('airlineNumericCode','297').text,'中華航空');
+assert.equal(explain('arrivalAirport','ABC').text,'Example International Airport');
+assert.match(explain('departureAirport','NBO').text,/奈洛比/);
+for(const version of [1,2,3,4,5])assert.ok(explain('versionNumber',version).text);
+assert.match(explain('versionNumber',5).text,/快速通關/);
+const cal=parserWindow.BoardingDateNote;
+assert.equal(cal.calendarNote(324),'閏年 11月19日／平年 11月20日；年份未記錄');
+assert.equal(cal.calendarNote(366),'閏年 12月31日／平年 無此日；年份未記錄');
+assert.equal(cal.display('flightDate',{flightDays:[324]},0).main,'第 324 天');
+assert.equal(cal.display('flightDate',{flightDays:[324]},0).note.includes('2026'),false);
+const historical=encode({data:{passengerName:'SAMPLE/TRAVELER',legs:[
+  {operatingCarrierPNR:'ABC123',departureAirport:'NBO',arrivalAirport:'KUL',
+  operatingCarrierDesignator:'D7',flightNumber:'0102',
+  flightDate:new Date('2024-11-19T00:00:00.000Z'),
+  compartmentCode:'Y',seatNumber:'001D',checkInSequenceNumber:'0089',passengerStatus:'1'}]}});
+assert.equal(inspect(historical).dateCodes.flightDays[0],324);
+assert.match(cal.display('flightDate',inspect(historical).dateCodes,0).note,/11月19日/);
+assert.ok(page.includes('boarding-codebook.js?v=20261015-global'));
+assert.ok(page.includes('boarding-scanner.js?v=20261015-ordinal'));
 
 
 const simulated = {

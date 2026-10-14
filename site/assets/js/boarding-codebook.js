@@ -7,6 +7,14 @@
   'use strict';
   const item = (text, kind = 'standard') => Object.freeze({text, kind});
   const tables = Object.freeze({
+    versionNumber: {
+      '1':item('初期 BCBP 基本格式'),
+      '2':item('擴充行動登機證相關用途'),
+      '3':item('支援選用數位簽章等安全資料'),
+      '4':item('擴充部分欄位與使用情境'),
+      '5':item('加入快速通關相關欄位'),
+      '6':item('後續版本，持續擴充代碼與欄位')
+    },
     electronicTicketIndicator: {
       E: item('電子機票'),
       L: item('無票式運輸（ticketless）')
@@ -76,9 +84,9 @@
     frequentFlyerAirlineDesignator: {},
     boardingPassIssuerDesignator: {},
     airlineNumericCode: {
-      '086':item('紐西蘭航空的三碼票證代碼','lookup'),
-      '297':item('中華航空的三碼票證代碼','lookup'),
-      '607':item('阿提哈德航空的三碼票證代碼','lookup')
+      '086':item('紐西蘭航空','lookup'),
+      '297':item('中華航空','lookup'),
+      '607':item('阿提哈德航空','lookup')
     }
   });
   const carriers = Object.freeze({
@@ -96,24 +104,30 @@
     AKL:'奧克蘭機場', CHC:'基督城機場',
     DUD:'達尼丁機場', BCN:'巴塞隆納機場',
     AUH:'阿布達比機場', BKK:'曼谷蘇凡納布機場',
-    ICN:'仁川國際機場', RMQ:'臺中國際機場'
+    ICN:'仁川國際機場', RMQ:'臺中國際機場',
+    NBO:'奈洛比喬莫·肯雅塔國際機場',
+    KUL:'吉隆坡國際機場', DOH:'杜哈哈馬德國際機場',
+    SIN:'新加坡樟宜機場', HKG:'香港國際機場',
+    DXB:'杜拜國際機場', LHR:'倫敦希斯洛機場',
+    CDG:'巴黎戴高樂機場', FRA:'法蘭克福機場',
+    MUC:'慕尼黑機場', FCO:'羅馬菲烏米奇諾機場',
+    AMS:'阿姆斯特丹史基浦機場', JFK:'紐約甘迺迪國際機場',
+    LAX:'洛杉磯國際機場', SFO:'舊金山國際機場',
+    CTS:'新千歲機場', FUK:'福岡機場', DAD:'峴港國際機場',
+    SGN:'胡志明市新山一國際機場', HAN:'河內內排國際機場',
+    DMK:'曼谷廊曼國際機場', HKT:'普吉國際機場',
+    PER:'伯斯機場', ADL:'阿得雷德機場',
+    WLG:'威靈頓國際機場', ZQN:'皇后鎮機場',
+    PUS:'金海國際機場'
   });
   function explain(key, value, context = {}) {
     if (value === undefined || value === null || value === '') return null;
-    // This Date is the bcbp decoder's estimated calendar date, NOT an
-    // unambiguous year stored in the barcode. Keep the year strictly secondary.
-    if (key === 'issuanceDate' || key === 'flightDate') {
-      if (typeof value.getUTCFullYear !== 'function' || !Number.isFinite(value.getTime?.())) return null;
-      const year = value.getUTCFullYear();
-      const basis = key === 'issuanceDate' ? '依年份末位' :
-        context.issuanceDate && typeof context.issuanceDate.getUTCFullYear === 'function'
-          ? '依核發日期' : '依目前年份';
-      return item(year + ' 年（' + basis + '推估）', 'inferred');
-    }
+    // Date fields are shown separately from raw day-of-year codes, never guessed years.
     const code = String(value).trim().toUpperCase();
     if (!code) return null;
-    if ((key === 'departureAirport' || key === 'arrivalAirport') && airports[code]) {
-      return item(airports[code], 'lookup');
+    if (key === 'departureAirport' || key === 'arrivalAirport') {
+      const airportName = airports[code] || global.AirportNameIndex?.[code];
+      return airportName ? item(airportName,'lookup') : null;
     }
     if (['operatingCarrierDesignator','marketingCarrierDesignator','frequentFlyerAirlineDesignator','boardingPassIssuerDesignator'].includes(key) && carriers[code]) {
       return item(carriers[code], 'lookup');

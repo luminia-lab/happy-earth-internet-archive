@@ -44,7 +44,7 @@
     }
     if(key==='issuanceDate'){
       const raw=codes?.issuanceCode;
-      if(!raw)return {main:'核發日期代碼未能還原',note:'不以今年推算'};
+      if(!raw)return {main:'核發日期未記錄或無法確認',note:'不以今年推算'};
       const day=+raw.slice(1);
       return {main:'年份尾數 '+raw[0]+' · 第 '+day+' 天',
         note:(calendarNote(day)||'')+'（完整年份未確定）'};

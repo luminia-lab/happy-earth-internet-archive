@@ -42,6 +42,11 @@ jobs:
           node scripts/generate-airport-names.mjs
           node scripts/test-airport-names.mjs
 
+      - name: Generate first-party airline names from IATA code dataset
+        run: |
+          node scripts/generate-airline-names.mjs
+          node scripts/test-airline-names.mjs
+
       - name: Validate source
         run: node scripts/validate-site.mjs
 

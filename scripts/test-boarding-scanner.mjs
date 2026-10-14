@@ -73,4 +73,23 @@ const invalid=await simulated.BoardingImageRecovery.scanImage(
 assert.equal(invalid.results.length,0, 'Invalid barcode may not be reported as valid');
 assert.ok(falseCalls>8,'Failed scan must try crops and angle correction');
 
-console.log('PASS scanner dependencies, sample BCBP, two-leg roundtrip, and automatic recovery');
+
+const code = await readFile(join(root,'site/assets/js/boarding-image-recovery.js'),'utf8');
+assert.ok(code.includes('九宮格') && code.includes('小區域'), 'Multi-scale regions are mandatory');
+assert.ok(!code.includes('Math.min(2, maxSide'), 'Do not reintroduce old photo-wide shrink limit');
+assert.match(code,/imageSmoothingEnabled = false/);
+const regions = simulated.BoardingImageRecovery.tiles(4,.32);
+assert.equal(regions.length,16);
+assert.ok(regions.every(([x,y,w,h]) => x>=0 && y>=0 && x+w<=1.00001 && y+h<=1.00001));
+let staged=0;
+const lastTile=await simulated.BoardingImageRecovery.scanImage(
+ {type:'image/png'},
+ async () => {
+   staged++;
+   return staged === 27 ? [{text:'M1TEST/USER         EABC123 TPEAUHEY 0021 283J001A0001 300',format:'PDF417',isValid:true}] : [];
+ },()=>{},()=>false
+);
+assert.equal(lastTile.results.length,1,'Tiles should rescue off-center small barcodes');
+assert.ok(staged>=27);
+
+console.log('PASS scanner dependencies, sample BCBP, two-leg roundtrip, and multi-scale recovery');

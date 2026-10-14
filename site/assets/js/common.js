@@ -11,6 +11,7 @@
       ['文章總覽', 'articles/'],
       ['生活', 'articles/'],
       ['旅遊', 'articles/'],
+      ['實用工具', 'tools/'],
       ['健康', 'vigor/'],
       ['活動', 'events/'],
       ['娛樂', 'articles/?channel=entertainment'],

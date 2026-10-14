@@ -30,6 +30,9 @@ assert.match(page,/data-scanner/);
 assert.match(page,/zxing\/reader\.js/);
 assert.match(page,/bcbp\/bcbp\.js/);
 assert.ok(page.includes('boarding-image-recovery.js'));
+const scannerSource = await readFile(join(root,'site/assets/js/boarding-scanner.js'),'utf8');
+assert.match(scannerSource, /條碼辨識成功，但未通過目前的 BCBP 格式檢查/);
+assert.match(scannerSource, /出發地或目的地欄位不是標準/);
 assert.ok(!page.includes('\\\\n<script'), 'HTML must not contain literal backslash-n between scripts');
 
 const recoveryJs = await readFile(join(root,'site/assets/js/boarding-image-recovery.js'),'utf8');
@@ -91,5 +94,18 @@ const lastTile=await simulated.BoardingImageRecovery.scanImage(
 );
 assert.equal(lastTile.results.length,1,'Tiles should rescue off-center small barcodes');
 assert.ok(staged>=27);
+
+let discovered = 0;
+const multiple = await simulated.BoardingImageRecovery.scanImage(
+ {type:'image/png'}, async () => {
+   discovered++;
+   if(discovered===2) return [{text:'SYNTHETIC-FIRST',format:'PDF417',isValid:true}];
+   if(discovered===25) return [{text:'SYNTHETIC-SECOND',format:'PDF417',isValid:true}];
+   return [];
+ },()=>{},()=>false
+);
+assert.equal(multiple.results.length,2, 'A successful first decode must not suppress deep scanning for other codes');
+assert.ok(discovered>=30, 'The smaller grid must run even after finding a first barcode');
+
 
 console.log('PASS scanner dependencies, sample BCBP, two-leg roundtrip, and multi-scale recovery');

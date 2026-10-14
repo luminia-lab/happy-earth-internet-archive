@@ -70,14 +70,14 @@
     // BCBP date fields do not encode the complete year. Never show a guessed year as a fact.
     const month = input.getUTCMonth() + 1;
     const day = input.getUTCDate();
-    return month + '月' + day + '日（年份未經確認）';
+    return month + '月' + day + '日';
   };
   const fieldValue = (key, value) => {
     if (value instanceof Date) return formatDate(value);
     if (typeof value === 'boolean') return value ? '是（Y）' : '否（N）';
     return String(value);
   };
-  function renderFields(object, keys) {
+  function renderFields(object, keys, context = {}) {
     const dl = make('dl', undefined, 'scanner-fields');
     let count = 0;
     for (const key of keys) {
@@ -88,10 +88,11 @@
       const row = make('div', undefined, 'scanner-field');
       const dd = make('dd');
       dd.append(make('span', fieldValue(key, value), 'scanner-source-value'));
-      const annotation = window.BoardingCodebook?.explain?.(key, value);
+      const annotation = window.BoardingCodebook?.explain?.(key, value, context);
       if (annotation) {
         const prefix = annotation.kind === 'typical' ? '常見對應' :
-          annotation.kind === 'lookup' ? '名稱對照' : '標準代碼說明';
+          annotation.kind === 'lookup' ? '名稱對照' :
+          annotation.kind === 'inferred' ? '推測年份' : '標準說明';
         dd.append(make('small', prefix + ' · ' + annotation.text, 'scanner-annotation'));
       }
       row.append(make('dt', descriptor[0] + ' / ' + descriptor[1]), dd);
@@ -147,11 +148,11 @@
         const group = make('section', undefined, 'scanner-leg');
         const route = [leg.departureAirport, leg.arrivalAirport].filter(Boolean).join(' → ');
         group.append(make('h3', '第 ' + (legIndex + 1) + ' 段' + (route ? '｜' + route : '')));
-        const legNodes = renderFields(leg, legKeys);
+        const legNodes = renderFields(leg, legKeys, { issuanceDate: decoded.data.issuanceDate });
         if (legNodes) group.append(legNodes);
         card.append(group);
       });
-      card.append(make('p', '日期的年份可能是解析套件依目前時間推定，並非條碼直接提供。艙等代碼不等於付費訂位艙等；旅客狀態也非即時查詢。', 'scanner-warning'));
+      card.append(make('p', '灰色「推測年份」不是條碼直接記載的完整年份，可能相差十年或更多。艙等代碼不等於購票訂位艙等；旅客狀態也非即時查詢。', 'scanner-warning'));
     } else {
       card.append(make('p', '條碼辨識成功，但未通過目前的 BCBP 格式檢查：' + inspection.reason + ' 已保留完整原文，不從圖片上的印刷文字猜測航班資料。', 'scanner-hint'));
     }

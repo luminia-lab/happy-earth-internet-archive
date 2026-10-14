@@ -31,7 +31,7 @@
       <button class="button ghost" type="button" data-clear>清除</button>
     </div>
     <p class="scanner-status" role="status" aria-live="polite" data-status>就緒。圖片不會上傳到伺服器。</p>
-    <p class="scanner-hint" data-build-version>辨識版本：2026-10-15・局部對比增強版｜新增代碼解釋</p>
+    <p class="scanner-hint" data-build-version>辨識版本：2026-10-15・局部對比增強版｜年份推測註記</p>
     <p class="scanner-hint">含姓名、訂位代號的資料屬於敏感資訊。複製或分享解析結果前，請自行確認內容。</p>
     <div class="scanner-previews" data-previews hidden></div>
   </section>
@@ -39,8 +39,8 @@
   <section class="scanner-info">
     <h2>這個工具能讀到什麼？</h2>
     <p>它先辨識圖中的條碼，再嘗試以 IATA BCBP 登機證格式解析旅客、航段、座位、票號及標準選填欄位。航空公司自行定義而無公開解釋的資料，只顯示原文。</p>
-    <p>登機證條碼可能不記錄年份；航班日期以「一年中的第幾天」表示，不會假裝知道完整年份。條碼中顯示的旅客狀態也不是航空公司的即時訂位狀態。</p>
-    <p class="scanner-hint">欄位較大的文字是條碼原始代碼；淡灰色小字是 IATA 標準說明、常見艙等對應或固定代碼表的名稱對照。資料沒有寫的事情不推算，欄位無可靠定義就保留原碼。<a href="https://www.iata.org/en/programs/passenger/common-use/" target="_blank" rel="noopener noreferrer">參考 IATA BCBP 規範</a>。</p>
+    <p>登機證可能只記錄年份末位，航班日期通常只有一年中的第幾天。本工具會以灰字註明推測年份，不將估計值當作確定資料。條碼中的旅客狀態也不是航空公司的即時狀態。</p>
+    <p class="scanner-hint">欄位較大的文字是解碼值；淡灰色小字是標準說明、常見對應、名稱對照或明確標示的年份推測。沒有可靠依據的欄位仍保留原碼，不補造資料。<a href="https://www.iata.org/en/programs/passenger/common-use/" target="_blank" rel="noopener noreferrer">參考 IATA BCBP 規範</a>。</p>
     <p class="scanner-hint">條碼辨識採用 ZXing-C++／zxing-wasm；BCBP 解析採用開源 bcbp 套件（支援至標準第 6 版）。圖片與結果不會被本工具儲存、上傳或發送分析事件。</p>
   </section>
 </main>
@@ -49,7 +49,7 @@
 <script src="../../assets/vendor/zxing/reader.js"></script>
 <script src="../../assets/vendor/bcbp/bcbp.js"></script>
 <script src="../../assets/js/boarding-image-recovery.js?v=20261015-clahe"></script>
-<script src="../../assets/js/boarding-codebook.js?v=20261015"></script>
-<script src="../../assets/js/boarding-scanner.js?v=20261015-codebook"></script>
+<script src="../../assets/js/boarding-codebook.js?v=20261015-yearhint"></script>
+<script src="../../assets/js/boarding-scanner.js?v=20261015-yearhint"></script>
 </body>
 </html>

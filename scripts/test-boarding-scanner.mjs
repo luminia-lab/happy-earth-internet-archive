@@ -58,6 +58,23 @@ assert.equal(explain('airlineInfo','UNKNOWN-OPAQUE'),null);
 assert.equal(explain('compartmentCode','?'),null);
 assert.match(explain('boardingPassIssuerDesignator','NZ').text,/紐西蘭/);
 
+assert.match(scannerSource, /'標準說明'/);
+assert.doesNotMatch(scannerSource, /標準代碼說明/);
+assert.match(scannerSource, /renderFields\(leg, legKeys, \{ issuanceDate:/);
+const estimatedIssue = explain('issuanceDate', new Date('2026-10-05T00:00:00.000Z'));
+assert.equal(estimatedIssue.kind, 'inferred');
+assert.match(estimatedIssue.text, /2026 年（依年份末位推估）/);
+const estimatedFlight = explain('flightDate', new Date('2026-10-06T00:00:00.000Z'), {
+  issuanceDate: new Date('2026-10-05T00:00:00.000Z')
+});
+assert.equal(estimatedFlight.kind, 'inferred');
+assert.match(estimatedFlight.text, /2026 年（依核發日期推估）/);
+assert.match(explain('flightDate', new Date('2026-10-06T00:00:00.000Z')).text, /依目前年份推估/);
+assert.equal(explain('flightDate', 'invalid'), null);
+assert.ok(page.includes('boarding-codebook.js?v=20261015-yearhint'));
+assert.ok(page.includes('boarding-scanner.js?v=20261015-yearhint'));
+
+
 const simulated = {
   document: { createElement: () => ({
     width:0,height:0,

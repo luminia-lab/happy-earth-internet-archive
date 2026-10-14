@@ -65,13 +65,7 @@
     status.textContent = message;
     status.classList.toggle('is-error', isError);
   };
-  const formatDate = (input) => {
-    if (!(input instanceof Date) || Number.isNaN(input.getTime())) return String(input);
-    // BCBP date fields do not encode the complete year. Never show a guessed year as a fact.
-    const month = input.getUTCMonth() + 1;
-    const day = input.getUTCDate();
-    return month + '月' + day + '日';
-  };
+  const formatDate = () => '日期序號未確認';
   const fieldValue = (key, value) => {
     if (value instanceof Date) return formatDate(value);
     if (typeof value === 'boolean') return value ? '是（Y）' : '否（N）';
@@ -87,13 +81,17 @@
       if (!descriptor) continue;
       const row = make('div', undefined, 'scanner-field');
       const dd = make('dd');
-      dd.append(make('span', fieldValue(key, value), 'scanner-source-value'));
-      const annotation = window.BoardingCodebook?.explain?.(key, value, context);
+      const date = window.BoardingDateNote?.display?.(key, context.dateCodes, context.legIndex);
+      dd.append(make('span', date?.main ?? fieldValue(key, value), 'scanner-source-value'));
+      const annotation = date?.note ? {kind:'date',text:date.note} :
+        window.BoardingCodebook?.explain?.(key, value, context);
       if (annotation) {
         const prefix = annotation.kind === 'typical' ? '常見對應' :
           annotation.kind === 'lookup' ? '名稱對照' :
           annotation.kind === 'inferred' ? '推測年份' : '標準說明';
-        dd.append(make('small', prefix + ' · ' + annotation.text, 'scanner-annotation'));
+        const justName = annotation.kind === 'date' || (annotation.kind === 'lookup' &&
+          ['departureAirport','arrivalAirport','airlineNumericCode'].includes(key));
+        dd.append(make('small', justName ? annotation.text : prefix + ' · ' + annotation.text, 'scanner-annotation'));
       }
       row.append(make('dt', descriptor[0] + ' / ' + descriptor[1]), dd);
       dl.appendChild(row);
@@ -147,7 +145,7 @@
         numberOfLegs: decoded.meta?.numberOfLegs,
         versionNumber: decoded.meta?.versionNumber
       };
-      const sharedNodes = renderFields(shared, sharedKeys);
+      const sharedNodes = renderFields(shared, sharedKeys, {dateCodes:inspection.dateCodes});
       if (sharedNodes) card.append(sharedNodes);
       decoded.data.legs.forEach((leg, legIndex) => {
         const group = make('section', undefined, 'scanner-leg');
@@ -157,11 +155,11 @@
           : '第 ' + (legIndex + 1) + ' 段' + (route ? '｜' + route : '');
         group.append(make('h3', sectionTitle));
         const keys = informational ? legKeys.filter(key => key !== 'operatingCarrierPNR') : legKeys;
-        const legNodes = renderFields(leg, keys, { issuanceDate: decoded.data.issuanceDate });
+        const legNodes = renderFields(leg, keys, {dateCodes:inspection.dateCodes,legIndex});
         if (legNodes) group.append(legNodes);
         card.append(group);
       });
-      card.append(make('p', '條碼資料只反映產生時的記錄，不代表目前訂位狀態。灰色「推測年份」並非條碼確定記載的完整年份；艙等代碼也不等於購票訂位艙等。', 'scanner-warning'));
+      card.append(make('p', '日期只記錄年內序號；閏年與平年月日可能不同，不預設今年。條碼不是即時訂位查詢，艙等代碼也不保證實際搭乘產品。', 'scanner-warning'));
     } else {
       card.append(make('p', '條碼辨識成功，但未通過目前的 BCBP 格式檢查：' + inspection.reason + ' 已保留完整原文，不從圖片上的印刷文字猜測航班資料。', 'scanner-hint'));
     }

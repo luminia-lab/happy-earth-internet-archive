@@ -29,6 +29,8 @@ const page = await readFile(join(root,'site/tools/boarding-pass-scanner/index.ht
 assert.match(page,/data-scanner/);
 assert.match(page,/zxing\/reader\.js/);
 assert.match(page,/bcbp\/bcbp\.js/);
+assert.match(page, /boarding-image-recovery\\.js/);
+assert.ok(!page.includes('\\\\n<script'), 'HTML must not contain literal backslash-n between scripts');
 
 const recoveryJs = await readFile(join(root,'site/assets/js/boarding-image-recovery.js'),'utf8');
 assert.match(recoveryJs, /裁切/);

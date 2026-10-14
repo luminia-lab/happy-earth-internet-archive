@@ -100,3 +100,5 @@ content/articles-metadata.json
 - GitHub Actions 先安裝鎖定版本，再執行 `node scripts/prepare-barcode-vendor.mjs`；網站正式部署後，JS 和 WASM 均由本站提供，不依賴第三方即時 CDN。
 - 本機預覽若要完整掃描，先執行 `npm install --no-save --ignore-scripts --no-audit --no-fund --package-lock=false zxing-wasm@3.1.5 bcbp@6.0.2` 與 `node scripts/prepare-barcode-vendor.mjs`。
 - 年份未完整記載時不能當作確認值；標準不解釋的欄位不做推測。勿把帶有真實 PNR、票號及會員號的測試圖上傳至公開儲存庫。
+
+- 掃描修復：自動執行分區裁切、解析度保留、對比增強與小角度校正（非 AI/OCR），並逐次更新進度；多張票同框會再掃描分區以減少遺漏。解碼失敗不假造條碼。

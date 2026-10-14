@@ -186,7 +186,7 @@
     busy = true;
     previews.hidden = false;
     images.forEach(previewImage);
-    if (typeof window.ZXingWASM?.readBarcodes !== 'function') {
+    if (typeof window.ZXingWASM?.readBarcodes !== 'function' || typeof window.BoardingImageRecovery?.scanImage !== 'function') {
       busy = false;
       return setStatus('解碼元件未能載入，請重新整理後再試。', true);
     }
@@ -203,27 +203,22 @@
       if (current !== generation) return;
       setStatus('正在辨識第 ' + (i + 1) + '／' + images.length + ' 張圖片……');
       try {
-        const found = await window.ZXingWASM.readBarcodes(images[i], {
-          tryHarder: true,
-          tryRotate: true,
-          tryInvert: true,
-          maxNumberOfSymbols: 0
-        });
-        for (const item of found || []) {
-          if (item.isValid !== false && typeof item.text === 'string' && item.text.length > 0) {
-            if (!entries.some((other) => other.text === item.text && other.format === item.format)) {
-              entries.push({format:item.format,text:item.text});
-            }
-          }
+        const report = await window.BoardingImageRecovery.scanImage(
+          images[i], window.ZXingWASM.readBarcodes,
+          (message) => { if (current === generation) setStatus('圖片 ' + (i+1) + '／' + images.length + '：' + message); },
+          () => current !== generation
+        );
+        for (const item of report.results) {
+          if (!entries.some((other) => other.text === item.text && other.format === item.format)) entries.push(item);
         }
-      } catch (error) {
+        if (report.failures) failures += report.failures;
+      } catch (_) {
         failures++;
-        if (i === 0) console.warn('Scanner decode error:', error?.message || 'unavailable');
       }
     }
     if (current !== generation) return;
     busy = false;
-    if (!entries.length) return setStatus(failures === images.length ? '解碼元件暫時無法處理圖片。請改用其他截圖或重新整理。' : '沒有成功讀取條碼。試著截取條碼區域、壓平紙張或調整拍攝角度。', true);
+    if (!entries.length) return setStatus('已嘗試原圖、分區裁切、提高對比與角度校正，仍沒有讀到有效條碼。可改用條碼局部截圖或重新拍攝。', true);
     resultsBox.hidden = false;
     resultsBox.replaceChildren(...entries.map(addResult));
     setStatus('找到 ' + entries.length + ' 個條碼。全部結果都只在目前的瀏覽器畫面中。');

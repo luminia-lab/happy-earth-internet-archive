@@ -3,3 +3,8 @@
 /* BCBP raw values remain visually primary; optional code explanations are secondary. */
 .scanner-source-value{display:block;color:#263b4f;font-size:1rem;font-weight:720}
 .scanner-annotation{display:block;margin-top:4px;font-size:.82rem;font-weight:400;line-height:1.55;color:#687888}
+
+/* Sparse BCBP itinerary: readable booking reference without claiming a boarding pass. */
+.scanner-booking-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0;padding:13px 15px;background:#edf5fa;border:1px solid #d8e6ef;border-radius:12px}
+.scanner-booking-summary small{display:block;color:#607487;font-size:.81rem;margin-bottom:4px}
+.scanner-booking-summary strong{display:block;font-size:1.27rem;letter-spacing:.04em;color:#214b66;word-break:break-word}

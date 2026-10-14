@@ -101,41 +101,46 @@
     }
     return count ? dl : null;
   }
-  function parseBCBP(value) {
-    // The decoder and the detector are independent. Explain why a real
-    // decoded barcode is not accepted as a standard boarding pass.
-    // Never guess missing travel details from surrounding printed text.
-    const original = value.replace(/\r|\n/g, '');
-    if (!/^M[1-9]/.test(original)) return { decoded: null, reason: '條碼內容不符合 IATA BCBP 的 M 開頭格式。' };
-    if (original.length < 60) return { decoded: null, reason: '內容以 M 開頭，但短於 BCBP 第一航段的 60 字元固定區段。' };
-    const decode = window.bcbp && window.bcbp.decode;
-    if (typeof decode !== 'function') return { decoded: null, reason: '標準解析元件未載入。' };
-    try {
-      const parsed = decode(original);
-      const legs = parsed?.data?.legs || [];
-      const number = parsed?.meta?.numberOfLegs;
-      if (!Array.isArray(legs) || legs.length === 0 || legs.length !== number) {
-        return { decoded: null, reason: '航段數與固定欄位結構不一致。' };
-      }
-      if (!legs.every((leg) => /^[A-Z]{3}$/.test(leg.departureAirport || '') && /^[A-Z]{3}$/.test(leg.arrivalAirport || ''))) {
-        return { decoded: null, reason: '條碼雖以 M 開頭，但出發地或目的地欄位不是標準的三碼機場代碼；可能是非標準行程單。' };
-      }
-      return { decoded: parsed, reason: null };
-    } catch (_) {
-      return { decoded: null, reason: '無法依目前支援的 BCBP 版本解析固定欄位。' };
-    }
-  }
   function addResult(item, index) {
     const card = make('article', undefined, 'scanner-result');
     const head = make('div', undefined, 'scanner-result-header');
     const titleBlock = make('div');
     titleBlock.append(make('span', item.format || 'Barcode', 'scanner-type'));
-    const inspection = parseBCBP(item.text);
+    const inspection = window.BoardingBCBP?.parse?.(item.text) || { decoded: null, kind:'unparsed', reason:'解析元件未載入。' };
     const decoded = inspection.decoded;
-    titleBlock.append(make('h2', decoded ? '登機證（IATA BCBP）' : '條碼原始內容'));
+    const typeTitle = inspection.kind === 'itinerary' ? '行程單／訂位資料（非登機證）' :
+      inspection.kind === 'partial' ? '航空訂位資料（部分欄位）' :
+      decoded ? '登機證（IATA BCBP）' : '條碼原始內容';
+    titleBlock.append(make('h2', typeTitle));
     head.append(titleBlock, make('span', '第 ' + (index + 1) + ' 個條碼', 'scanner-dim'));
     card.append(head);
     if (decoded) {
+      const informational = inspection.kind === 'itinerary' || inspection.kind === 'partial';
+      if (informational) {
+        const note = inspection.kind === 'itinerary'
+          ? '這是行程單／訂位條碼，不是可用於登機的登機證；訂位與票證資訊也不是即時查詢結果。'
+          : '這份條碼缺少完整航線欄位，只顯示能依格式可靠解析的資料，不能據此登機。';
+        card.append(make('p', note, 'scanner-warning'));
+        const booking = make('div', undefined, 'scanner-booking-summary');
+        const seen = new Set();
+        for (const leg of decoded.data.legs) {
+          const pnr = typeof leg.operatingCarrierPNR === 'string' ? leg.operatingCarrierPNR.trim() : '';
+          if (pnr && /^[A-Z0-9]{4,7}$/i.test(pnr) && !seen.has('P' + pnr)) {
+            const cell = make('div');
+            cell.append(make('small', '訂位代號 · PNR'), make('strong', pnr));
+            booking.append(cell);
+            seen.add('P' + pnr);
+          }
+          const ticket = window.BoardingBCBP.ticketNumber(leg);
+          if (ticket && !seen.has('T' + ticket)) {
+            const cell = make('div');
+            cell.append(make('small', '組合機票號碼 · Ticket number'), make('strong', ticket));
+            booking.append(cell);
+            seen.add('T' + ticket);
+          }
+        }
+        if (booking.childNodes.length) card.append(booking);
+      }
       const shared = {
         ...decoded.data,
         electronicTicketIndicator: decoded.meta?.electronicTicketIndicator,
@@ -147,12 +152,16 @@
       decoded.data.legs.forEach((leg, legIndex) => {
         const group = make('section', undefined, 'scanner-leg');
         const route = [leg.departureAirport, leg.arrivalAirport].filter(Boolean).join(' → ');
-        group.append(make('h3', '第 ' + (legIndex + 1) + ' 段' + (route ? '｜' + route : '')));
-        const legNodes = renderFields(leg, legKeys, { issuanceDate: decoded.data.issuanceDate });
+        const sectionTitle = informational
+          ? (decoded.data.legs.length === 1 ? '其他訂位與票證欄位' : '第 ' + (legIndex + 1) + ' 組訂位資料')
+          : '第 ' + (legIndex + 1) + ' 段' + (route ? '｜' + route : '');
+        group.append(make('h3', sectionTitle));
+        const keys = informational ? legKeys.filter(key => key !== 'operatingCarrierPNR') : legKeys;
+        const legNodes = renderFields(leg, keys, { issuanceDate: decoded.data.issuanceDate });
         if (legNodes) group.append(legNodes);
         card.append(group);
       });
-      card.append(make('p', '灰色「推測年份」不是條碼直接記載的完整年份，可能相差十年或更多。艙等代碼不等於購票訂位艙等；旅客狀態也非即時查詢。', 'scanner-warning'));
+      card.append(make('p', '條碼資料只反映產生時的記錄，不代表目前訂位狀態。灰色「推測年份」並非條碼確定記載的完整年份；艙等代碼也不等於購票訂位艙等。', 'scanner-warning'));
     } else {
       card.append(make('p', '條碼辨識成功，但未通過目前的 BCBP 格式檢查：' + inspection.reason + ' 已保留完整原文，不從圖片上的印刷文字猜測航班資料。', 'scanner-hint'));
     }

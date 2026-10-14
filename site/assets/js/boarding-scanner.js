@@ -86,7 +86,15 @@
       const descriptor = fields[key];
       if (!descriptor) continue;
       const row = make('div', undefined, 'scanner-field');
-      row.append(make('dt', descriptor[0] + ' / ' + descriptor[1]), make('dd', fieldValue(key, value)));
+      const dd = make('dd');
+      dd.append(make('span', fieldValue(key, value), 'scanner-source-value'));
+      const annotation = window.BoardingCodebook?.explain?.(key, value);
+      if (annotation) {
+        const prefix = annotation.kind === 'typical' ? '常見對應' :
+          annotation.kind === 'lookup' ? '名稱對照' : '標準代碼說明';
+        dd.append(make('small', prefix + ' · ' + annotation.text, 'scanner-annotation'));
+      }
+      row.append(make('dt', descriptor[0] + ' / ' + descriptor[1]), dd);
       dl.appendChild(row);
       count++;
     }

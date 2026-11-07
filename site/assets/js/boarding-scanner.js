@@ -160,6 +160,9 @@
         card.append(group);
       });
       card.append(make('p', '日期只記錄年內序號；閏年與平年月日可能不同，不預設今年。條碼不是即時訂位查詢，艙等代碼也不保證實際搭乘產品。', 'scanner-warning'));
+      if (inspection.kind === 'boarding-pass' && window.HappyEarthFlightLog?.offer) {
+        decoded.data.legs.forEach((leg, legIndex) => window.HappyEarthFlightLog.offer(card, leg, {dateCodes: inspection.dateCodes, legIndex}));
+      }
     } else {
       card.append(make('p', '條碼辨識成功，但未通過目前的 BCBP 格式檢查：' + inspection.reason + ' 已保留完整原文，不從圖片上的印刷文字猜測航班資料。', 'scanner-hint'));
     }

@@ -92,7 +92,7 @@
   }
   async function writeSheet(token,row) {
     const base='https://sheets.googleapis.com/v4/spreadsheets/'+SHEET_ID+'/values/';
-    const existing=await api(token,base+sheetRange('A2:V1002'));
+    const existing=await api(token,base+sheetRange('A2:J'));
     if (isDuplicate(existing.values||[],row)) return 'duplicate';
     const url=base+sheetRange('A:V')+':append?valueInputOption=RAW&insertDataOption=INSERT_ROWS';
     await api(token,url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({majorDimension:'ROWS',values:[row]})});
@@ -167,12 +167,8 @@
         localStorage.setItem(KEY,clientId);
         syncBtn.disabled=true;status.textContent='等待 Google 授權，並檢查現有航段……';
         const token=await googleToken(clientId);
-        try {
-          const result=await writeSheet(token,r);
-          status.textContent=result==='duplicate'?'找到相同日期、航線與航班號：已略過，未新增重複資料。':'已寫入《飛行紀錄》；請到 Google Sheets 核對新航段。';
-        } finally {
-          global.google?.accounts?.oauth2?.revoke(token,()=>{});
-        }
+        const result=await writeSheet(token,r);
+        status.textContent=result==='duplicate'?'找到相同日期、航線與航班號：已略過，未新增重複資料。':'已寫入《飛行紀錄》；請到 Google Sheets 核對新航段。';
       } catch(e){status.textContent=e.message||'寫入失敗。';}
       finally {syncBtn.disabled=false;}
     });

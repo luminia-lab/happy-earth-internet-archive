@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>即時登機證掃描｜幸福地球測試版</title>
+  <meta name="description" content="將登機證 QR Code、PDF417、Aztec、DataMatrix 條碼轉成 IATA BCBP 欄位與原始字串。照片只在瀏覽器本機解碼。">
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/boarding-scanner.css">
+  <link rel="stylesheet" href="../../assets/css/boarding-live-camera.css">
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a class="brand" href="../../"><span class="brand-mark">🌍</span><span>幸福地球</span></a><nav class="nav"><a href="../../">首頁</a><a href="../">實用工具</a><a href="../../articles/">文章</a></nav></div></header>
+<main class="scanner-shell" data-scanner>
+  <nav class="scanner-breadcrumb"><a href="../../">幸福地球</a> ／ <a href="../">實用工具</a></nav>
+  <div class="scanner-head">
+    <div><p class="eyebrow">Happy Earth Tools</p><h1>即時登機證掃描｜測試版</h1><p>鏡頭持續搜尋條碼；掃到有效 BCBP 才顯示成功。原本的圖片掃描仍可使用。</p></div>
+    <span class="scanner-privacy">僅在你的瀏覽器處理</span>
+  </div>
+  <section class="live-scanner-panel" data-live-scanner data-live-state="idle" aria-label="即時相機掃描測試">
+    <div class="live-heading"><h2>即時相機模式</h2><span class="live-tag">實驗功能 · 不儲存</span></div>
+    <div class="live-viewport">
+      <video data-live-video autoplay playsinline muted aria-label="即時相機預覽"></video>
+      <div class="live-target" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="scanner-actions live-actions">
+      <button type="button" class="button" data-live-start>開啟相機・即時掃描</button>
+      <button type="button" class="button ghost" data-live-deep disabled>凍結畫面・深度辨識</button>
+      <button type="button" class="button ghost" data-live-retry disabled>繼續即時掃描</button>
+      <button type="button" class="button ghost" data-live-stop disabled>關閉相機</button>
+    </div>
+    <p class="scanner-status live-status" data-live-status role="status" aria-live="polite">相機尚未啟動。</p>
+    <p class="scanner-hint" data-live-notice>相機不會自動開啟；只有你按下開始才會請求權限。離開頁面會關閉鏡頭。</p>
+    <div class="live-result" data-live-result hidden></div>
+    <p class="scanner-hint">此頁是獨立測試版，不會將照片或條碼傳送到 Google Sheets。掃描成功不等於已儲存航班。</p>
+  </section>
+  <section class="scanner-panel" aria-label="選擇條碼圖片">
+    <h2>備用：原本的照片辨識</h2>
+    <div class="scanner-drop" data-drop tabindex="0" role="button" aria-label="選擇條碼圖片，也可拖曳或貼上">
+      <span class="scanner-drop-icon" aria-hidden="true">▦</span>
+      <strong>點這裡選圖片、拖進來，或直接貼上</strong>
+      <span>QR Code、PDF417、Aztec、DataMatrix 與一般條碼；PDF 請先截圖條碼區域</span>
+    </div>
+    <input type="file" accept="image/*" multiple data-files class="sr-only" aria-label="選擇條碼圖片">
+    <input type="file" accept="image/*" capture="environment" data-camera class="sr-only" aria-label="使用相機拍照辨識">
+    <div class="scanner-actions">
+      <button class="button" type="button" data-pick>選擇圖片</button>
+      <button class="button ghost" type="button" data-photo>拍照辨識</button>
+      <button class="button ghost" type="button" data-paste>從剪貼簿貼上</button>
+      <button class="button ghost" type="button" data-clear>清除</button>
+    </div>
+    <p class="scanner-status" role="status" aria-live="polite" data-status>就緒。圖片不會上傳到伺服器。</p>
+    <p class="scanner-hint" data-build-version>辨識版本：2026-10-15・局部對比增強版｜世界機場名稱・保守日期</p>
+    <p class="scanner-hint">含姓名、訂位代號的資料屬於敏感資訊。複製或分享解析結果前，請自行確認內容。</p>
+    <div class="scanner-previews" data-previews hidden></div>
+  </section>
+  <section data-results class="scanner-results" aria-label="解碼結果" hidden></section>
+  <section class="scanner-info">
+    <h2>這個工具能讀到什麼？</h2>
+    <p>它先辨識條碼，再嘗試依 IATA BCBP 格式解析登機證及行程單中的訂位代號、機票號碼、旅客和航段資料。行程單不等於可登機的登機證；沒有公開定義的欄位只顯示原文。</p>
+    <p>登機證航班日期通常只記錄一年中的第幾天，不含完整年份；閏年與平年的月日可能不同。本工具不預設今年，而是直接列出日期序號與可能的月日。旅客狀態不是航空公司的即時狀態。</p>
+    <p class="scanner-hint">欄位較大的文字是解碼值，淡灰色小字補充標準說明與名稱對照。機場與航空公司名稱使用預先匯入的離線代碼對照；常見名稱優先顯示繁體中文，其他顯示英文。代碼可能隨時間重配，名稱對照僅供參考，不是即時航班資訊。<a href="https://www.iata.org/en/programs/passenger/common-use/" target="_blank" rel="noopener noreferrer">參考 IATA BCBP 規範</a>。</p>
+    <p class="scanner-hint">名稱資料來源：<a href="https://ourairports.com/data/" target="_blank" rel="noopener noreferrer">OurAirports</a>（機場，Public Domain）與 <a href="https://github.com/gh2137/iata-codes" target="_blank" rel="noopener noreferrer">iata-codes</a>（航空公司，ODbL）；網站離線對照表沿用 ODbL 授權。航空公司的兩碼代碼與機票三碼票證代碼不同，三碼對照目前只列已核實的項目。</p>
+    <p class="scanner-hint">條碼辨識採用 ZXing-C++／zxing-wasm；BCBP 解析採用開源 bcbp 套件（支援至標準第 6 版）。圖片與結果不會被本工具儲存、上傳或發送分析事件。</p>
+  </section>
+</main>
+<footer class="footer"><div class="container">幸福地球｜實用工具　<a href="../">返回工具列表</a></div></footer>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/vendor/zxing/reader.js"></script>
+<script src="../../assets/vendor/bcbp/bcbp.js"></script>
+<script src="../../assets/js/boarding-image-recovery.js?v=20261015-clahe"></script>
+<script src="../../assets/data/airport-names.js?v=20261015-global"></script>
+<script src="../../assets/data/airline-names.js?v=20261015-airlines"></script>
+<script src="../../assets/js/boarding-date-note.js?v=20261015-ordinal"></script>
+<script src="../../assets/js/boarding-codebook.js?v=20261015-airlines"></script>
+<script src="../../assets/js/boarding-bcbp-parser.js?v=20261015-ordinal"></script>
+<script src="../../assets/js/boarding-scanner.js?v=20261015-ordinal"></script>
+<script src="../../assets/js/boarding-live-camera.js?v=20261107-prototype"></script>
+</body>
+</html>

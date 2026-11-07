@@ -8,3 +8,14 @@
 .scanner-booking-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0;padding:13px 15px;background:#edf5fa;border:1px solid #d8e6ef;border-radius:12px}
 .scanner-booking-summary small{display:block;color:#607487;font-size:.81rem;margin-bottom:4px}
 .scanner-booking-summary strong{display:block;font-size:1.27rem;letter-spacing:.04em;color:#214b66;word-break:break-word}
+
+/* Flight-log export is optional; keep it separate from the raw BCBP result. */
+.flight-log-panel{margin-top:18px;padding:15px;border-radius:12px;border:1px solid #d8e6ef;background:#f7fafc}
+.flight-log-details{padding-top:12px}
+.flight-log-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:13px 0}
+.flight-log-field{display:flex;flex-direction:column;gap:5px;min-width:0;font-size:.82rem;color:#536a7a;font-weight:650}
+.flight-log-field input{width:100%;min-width:0;border:1px solid #c7d8e3;border-radius:8px;padding:10px;font-size:.95rem;background:#fff;color:#27394b}
+.flight-log-panel .scanner-status{margin:12px 0 0;overflow-wrap:anywhere}
+.flight-log-panel .scanner-actions{margin-top:12px;flex-wrap:wrap}
+.flight-log-panel .scanner-actions button:disabled{opacity:.6;cursor:wait}
+@media(max-width:640px){.flight-log-grid{grid-template-columns:1fr}}
